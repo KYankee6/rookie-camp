@@ -20,7 +20,7 @@ import net.javaguides.springboot.exception.ResourceNotFoundException;
 import net.javaguides.springboot.model.Employee;
 import net.javaguides.springboot.repository.EmployeeRepository;
 
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {
@@ -55,9 +55,10 @@ public class EmployeeController {
 		Employee employee = employeeRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + id));
 		
-		employee.setFirstName(employeeDetails.getFirstName());
-		employee.setLastName(employeeDetails.getLastName());
-		employee.setEmailId(employeeDetails.getEmailId());
+		employee.setEmpName(employeeDetails.getEmpName());
+		employee.setEmpDeptName(employeeDetails.getEmpDeptName());
+		employee.setEmpTelNo(employeeDetails.getEmpTelNo());
+		employee.setEmpMail(employeeDetails.getEmpMail());
 		
 		Employee updatedEmployee = employeeRepository.save(employee);
 		return ResponseEntity.ok(updatedEmployee);
