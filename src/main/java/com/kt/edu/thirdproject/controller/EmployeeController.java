@@ -1,4 +1,4 @@
-package net.javaguides.springboot.controller;
+package com.kt.edu.thirdproject.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.javaguides.springboot.exception.ResourceNotFoundException;
-import net.javaguides.springboot.model.Employee;
-import net.javaguides.springboot.repository.EmployeeRepository;
+import com.kt.edu.thirdproject.exception.ResourceNotFoundException;
+import com.kt.edu.thirdproject.model.Employee;
+import com.kt.edu.thirdproject.repository.EmployeeRepository;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController

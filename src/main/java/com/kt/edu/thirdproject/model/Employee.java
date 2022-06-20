@@ -1,4 +1,4 @@
-package net.javaguides.springboot.model;
+package com.kt.edu.thirdproject.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
