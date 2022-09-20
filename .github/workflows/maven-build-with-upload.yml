@@ -9,6 +9,7 @@ on:
     - main
     - release/*
   pull_request:
+    branches:
     - main
 
 jobs:
