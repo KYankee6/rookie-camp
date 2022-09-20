@@ -20,7 +20,7 @@ import com.kt.edu.thirdproject.exception.ResourceNotFoundException;
 import com.kt.edu.thirdproject.model.Employee;
 import com.kt.edu.thirdproject.repository.EmployeeRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {
