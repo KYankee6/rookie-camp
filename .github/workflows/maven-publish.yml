@@ -17,8 +17,8 @@ jobs:
 
     steps:
     - name: Check out latest GitHub source
-    - uses: actions/checkout@v3
-    - with:
+      uses: actions/checkout@v3
+      with:
         path: /root/rookie-camp
         
     - name: Set up JDK 11
