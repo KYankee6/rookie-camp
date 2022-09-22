@@ -6,8 +6,6 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '23 22 * * *'
   push:
     branches: [ "master" ]
     # Publish semver tags as releases.
@@ -25,7 +23,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: rookie5
     permissions:
       contents: read
       packages: write
@@ -36,6 +34,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          path: /root/rookie-camp
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
