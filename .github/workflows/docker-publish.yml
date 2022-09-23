@@ -125,9 +125,12 @@ jobs:
     name: Clean up docker images
     runs-on: self-hosted
     steps:
+      - name: PrepareReg Names
+        run: |
+          echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+          echo IMAGE_TAG=$(echo ${{ github.ref }} | tr '[:upper:]' '[:lower:]' | awk '{split($0,a,"/"); print a[3]}') >> $GITHUB_ENV
+        
       -   name: Clean up docker images
           run:
             docker rmi $(docker images --filter "before=${{ env.IMAGE_REPOSIRORY }}:${{ env.IMAGE_TAG }}" --filter=reference="${{ env.IMAGE_REPOSIRORY }}:*" -q)
-#       - name: Pull the published Docker image
-#         if: ${{ github.event_name != 'pull_request' }}
-#         run: docker pull ${{ steps.meta.outputs.tags }}
+
