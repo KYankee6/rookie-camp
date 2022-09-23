@@ -118,7 +118,7 @@ jobs:
       - name: Docker deploy self- hosted server
         run: |
            docker ps -q --filter "name=spring" | xargs -r docker stop | xargs -r docker rm
-           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
+           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
           
   cleanup:
     needs: [ build, deploy ]
