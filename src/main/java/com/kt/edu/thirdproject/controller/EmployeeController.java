@@ -21,23 +21,27 @@ import com.kt.edu.thirdproject.model.Employee;
 import com.kt.edu.thirdproject.repository.EmployeeRepository;
 
 //@CrossOrigin(origins = "http://localhost:3000")
-//commit test wjdgorus2
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	
+
 	// get all employees
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
 		return employeeRepository.findAll();
 	}
 
+	@GetMapping("/test")
+	public ResponseEntity<String> test(){
+		return ResponseEntity.ok("API 배포 테스트입니다.");
+	}
+
 
 	// create employee rest api
-	@PostMapping("/employebues")
+	@PostMapping("/employees")
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
