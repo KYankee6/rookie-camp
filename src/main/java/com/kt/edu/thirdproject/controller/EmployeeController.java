@@ -42,6 +42,10 @@ public class EmployeeController {
 	public ResponseEntity<String> test2(){
 		return ResponseEntity.ok("test2 pass");
 	}
+	@GetMapping("/test3")
+	public ResponseEntity<String> test3(){
+		return ResponseEntity.ok("test2 pass");
+	}
 
 
 	// create employee rest api
