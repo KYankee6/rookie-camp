@@ -111,8 +111,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Docker delpoy
         run: |
-          docker ps -q --filter "name=cat" | grep -q . && docker stop cat && docker rm -fv cat
-          docker run -d -p 8000:8000 --name cicd --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
+           docker ps -q --filter "name=spring" | xargs docker stop | xargs docker rm
+           docker run -d -p ${{sercrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
           
   cleanup:
     needs: [ build, deploy ]
