@@ -112,7 +112,7 @@ jobs:
       - name: Docker delpoy
         run: |
            docker ps -q --filter "name=spring" | xargs docker stop | xargs docker rm
-           docker run -d -p ${{sercrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
+           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
           
   cleanup:
     needs: [ build, deploy ]
