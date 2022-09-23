@@ -34,27 +34,6 @@ public class EmployeeController {
 		return employeeRepository.findAll();
 	}
 
-	@GetMapping("/test")
-	public ResponseEntity<String> test(){
-		return ResponseEntity.ok("test pass");
-	}
-	@GetMapping("/test2")
-	public ResponseEntity<String> test2(){
-		return ResponseEntity.ok("test2 pass");
-	}
-	@GetMapping("/test3")
-	public ResponseEntity<String> test3(){
-		return ResponseEntity.ok("test2 pass");
-	}
-	@GetMapping("/test4")
-	public ResponseEntity<String> test4(){
-		return ResponseEntity.ok("test2 pass");
-	}
-	@GetMapping("/test5")
-	public ResponseEntity<String> test5(){
-		return ResponseEntity.ok("test5 pass");
-	}
-
 
 	// create employee rest api
 	@PostMapping("/employebues")
