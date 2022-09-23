@@ -92,4 +92,4 @@ jobs:
   
       - name: Pull the published Docker image
         if: ${{ github.event_name != 'pull_request' }}
-        run: docker rm ${{ github.repository }}  | docker pull ${{ github.repository }} 
+        run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} 
