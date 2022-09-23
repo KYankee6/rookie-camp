@@ -23,7 +23,7 @@ env:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -32,9 +32,17 @@ jobs:
       id-token: write
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Cache docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ env.VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
@@ -73,6 +81,7 @@ jobs:
         uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
         with:
           context: .
+          builder: ${{ steps.buildx.outputs.name }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -89,3 +98,39 @@ jobs:
         # This step uses the identity token to provision an ephemeral certificate
         # against the sigstore community Fulcio instance.
         run: echo "${{ steps.meta.outputs.tags }}" | xargs -I {} cosign sign {}@${{ steps.build-and-push.outputs.digest }}
+
+  deploy:
+    needs: build
+    name: Deploy
+    runs-on: self-hosted
+    steps:
+      - name: PrepareReg Names
+        run: |
+          echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+          echo IMAGE_TAG=$(echo ${{ github.ref }} | tr '[:upper:]' '[:lower:]' | awk '{split($0,a,"/"); print a[3]}') >> $GITHUB_ENV
+        
+      - name: Login to ghcr
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Docker deploy self- hosted server
+        run: |
+           docker ps -q --filter "name=spring" | xargs -r docker stop | xargs -r docker rm
+           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
+          
+  cleanup:
+    needs: [ build, deploy ]
+    name: Clean up docker images
+    runs-on: self-hosted
+    steps:
+      - name: PrepareReg Names
+        run: |
+          echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+          echo IMAGE_TAG=$(echo ${{ github.ref }} | tr '[:upper:]' '[:lower:]' | awk '{split($0,a,"/"); print a[3]}') >> $GITHUB_ENV
+        
+      -   name: Clean up docker images
+          run:
+            docker rmi $(docker images --filter "before=${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}" --filter=reference="${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:*" -q)
+
