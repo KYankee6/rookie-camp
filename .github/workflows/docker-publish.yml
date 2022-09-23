@@ -121,7 +121,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Docker deploy self- hosted server
         run: |
-           docker ps -q --filter "name=spring" | xargs -r docker stop | xargs -r docker rm | xargs -r docker kill 
+           docker ps -qa --filter "name=spring" | xargs -r docker stop | xargs -r docker rm 
            docker pull ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
            docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
           
