@@ -117,7 +117,7 @@ jobs:
       - name: Docker delpoy
         run: |
            docker ps -q --filter "name=spring" | xargs -r docker stop | xargs -r docker rm
-           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
+           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.IMAGE_REPOSIRORY }}:${{ env.IMAGE_TAG }}
           
   cleanup:
     needs: [ build, deploy ]
@@ -126,7 +126,7 @@ jobs:
     steps:
       -   name: Clean up docker images
           run:
-            docker rmi $(docker images --filter "before=${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}" --filter=reference="${{ env.DOCKER_IMAGE }}:*" -q)
+            docker rmi $(docker images --filter "before=${{ env.IMAGE_REPOSIRORY }}:${{ env.IMAGE_TAG }}" --filter=reference="${{ env.IMAGE_REPOSIRORY }}:*" -q)
 #       - name: Pull the published Docker image
 #         if: ${{ github.event_name != 'pull_request' }}
 #         run: docker pull ${{ steps.meta.outputs.tags }}
