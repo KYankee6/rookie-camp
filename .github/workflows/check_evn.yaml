@@ -24,7 +24,7 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: run
+        - name: run
           run:
             echo ${{ github.repository }}
             echo ${{ env.REGISTRY }}
