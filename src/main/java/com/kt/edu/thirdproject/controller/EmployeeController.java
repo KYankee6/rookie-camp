@@ -32,10 +32,16 @@ public class EmployeeController {
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
 		return employeeRepository.findAll();
-	}		
-	
+	}
+
+	@GetMapping("/test")
+	public ResponseEntity<String> test(){
+		return ResponseEntity.ok("test pass");
+	}
+
+
 	// create employee rest api
-	@PostMapping("/employees")
+	@PostMapping("/employebues")
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
