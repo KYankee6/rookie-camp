@@ -48,7 +48,7 @@ public class EmployeeController {
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + id));
 		return ResponseEntity.ok(employee);
 	}
-	
+
 	// update employee rest api
 	
 	@PutMapping("/employees/{id}")
