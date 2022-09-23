@@ -111,7 +111,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Docker delpoy
         run: |
-           docker ps -q --filter "name=spring" | xargs docker stop | xargs docker rm
+           docker ps -q --filter "name=spring" | xargs -r docker stop | xargs -r docker rm
            docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
           
   cleanup:
