@@ -34,10 +34,6 @@ public class EmployeeController {
 		return employeeRepository.findAll();
 	}
 
-	@GetMapping("/test")
-	public ResponseEntity<String> test(){
-		return ResponseEntity.ok("API 배포 테스트입니다.");
-	}
 
 
 	// create employee rest api
