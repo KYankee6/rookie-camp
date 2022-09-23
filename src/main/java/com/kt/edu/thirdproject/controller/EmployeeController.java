@@ -50,6 +50,10 @@ public class EmployeeController {
 	public ResponseEntity<String> test4(){
 		return ResponseEntity.ok("test2 pass");
 	}
+	@GetMapping("/test5")
+	public ResponseEntity<String> test5(){
+		return ResponseEntity.ok("test5 pass");
+	}
 
 
 	// create employee rest api
