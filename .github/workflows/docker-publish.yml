@@ -132,5 +132,5 @@ jobs:
         
       -   name: Clean up docker images
           run:
-            docker rmi $(docker images --filter "before=${{ env.IMAGE_REPOSIRORY }}:${{ env.IMAGE_TAG }}" --filter=reference="${{ env.IMAGE_REPOSIRORY }}:*" -q)
+            docker rmi $(docker images --filter "before=${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}" --filter=reference="${{ env.IMAGE_REPOSITORY }}:*" -q)
 
