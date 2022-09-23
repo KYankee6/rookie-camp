@@ -123,7 +123,7 @@ jobs:
   cleanup:
     needs: [ build, deploy ]
     name: Clean up docker images
-    runs-on: [ self-hosted, development ]
+    runs-on: self-hosted
     steps:
       -   name: Clean up docker images
           run:
