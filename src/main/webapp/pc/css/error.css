@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+html,body{height:100%;}
+body{}
+.footer{background-color:#fff; }
+.wrap{width:100%; height:726px; margin-top:-107px; overflow-y:auto;background:#fff url(../../resource/images/common/bg_404_page.png) center bottom no-repeat;background-size:100%;}
+.contents{width:1080px;margin:0 auto; padding-top:246px; text-align:center; color:#031b4b; letter-spacing:-0.25px;}
+h1{margin:0 auto; font-size:0; line-height:0; overflow:hidden; width:193px; height:38px; background:url(../../resource/images/common/logo_ktenterprise.png) no-repeat 0 0;}
+p{font-family:'NotoSans_Light';}
+.pc.tit{margin-top:50px; font-size:52px; font-family:"NotoSans_Medium";}
+.pc{display:block;}
+.mobile{display:none;}
+.pc.txt19{margin-top:18px; font-size:19px; line-height:28px;}
+.txt17{margin-top:15px; font-size:17px;}
+.ico_star{color:#ed2c29; position:relative; top:4px;}
+.btn_goMain{margin-top:60px; display:inline-block; height:56px; line-height:56px; width:220px; box-sizing:border-box; border-radius:30px; text-align:center; font-size:17px; color:#031b4b; border:1px solid #031b4b; background-color:#fff; }
+.btn_goMain:hover{background-color:#3069b3;line-height:58px; color:#fff; border:none;}
+
+/* 작업공지 페이지 */
+.ktWrap .wrap .contents h1	{display:none;}
+.ktWrap .wrap .contents .tit	{font-size:52px; margin:50px 0 25px; font-weight:bold;}
+.ktWrap .wrap .contents .desc	{display:block; text-align:center; font-size:19px; line-height:28px; margin:0 20px;}
+.ready_wrap .inner .desc	{display:block; text-align:center; font-size:19px; line-height:28px; margin:0 20px;}
+.ready_wrap .inner h3.title	{font-size:52px; margin:50px 0 25px; font-weight:bold;}
+.ready_wrap .inner ul li	{display:block; text-align:center; font-size:19px; line-height:28px; margin:0 20px;}
+
+@media screen and (max-width: 760px) and (min-width: 10px){
+	body{background:#fff url(../../resource/images/common/m_bg_404_page.png) center bottom no-repeat;background-size:100%;}
+	.wrap{width:100%; height:100%; margin-top:-43px; }
+	.contents{width:100%; max-width:76rem; padding-top:109px;}
+	h1{width:11.8rem; height:2.3rem; background:url(../../resource/images/common/logo_m_ktenterprise.png) no-repeat 0 0; background-size:100%;}
+	.pc{display:none;}
+	.mobile{display:block;}
+	.mobile.tit{margin-top:1.8rem; font-size:26px; line-height:3.33rem; font-family:"NotoSans_Medium"; font-weight:bold;}
+	.mobile.txt19{margin-top:18px; font-size:14px; line-height:1.9rem;font-family:"NotoSans_Regular";}
+	.txt17{margin-top:1.5rem; font-size:1.2rem;}
+	.btn_goMain{margin-top:2.8rem; width:13.8rem; height:3.5rem; line-height:3.5rem; font-size:1.26rem; background-color:#3069b3;  color:#fff; border:none;}
+}

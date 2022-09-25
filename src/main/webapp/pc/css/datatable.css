@@ -1,0 +1,276 @@
+﻿@charset "utf-8";
+
+/* TABLE - SET */
+	/* DATA-TABLE */
+table.data-list {width:100%;border-collapse:separate;margin:20px 0 0 0;border-top:1px solid #666;/* border-left:1px solid #ddd;border-right:1px solid #ddd; */background:#fff;}
+	table.data-list thead th {padding:12px 0 13px;border-bottom:1px solid #ccc;border-left:1px solid #eaeaea;line-height:19px;font-size:15px;text-align:center;}
+	table.data-list thead th:first-child {border-left:0;}
+	table.data-list thead th.text-blind {text-indent:-9999em;}
+	table.data-list thead.type-row tr th {position:relative;}
+	table.data-list thead.type-row tr th:first-child{background:none;}
+	table.data-list thead.type-row tr th .l-line {position:absolute;top:12px;left:0;width:1px;height:62px;/* background:url("../images/common/bg_th2.gif") repeat-y 0 50%; */}
+	table.data-list thead.type-row tr th .r-line {position:absolute;top:12px;right:-1px;width:1px;height:62px;/* background:url("../images/common/bg_th2.gif") repeat-y 0 50%; */}
+	table.data-list thead th div.tool-content {vertical-align:-3px;}
+	table.data-list thead th div.tool-content div.tool-tip {left:-16px;}
+	table.data-list thead th div.tool-content div.tool-tip-right {left:-318px;}
+	table.data-list thead th ul.list-dot {margin:5px 0 0 0;}
+	table.data-list thead th ul.list-dot li {font-weight:normal;}
+	table.data-list thead th.lineL {border-left:1px solid #eaeaea;}
+	table.data-list tbody td {padding:14px 15px 16px;border-bottom:1px solid #ddd;border-left:1px solid #eaeaea;line-height:23px;font-size:15px;text-align:center;color:#333;}
+	table.data-list tbody th {border-bottom:1px solid #ddd;}
+	table.data-list tbody.no-size td {padding-right:0;padding-left:0;}
+	table.data-list tbody td.desc {font-size:13px;line-height:21px;}
+	table.data-list tbody td div.btn-left {margin:10px 0 0 0;}
+	table.data-list tbody td.sta {padding-left:29px;text-align:left;}
+	table.data-list tbody td.subject {font-size:15px;line-height:21px;color:#333;text-align:left;}
+	table.data-list tbody td:first-child {border-left:0;}
+	table.data-list tbody td.lineL {border-left:1px solid #eaeaea;}
+	table.data-list tbody td.lineR {border-right:1px solid #eaeaea;}
+	table.data-list tbody td.first {text-align:left;}
+	table.data-list tbody td.left {text-align:left;}
+	table.data-list tbody td.title {padding-left:30px;color:#333;text-align:left;}
+	table.data-list tbody td.tit {padding-left:20px;color:#333;text-align:left;}
+	table.data-list tbody td.title a.link {text-decoration:underline;}
+	table.data-list tbody td.left ul.list-dot {margin:0;}
+	table.data-list tbody td.right {text-align:right;}
+	table.data-list tbody td.right em.vat {display:inline-block;}
+	table.data-list tbody td .money {display:inline;padding:0;font-size:18px;color:#ee2c2a;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list tbody td .card-num {display:block;font-size:13px;}
+	table.data-list tbody td.name {padding-left:10px;font-weight:bold;color:#333;text-align:left;}
+	table.data-list tbody td .bmoney {display:inline;padding:0;font-size:18px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list tbody td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list tbody td.noContents {padding: 35px 0 35px;color: #333;font-size: 13px;text-align: center;}
+		table.data-list tbody td.noContents div.btn-area {margin:10px 0 0 0;}
+	table.data-list tbody td .vat {display:block;color:#666;font-size:13px;line-height:16px;}
+	table.data-list tbody td .data {display:block;color:#666;font-size:13px;line-height:16px;}
+	table.data-list tbody td .residual {display:block;font-weight:normal;font-size:15px;color:#333;}
+	table.data-list tbody td .btns {margin:6px 0 0 0;}
+	table.data-list tbody td .label-radio {vertical-align:middle;background-position:0 3px;}
+	table.data-list tbody td .underline {text-decoration:underline;}
+	table.data-list tbody td .data-delete {font-weight:normal;font-size:15px;color:#333;}
+	table.data-list tbody td.grade {color:#df2428;font-size:17px;}
+	table.data-list tbody td div.tool-content div.tool-tip {left:-358px;}
+	table.data-list tbody tr.to-month td {color:#df2428;}
+	table.data-list tbody tr.sum td {background:#f8f8f8;font-weight:bold;}
+	table.data-list tbody tr.top-data td {color:#df2428;}
+	table.data-list tbody tr.top-data td.sta {color:#666;}
+	table.data-list tfoot td.total {text-align:center;}
+	table.data-list tfoot td.total .sum {margin:0 5px 0 0;font-weight:bold;color:#333;}
+	table.data-list tfoot th {padding:10px 0 13px;border-bottom:1px solid #ccc;text-align:left;color:#333;font-size:15px;}
+	table.data-list tfoot th.center {text-align:center;}
+	table.data-list tfoot td{padding:9px 15px 12px;border-bottom:1px solid #ccc;color:#666;font-size:15px;padding-left:10px;line-height:23px;}
+	table.data-list tfoot td.right {padding-right:15px;text-align:right;}
+	table.data-list tfoot td.center {text-align:center;padding-right:0;padding-left:0;}
+	table.data-list tfoot td .money {font-size:18px;color:#ee2c2a;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list tfoot td .bmoney {font-size:18px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list tfoot td .vat {display:block;color:#666;font-size:13px;line-height:16px;}
+	table.data-list tfoot td.total-money {text-align:right;padding-right:15px;border-left:1px solid #eaeaea;}
+	table.data-list tfoot th.total {padding-left:70px;}
+	table.data-list tfoot th.total-first {padding-left:0;text-align:center;}
+
+table.data-list-row {margin:20px 0 0 0;width:100%;border-collapse:separate;border-top:1px solid #666;/* border-left:1px solid #ddd;border-right:1px solid #ddd; */background:#fff;table-layout:fixed;}
+	table.data-list-row tbody th {padding:17px 0 17px 19px;font-size:15px;line-height:18px;text-align:left;border-left:1px solid #eaeaea;border-bottom:1px solid #ddd;border-right:1px solid #eaeaea;}
+	table.data-list-row tbody th:first-child {border-left:0;}
+	table.thLine tbody th {position:relative;}
+	table.thLine tbody th .r-line {position:absolute;top:15px;right:0;width:1px;height:62px;/* background:url("../images/common/bg_th2.gif") repeat-y 100% 50%; */}
+	table.data-list-row tbody.line-type th {border-right:1px solid #eaeaea;background:none;}
+	table.data-list-row tbody.line-type th.noLline {border-left:0;}
+	table.data-list-row tbody th.first-line {border-left:1px solid #eaeaea;}
+	table.data-list-row tbody th.first-back {background:none;}
+	table.data-list-row tbody th.center {padding:17px 0 17px 0;text-align:center;}
+	table.data-list-row tbody td {padding:13px 20px 12px 20px;font-size:15px;color:#333;border-bottom:1px solid #ddd;line-height:23px;}
+	table.data-list-row tbody td.center {text-align:center;}
+	table.data-list-row tbody td .info {font-size:13px;}
+	table.data-list-row tbody td .text {padding:0 0 0 10px;height:28px;line-height:28px;border:1px solid #ccc;border-radius:2px;vertical-align:middle;}
+	table.data-list-row tbody td .money {font-size:18px;color:#ee2c2a;font-weight:700;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list-row tbody td .bmoney {font-size:18px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.data-list-row tbody td .vat {color:#333;font-size:13px;}
+	table.data-list-row tbody td.point {padding:13px 0 17px 19px;font-size:19px;color:#333;}
+	table.data-list-row tbody td .addr-list {margin:0 0 0 -1px;padding-left:20px;border-left:1px solid #eaeaea;}
+	table.data-list-row tbody tr.address th {background:none;}
+	table.data-list-row tbody tr.address td {padding-left:0;}
+	table.data-list-row tbody td .address-wrap {position:relative;}
+	table.data-list-row tbody td .address-wrap .btn-right {position:absolute;right:10px;top:10px;}
+	table.data-list-row tbody td .txt-caution {background:url('../images/common/bl_noti_dot.png') no-repeat 0 9px;}
+	table.data-list-row tbody td .btns {margin:5px 0 0 0;}
+
+/* 요금제 비교하기 */
+table.data-list tbody.type-compare td {color:#333;}
+	table.data-list tbody.type-compare td a.link {display:inline-block;}
+	table.data-list tbody.type-compare td a.link:hover {color:#ed1c24;}
+	table.data-list tbody.type-compare td .option {margin:6px 0 0 0;}
+	table.data-list tbody.type-compare td .option a.btn20-gray {vertical-align:4px;}
+	table.data-list tbody.type-compare td .option label {float:left;margin:0 2px 0 0;width:20px;height:20px;background:url('../images/common/bg_checkbox.png') no-repeat 0 0;vertical-align:middle;cursor:pointer;}
+	table.data-list tbody.type-compare td .option label.chk {float:left;background:url('../images/common/bg_checkbox_chk.png') no-repeat 0 0;}
+	table.data-list tbody.type-compare td .option label + span {display:inline-block;float:left;margin:0 6px 0 0;padding:1px 8px 4px;line-height:100%;color:#d7d7d7;font-size:13px;border:1px solid #f0f0f0;border-radius:3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;vertical-align:middle;}
+	table.data-list tbody.type-compare td .option label.chk + a {display:inline-block;float:left;margin:0 6px 0 0;padding:1px 8px 4px;line-height:100%;color:#666;font-size:13px;border:1px solid #ccc;border-radius:3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background-color:#fff;vertical-align:middle;}
+
+/* WRITE-TABLE */
+table.row-write {width:100%;margin:20px 0 0 0;border-top:1px solid #666;border-collapse:separate;/* border-left:1px solid #ddd;border-right:1px solid #ddd; */background:#fff;}
+	div.bcontent .row-write {margin:0;}
+	table.row-write thead th {padding:15px 0;border-bottom:1px solid #ddd;border-left:1px solid #eaeaea;line-height:19px;font-size:15px;/* background:#fff url("../images/common/bg_th.gif") no-repeat 0 50%; */}
+	table.row-write thead th:first-child {border-left:0;/* background-color:#fff;background-image:none; */}
+	table.row-write thead th.text-blind {text-indent:-9999em;}
+	table.row-write tbody th {padding:17px 0 19px 20px;border-bottom:1px solid #ddd;font-size:15px;text-align:left;line-height:18px;}
+	table.row-write tbody th .input-txt {display:block;margin-top:5px;font-weight:normal;color:#666;}
+	table.row-write tbody th .text-info {font-size:13px;}
+	table.row-write tbody th div.tool-content .more,
+	table.row-write tbody td div.tool-content .more {vertical-align:-3px;}
+	table.row-write tbody td div.tool-content div.tool-tip {left:-16px;}
+	table.row-write tbody th div.tool-content div.tool-tip {font-weight:normal;}
+	table.row-write tbody th.r-line {border-right:1px solid #eaeaea;}
+	table.row-write tbody th.l-line {border-left:1px solid #eaeaea;}
+	table.row-write tbody td {padding:15px 20px 15px 20px;line-height:100%;border-bottom:1px solid #ddd;border-left:1px solid #eaeaea;font-size:15px;color:#333;}
+	table.row-write-center tbody td {text-align:center;}
+	table.row-write tbody td .text-question {color:#666;}
+	table.row-write tbody td.number {line-height:21px;}
+	table.row-write tbody td.noContents {padding: 35px 0 35px;color:#333;font-size: 13px;text-align: center;}
+	table.row-write tbody td.bdL-no {border-left:0;}
+	table.row-write tbody td.center {text-align:center;}
+	table.row-write tbody td.name {padding-top:11px;font-size:15px;font-weight:bold;}
+	table.row-write tbody td .label-radio {margin:0 15px 0 0;}
+	table.row-write tbody td .label-checkbox {margin:0 15px 0 0;}
+	table.row-write tbody td .money {font-size:18px;color:#ee2c2a;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.row-write tbody td .bmoney {font-size:18px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+	table.row-write tbody td .text {padding:0 0 0 10px;height:28px;line-height:28px;border:1px solid #ccc;border-radius:2px;vertical-align:middle;}
+	table.row-write tbody td.cbtn {text-align:center;}
+	table.row-write tbody td .info {padding:0 0 0 4px;font-size:13px;color:#333;}
+	table.row-write tbody td .txt {margin:10px 0 0 0;font-size:13px;line-height:18px;color:#666;}
+	table.row-write tbody td .txt-auto {margin:10px 0 0 0;padding:0 0 0 10px;font-size:13px;line-height:18px;color:#666;background:url('../images/common/bl_noti_dot.png') no-repeat 0 7px;}
+	table.row-write tbody td .txt-point {margin:10px 0 0 0;padding:0 0 0 10px;font-size:13px;line-height:18px;color:#df2428;background:url('../images/common/bl_noti_redDot.png') no-repeat 0 7px;}
+	table.row-write tbody td .txt-caution {background:url('../images/common/bl_noti_dot.png') no-repeat 0 9px;}
+	table.row-write tbody td .delete {margin:0 0 0 5px;vertical-align:-4px;}
+	table.row-write tbody td .note {margin:10px 0 0 0;padding:0 0 0 15px;background:url('../images/common/bg_line_text.png') no-repeat 0 5px;font-size:13px;line-height:18px;color:#666;}
+	table.row-write tbody td .caution {display:inline-block;margin-top:10px;padding-left:17px;font-size:13px;color:#666;line-height:140%;background:url('../images/common/bl_noti_dot.png') no-repeat 0 9px;}
+	table.row-write tbody td .textarea {width:100%;height:50px;border:1px solid #ccc;border-radius:2px;}
+	table.row-write tbody td .time {margin:0 5px;}
+	table.row-write tbody td.left {text-align:left;}
+	table.row-write tbody tr.try td {line-height:18px;}
+	table.row-write tbody td div.captcha {position:relative;margin:10px 0 0 0;border:0;}
+	table.row-write tbody td div.captcha .captcha-info {width:100%;height:auto;margin:10px 0 0 -20px;padding:10px 17px 10px 23px;font-size:13px;border-bottom:none;background:#f8f8f8 url('../images/contents/bl_captcha_info.gif') no-repeat 10px 16px;text-align:left;line-height:18px;}
+	table.row-write tbody td div.captcha div.captcha-box {padding-left:203px}
+	table.row-write tbody td div.captcha div.captcha-box .captcha-img {width:233px;border-right:none;}
+	table.row-write tbody td div.pcaptcha {border:0;margin:10px 0 0 0;}
+	table.row-write tbody td div.pcaptcha div.pcaptcha-box {padding-left:128px;height:60px;}
+	table.row-write tbody td div.pcaptcha div.pcaptcha-box .captcha-img {width:108px;height:60px;top:0;border-right:none;}
+	table.row-write tbody td div.pcaptcha div.pcaptcha-box .captcha-img img{padding:0;}
+	table.row-write tbody td div.pcaptcha div.pcaptcha-box .captcha-cont {padding:0;}
+	table.row-write tbody td ul.list-cellphone {margin:10px 0 0 0;border-top:1px solid #333;overflow:hidden;}
+	table.row-write tbody td ul.list-cellphone li {float:left;width:242px;padding:15px 0 15px 20px;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;font-size:13px;}
+	table.row-write tbody td ul.list-cellphone li.move {border-left:0;}
+	table.row-write tbody td ul.list-dot {margin:9px 0 0 0;}
+	table.row-write tbody td .email  {line-height:21px;margin:0 0 10px 0;}
+	table.row-write tbody .address th {background:none;}
+	table.row-write tbody .address td {padding-left:0;}
+	table.row-write tbody .address-list {position:relative;}
+	table.row-write tbody .address-list li {position:relative;margin:15px 0 0 0;padding:0 0 0 70px;}
+	table.row-write tbody .address-list li:first-child {margin:0;}
+	table.row-write tbody .address-list li .name {position:absolute;left:10px;top:-2px;width:50px;height:18px;line-height:15px;text-align:center;color:#fff;font-size:13px;font-weight:normal;background:url('../images/contents/bg_post.png') no-repeat 0 0;}
+	table.row-write tbody .address-list a.btn-right {position:absolute;right:20px;top:5px;}
+	table.row-write tbody td ul.data-data li {margin:10px 0 0 0;}
+	table.row-write tbody td ul.data-data li:first-child {margin:0;}
+	table.row-write tbody td ul.data-data li label {min-width:58px;}
+	table.row-write tbody td table.data-list {border-right:0;border-left:0;}
+	table.row-write tbody td table.data-list thead th {padding:15px 0;text-align:center;}
+	table.row-write tbody td ul.line-list {}
+		table.row-write tbody td ul.line-list li {margin:10px 0 0 0;}
+		table.row-write tbody td ul.line-list li:first-child {margin:0;}
+
+table.charge-list {width:100%;margin:20px 0 0 0;border-collapse:separate;border-top:1px solid #666;background:#fff;table-layout:fixed;}
+	table.charge-list thead th {padding:18px 20px 21px 0;border-bottom:1px solid #ddd;font-size:15px;color:#333;text-align:right;}
+	table.charge-list thead th:first-child{padding-left:20px;padding-right:0;text-align:left;line-height:24px;}
+	table.charge-list thead th.subject {padding-left:120px;text-align:left;}
+	table.charge-list thead th.middle {padding-left:10px;text-align:left;}
+	table.charge-list tbody th {padding:15px 20px 18px 28px;border-top:1px solid #f3f3f3;text-align:left;}
+	table.charge-list tbody td {padding:20px 20px 0 0;font-size:15px;color:#333;text-align:right;vertical-align:top;}
+	table.charge-list tbody tr:first-child th,
+	table.charge-list tbody tr:first-child td {border-top:0;}
+	table.charge-list tbody tr.section td {padding-top:20px !important;border-top:1px solid #ddd;}
+	table.charge-list tbody tr.last-section td {padding-bottom:20px;}
+	table.charge-list tbody td.pfirst {padding-left:20px;text-align:left;}
+	table.charge-list tbody td.pfirst1 {padding-left:40px;text-align:left;line-height:21px;}
+	table.charge-list tbody td.first {padding-left:12px;padding-top:12px;font-weight:bold;text-align:left;vertical-align:top;}
+	table.charge-list tbody td.first-ex {padding-top:20px;padding-left:20px;}
+	table.charge-list tbody td.subject {padding:20px 0 0 10px;text-align:left;}
+	table.charge-list tbody td .money {margin:0 2px 0 0;font-family:'Spoqa Han Sans', arial;font-size:16px;font-weight:400;color:#333;vertical-align:-2px;}
+	table.charge-list tbody td .won {font-size:15px;vertical-align:-1px;}
+	table.charge-list tbody td .more {vertical-align:-3px;}
+	table.charge-list tbody td.more-try {padding-top:23px;font-weight:bold;text-align:left;}
+		table.charge-list tbody td.first  + td.more-try {padding-top:13px;}
+	table.charge-list tbody td.more-try1 {padding-top:13px;padding-left:20px;font-weight:bold;text-align:left;}
+	table.charge-list tbody td.max .money,
+	table.charge-list tbody td.max .won {font-weight:bold;}
+	table.charge-list tbody td .button {margin:10px 0 0 0;}
+	table.charge-list tbody.roaming td.pfirst {padding:14px 0 20px 20px;line-height:21px;}
+	table.charge-list tbody tr.count td {background:#fbfbfb;}
+	table.charge-list tbody tr.count td.subject {font-weight:bold;}
+	table.charge-list tbody tr.count td.last .money {font-family:'Spoqa Han Sans';font-weight:700;color:#df2428;}
+	table.charge-list tbody tr.group td {border-top:1px solid #ddd;}
+	table.charge-list tbody td.noContents {padding: 35px 0 35px;color: #333;font-size: 13px;text-align: center;}
+	table.charge-list tfoot td {padding:15px 15px 18px 0;border-top:1px solid #ddd;font-size:15px;color:#333;text-align:right;/* background:#fbfbfb; */}
+	table.charge-list tfoot td.first {padding-left:12px;font-weight:bold;text-align:left;}
+	table.charge-list tfoot td .money {margin:0 2px 0 0;font-family:'Spoqa Han Sans', arial;font-size:16px;font-weight:700;color:#333;vertical-align:-1px;}
+	table.charge-list tfoot td.max .money,
+	table.charge-list tfoot td.max .won {font-weight:700;}
+	table.charge-list tfoot td.last .money {font-family:'Spoqa Han Sans';}
+	table.charge-list tfoot td .won {font-size:15px;}
+	table.charge-list tfoot tr.total td .won {font-size:17px;}
+	table.charge-list tfoot td .info {font-size:15px;font-weight:normal;color:#333;}
+	table.charge-list tfoot tr.total td {padding-top:25px;padding-bottom:25px;border-bottom:1px solid #ddd;background:#fff;}
+	table.charge-list tfoot tr.total td.first {font-size:19px;}
+	table.charge-list tfoot tr.total td.last .money {font-size:24px;color:#df2428;}
+	table.charge-list tfoot tr.stotal td {padding-top:25px;padding-bottom:25px;border-bottom:1px solid #ddd;background:#fff;}
+	table.charge-list tfoot tr.stotal td.first {font-size:17px;}
+	table.charge-list tfoot tr.stotal td.last .money {font-size:16px;font-weight:700;color:#df2428;}
+	table.charge-list tfoot tr.stotal td.price {font-size:23px;font-weight:700;color:#333;}
+	table.charge-list tfoot tr.stotal td.price strong {font-size:24px;font-weight:700;color:#df2428;}
+
+/* table 內 table */
+table.in-data-list {width:100%;border-collapse:separate;border-top:1px solid #666;/* border-left:1px solid #ddd;border-right:1px solid #ddd; */background:#fff;}
+	table.in-data-list thead th {padding:10px 0 13px;border-bottom:1px solid #ccc;line-height:19px;font-size:13px;/* background:url("../images/common/bg_th.gif") no-repeat 0 50%; */text-align:center;}
+	table.in-data-list thead th:first-child {background:none;}
+	table.in-data-list tbody td {padding:9px 15px 12px;border-bottom:1px solid #ddd;border-left:1px solid #eaeaea;line-height:23px;font-size:15px;text-align:center;color:#333;}
+	table.in-data-list tbody td:first-child {border-left:0;}
+
+/* 사용량조회 - 테이블 */
+table.ndata {position:relative;width:100%;margin:23px 0 0 0;border-top:1px solid #666;border-collapse:separate;}
+	table.ndata thead th {padding:12px 0 13px 0;border-bottom:1px solid #000;border-left:1px solid #eaeaea;/* background:url("../images/common/bg_th.gif") no-repeat 0 50%; */font-size:13px;line-height:18px;color:#333;}
+	table.ndata thead th:first-child {padding-left:0;border-left:0;background:none;text-align:left;}
+	table.ndata thead th.sta {padding-left:0;}
+	table.ndata thead.head th {border-bottom:0;}
+	table.ndata tbody th {padding:16px 0 0 0;font-size:15px;color:#333;}
+	table.ndata tbody td {padding:16px 0 0 0;font-size:15px;border-left:1px solid #eaeaea;color:#333;text-align:center;}
+	table.ndata tbody td.sta {border-left:0;font-weight:bold;color:#333;text-align:left;}
+	table.ndata tbody.board td {padding-bottom:17px;border-bottom:1px solid #ccc;}
+	table.ndata tbody.board tr:first-child td {border-top:1px solid #ccc;}
+	table.ndata tbody th.sta {padding-top:14px;padding-left:0;border-bottom:1px solid #ddd;font-weight:bold;color:#333;line-height:18px;text-align:left;vertical-align:top;}
+	table.ndata tbody th.first {padding-left:10px;border-left:1px solid #eaeaea;color:#333;text-align:left;font-weight:normal;}
+	table.ndata tbody tr.last th,
+	table.ndata tbody tr.last td {padding-bottom:17px;border-bottom:1px solid #ddd;}
+
+/* 즉시납부 */
+table.data-payment {width:100%;margin:15px 0 0 0;border-top:1px solid #666;border-bottom:1px solid #333;}
+	table.data-payment thead th {padding:20px 20px 21px 0;border-bottom:1px solid #ccc;font-size:15px;color:#333;text-align:right;}
+		table.data-payment thead th:first-child {padding-right:0;text-align:center;}
+		table.data-payment thead th.subject {padding-left:20px;padding-right:0;text-align:left;}
+	table.data-payment tfoot th {padding:20px 0 21px 45px;border-top:1px solid #ccc;font-size:15px;color:#333;}
+	table.data-payment tfoot td {padding-right:20px;font-size:15px;border-top:1px solid #ccc;text-align:right;}
+		table.data-payment tfoot td .money {font-family:'Spoqa Han Sans';font-weight:700;font-size:16px;vertical-align:-1px;}
+	table.data-payment tbody td {padding:22px 20px 0px 0;font-size:15px;color:#333;text-align:right;}
+	table.data-payment tbody tr.last td {padding-bottom:21px;}
+		table.data-payment tbody td:first-child {padding-right:0;text-align:center;}
+		table.data-payment tbody td.subject {padding-left:20px;padding-right:0;text-align:left;}
+		table.data-payment tbody td .money {font-family:'Spoqa Han Sans';font-weight:400;font-size:16px;vertical-align:-1px;}
+
+table.change-list {width:100%;margin:27px 0 0 0;border-top:1px solid #666;table-layout:fixed;}
+	table.change-list thead th {padding:13px 0 17px 0;border-bottom:1px solid #ccc;font-size:15px;line-height:24px;}
+	table.change-list tbody td {padding:11px 10px 13px 10px;border-left:1px solid #ccc;border-bottom:1px solid #ccc;font-size:15px;line-height:24px;color:#333;text-align:center;}
+		table.change-list tbody td:first-child {padding:20px;border-left:0;text-align:left;}
+		table.change-list tbody td .product-name {display:block;margin:7px 0 0 0;font-size:19px;line-height:24px;color:#333;}
+		table.change-list tbody td label {font-size:13px;vertical-align:middle}
+		table.change-list tbody td .compare {font-size:13px;vertical-align:0}
+		table.change-list tbody td .compare-selected {font-weight:bold;color:#df2428;text-decoration:underline;}
+		table.change-list tbody td .btn {margin:6px 0 0 0;}
+		table.change-list tbody td.price {font-family:'Spoqa Han Sans';font-size:16px;}
+		table.change-list tbody td.price .won {font-family:"맑은 고딕", Malgun Gothic, dotum, "돋움", arial, hevetica;font-size:15px;vertical-align:1px;}
+			table.change-list tbody td .btn .btn26-gray {background:#666;}

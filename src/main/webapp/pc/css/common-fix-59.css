@@ -1,0 +1,11 @@
+.ui-datepicker-trigger { margin:0 0 -3px 4px; }
+.ui-datepicker-month {
+	float: right;
+	height: 23px;
+	margin: 0 8px 0 0;
+}
+.ui-datepicker-year {
+	float: left;
+	height: 23px;
+	margin: 0 0 0 6px;
+}

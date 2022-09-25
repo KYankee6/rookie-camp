@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'NotoSans_Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NotoSansKR-Bold.otf') format('opentype')
+  	  ,url('fonts/NotoSansKR-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'NotoSans_Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NotoSansKR-Light.otf') format('opentype')
+  	  ,url('fonts/NotoSansKR-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'NotoSans_Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NotoSansKR-Medium.otf') format('opentype')
+  	  ,url('fonts/NotoSansKR-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'NotoSans_Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NotoSansKR-Regular.otf') format('opentype')
+  	  ,url('fonts/NotoSansKR-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family:"KTB";
+	font-weight:bold;
+	src:local("KTB"),
+			url("fonts/KTB.woff2") format('woff2'),
+			url("fonts/KTB.woff") format('woff'),
+			url("fonts/KTB.eot") format('embedded-opentype');
+}
+
+@font-face {
+	font-family:"KTL";
+	font-style:normal;
+	src:local("KTL"),
+			url("fonts/KTL.woff2") format('woff2'),
+			url("fonts/KTL.woff") format('woff'),
+			url("fonts/KTL.eot") format('embedded-opentype');
+}
+
+/*
+@font-face {
+  font-family: 'NotoSans_';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/NotoSansCJKkr-DemiLight.otf') format('opentype'),
+}
+@font-face {
+  font-family: 'NotoSans_';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/NotoSansCJKkr-Black.otf') format('opentype'),
+}
+@font-face {
+  font-family: 'NotoSans_';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/NotoSansCJKkr-Thin.otf') format('opentype'),
+}
+@font-face {
+  font-family: 'NotoSans_';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/NotoSansMonoCJKkr-Bold.otf') format('opentype'),
+}
+@font-face {
+  font-family: 'NotoSans_';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/NotoSansMonoCJKkr-Regular.otf') format('opentype'),
+}
+*/

@@ -1,0 +1,178 @@
+
+.pop-hashtag-select {
+	display:none;
+	font-size: 15px;
+}
+.pop-hashtag-select div, .pop-hashtag-select ul, .pop-hashtag-select h3 {
+	margin: 0;
+	padding: 0;
+}
+.pop-hashtag-select .top {
+	width:100%; 
+	height:120px;
+	/*border: 1px solid blue;*/
+	margin-bottom: 10px;
+}
+.pop-hashtag-select .top .search {
+	width:100%; 
+	height:50px; 
+	text-align:center; 
+	line-height:50px; 
+	/*border: 1px solid gray;*/
+}
+.pop-hashtag-select .top .search input {
+	width: 80%;
+	vertical-align: center;
+	height: 20px;
+}
+.pop-hashtag-select .top .search button {
+	line-height:20px;
+}
+.pop-hashtag-select .top .search-initl {
+	width:85%; 
+	height:60px; 
+	line-height:30px; 
+	/*border: 1px solid darkgray;*/
+	margin: 0 auto;
+	font-size: 15px;
+	letter-spacing: 4px;
+}
+.pop-hashtag-select .top .search-initl .title {
+	font-size: 18px;
+	font-weight: bold;
+}
+.pop-hashtag-select .top .search-initl a {
+    font-size: 15px;
+	text-decoration: none;
+	font-weight: normal;
+	display: inline-block;
+	width: 11px;
+}
+.pop-hashtag-select .top .search-initl a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+.pop-hashtag-select .top .search-initl a.on {
+	text-decoration: none;
+	font-weight: bold;
+	color: #13c;
+	font-size: 16px;
+}
+.pop-hashtag-select .top .search-initl a.on:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #13c;
+}
+
+.pop-hashtag-select .wrap-center {
+	width:100%; 
+	height:230px;
+	position: relative;
+	/*border: 1px solid blue;*/
+}
+.pop-hashtag-select .wrap-center .center-title  {
+	width: 90%;
+	margin: -5px auto 5px;;
+}
+.pop-hashtag-select .wrap-center .center-title h3 {
+	float: left;
+	margin: 0;
+}
+.pop-hashtag-select .wrap-center .center-title p {
+	float: right;
+	margin: 0;
+	font-size: 15px;
+	font-weight: bold;
+}
+.pop-hashtag-select .wrap-center .center-title::after {
+	content: '';
+	display: block;
+	clear: both;	
+}
+.pop-hashtag-select .wrap-center .result {
+	/*border: 1px solid green;*/
+	width: 88%;
+	height: 170px;
+	margin: 0 auto 10px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+.pop-hashtag-select .wrap-center .loading-img {
+	position: absolute;
+	text-align: center;
+	top: 120px;
+	left: 300px;
+	font-size: 12px;
+	display: none;
+}
+.pop-hashtag-select .wrap-center .result a {
+	font-size: 12px;
+	display: inline-block;
+	margin: 3px 10px 3px 0;
+	text-decoration: none;
+}
+.pop-hashtag-select .wrap-center .result a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+.pop-hashtag-select .wrap-center .result a.on {
+	color: #15e;
+}
+
+
+.pop-hashtag-select .bottom {
+	width: 100%; 
+	height: 150px;
+	/*border: 1px solid blue;*/
+}
+
+.pop-hashtag-select .bottom .bottom-wrap {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 12px;
+}
+
+.pop-hashtag-select .bottom .bottom-wrap p {
+	margin: 0 0 5px 0;
+	padding: 0;
+	color: #000;
+	font-weight: bold;
+}
+.pop-hashtag-select .bottom .bottom-wrap .hashtag-select, .pop-hashtag-select .bottom .bottom-wrap input {
+	width: 99%;
+	height: 20px;
+	padding: 4px 4px 1px 5px;
+	border: 1px solid #ddd;
+	margin: 0 0 5px 0;
+	color: #777;
+}
+.pop-hashtag-select .bottom .bottom-wrap .hashtag-select {
+	height: 40px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.pop-hashtag-select .bottom .bottom-wrap hr {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #333;
+	margin: 10px 0 10px;
+}
+.pop-hashtag-select .bottom .bottom-wrap button {
+	width: 150px;
+	height: 30px;
+	font-size: 15px;
+	border-radius: 5px;
+	background: #003;
+	color: #fff;
+	border: 0;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 2px;
+}
+.pop-hashtag-select .bottom .bottom-wrap button:hover {
+	background: #027;
+}
