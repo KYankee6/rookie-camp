@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: 82105
+Build-Jdk: AdoptOpenJDK (HotSpot) version 11.0.10
+Implementation-Title: thirdproject
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.kt.edu
+Main-Class: ${start-class}
+
