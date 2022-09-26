@@ -411,7 +411,7 @@ $(document).ready(function(){
             iScrollInit,
             iScrollinstance,
             iScrollReset,
-            url = location.href.split("kt.com/")[1].split(".")[0],
+           url = location.href.split("211-253-37-151.nip.io:40003/")[1].split(".")[0],
             mypage = "",
             i = 0,
             timeout,
