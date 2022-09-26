@@ -14,8 +14,8 @@ ARG port
 EXPOSE ${port}
 
 FROM eclipse-temurin:17.0.2_8-jre-alpine
+COPY --from=MAVEN_BUILD  /build/target/*.war app.war
 
-COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
 
 ENV TZ Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -26,4 +26,7 @@ ENV JAVA_OPTS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
 ENV JAVA_OPTS="${JAVA_OPTS} -XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1SummarizeConcMark -XX:InitiatingHeapOccupancyPercent=35 -XX:G1ConcRefinementThreads=20"
 
 #ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar  app.jar "]
-ENTRYPOINT ["sh", "-c", "java -jar  app.jar "]
+
+#ENTRYPOINT ["sh", "-c", "java -jar  app.jar "]
+
+ENTRYPOINT ["java", "-jar","app.war"]
