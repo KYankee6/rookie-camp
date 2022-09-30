@@ -35,6 +35,7 @@ public class EmployeeController {
 	}
 
 
+	@GetMapping("/product/{serv_name}/")
 
 	// create employee rest api
 	@PostMapping("/employees")
