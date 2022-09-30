@@ -17345,6 +17345,27 @@ a.footer-logo:hover {
   z-index: -1;
 }
 
+.category-inner-banner {
+  background: url(../images/category_banner.jpg) no-repeat top;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.category-inner-banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(23 22 22 / 49%);
+  z-index: -1;
+}
+
 .w3l-breadcrumb {
   display: block;
   text-align: center;
