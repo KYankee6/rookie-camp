@@ -16259,7 +16259,7 @@ h3.video-title {
 
 /* bg with text section */
 .w3l-covers-14 {
-  background: url("../images/banner1.jpg") no-repeat center fixed;
+  background: url("../images/main_back.png") no-repeat center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -16287,7 +16287,7 @@ h3.video-title {
 }
 
 .w3l-covers-14 .covers14-text h4 {
-  font-size: 60px;
+  font-size: 30px;
   line-height: 70px;
   color: #fff;
   font-weight: 600;
@@ -16295,8 +16295,24 @@ h3.video-title {
 
 .covers14-text p {
   color: #f3f3f3;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 0px;
+}
+
+.askbtn{
+  display: inline-block;
+  /* width: 180px; */
+  /* height: 50px; */
+  /* margin-top: 24px; */
+  padding-top: 14px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: 'NotoSans_Regular';
+  /* --quote-text-color: white; */
+  --font-color: white;
+  padding: 0.375rem 0.75rem;
+  background-color: #000;
 }
 
 @media all and (max-width: 991px) {
@@ -16331,12 +16347,16 @@ h3.video-title {
 
 /* blog section */
 span.label-blue {
-  color: var(--secondary-color);
+  color: #34558b;
   display: inline-block;
-  background: rgb(253 97 74 / 7%);
+  background: white;
   padding: 5px 20px;
-  border-radius: var(--border-radius-full);
+  border-radius: var(--border-radius-full) solid;
   font-weight: 600;
+  border-style: solid;
+  border-block-color: #34558b;
+  /* border-radius: 30px; */
+  border-radius: 15px;
 }
 
 a.blog-desc {
