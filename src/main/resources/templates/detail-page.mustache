@@ -21,28 +21,28 @@
 </head>
 
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--header-->
     <header id="site-header" class="fixed-top">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg stroke">
+            <nav class="template-navbar template-navbar-expand-lg stroke">
                 <h1>
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <a class="template-navbar-brand d-flex align-items-center" href="index.html">
                         Happy Events</a>
                 </h1>
                 <!-- if logo is image enable this
-    <a class="navbar-brand" href="#index.html">
+    <a class="template-navbar-brand" href="#index.html">
         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
     </a> -->
-                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                <button class="template-navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#template-navbarTogglerDemo02" aria-controls="template-navbarTogglerDemo02"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="template-navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="template-navbar-toggler-icon fa icon-close fa-times"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav ml-lg-auto">
+                <div class="collapse template-navbar-collapse" id="template-navbarTogglerDemo02">
+                    <ul class="template-navbar-nav ml-lg-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -53,11 +53,11 @@
                             <a class="nav-link" href="events.html">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="template-navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Pages <span class="fa fa-angle-down"></span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu" aria-labelledby="template-navbarDropdown">
                                 <a class="dropdown-item" href="services.html">Services</a>
                                 <a class="dropdown-item" href="single.html">Single Page</a>
                                 <a class="dropdown-item" href="error.html">404 Page</a>
@@ -108,6 +108,8 @@
                 <img src="../images/AI_BD_006_tban_pc.png">
                 <div id="Text8">
                     <h1 id='pd-name'>잘나가게</h1>
+                    <h2 id="pd-desc">빅데이터를 활용해 유용한 상권 정보와 이에 따른 영업 TIP을<br>
+                        보내주는 예비창업자/소상공인 대상 문자 알림 서비스</h2>
                 </div>
             </div>
         </div>
@@ -118,19 +120,11 @@
         <div class="sub_tab_fix j_pc_scroll_fix_cont">
             <div class="inner">
                 <ul>
-                    <li class="on"><a href="javascript:void(0)" data-txt="서비스소개">서비스소개</a></li>
-                    <li><a href="javascript:void(0)" data-txt="기대효과">기대효과</a></li>
-                    <li><a href="javascript:void(0)" data-txt="요금안내">요금안내</a></li>
-                    <li data-wrap-insight=""><a href="javascript:void(0)" data-txt="DX Story">DX Story</a></li>
-                    <li data-wrap-userguide=""><a href="javascript:void(0)" data-txt="사용자 가이드">사용자 가이드</a></li>
-                    <li><a href="javascript:void(0)" data-txt="추천상품">추천상품</a></li>
+                    <li class="on"><a href="#section1" data-txt="서비스소개">서비스소개</a></li>
+                    <li><a href="#section2" data-txt="기대효과">기대효과</a></li>
+                    <li><a href="#section3" data-txt="요금안내">요금안내</a></li>
+                    <li data-wrap-userguide=""><a href="#section4" data-txt="사용자 가이드">사용자 가이드</a></li>
                 </ul>
-                <aside class="aside">
-                    <ul>
-                            <li class="consulting"><a href="javascript:void(0)" onclick="floating_pop_open('consulting')"><span class="hidden">컨설팅신청</span></a></li>
-                        <li class="share"><a href="#" class="btn_share type2"><span class="hidden">공유</span></a></li>
-                    </ul>
-                </aside>
             </div>
         </div>
     </div>
@@ -144,7 +138,8 @@
                     유용한 데이터를 주 1회 이상 문자 알림 서비스로 제공합니다.</h3>
             </div>
 
-            <section class="section_detail mt100">
+            <!-- 서비스 구성 + 활용 방안 -->
+            <section id="section1" class="section_detail mt100">
                 <div class="mid">
                     <div class="cont">
                         <div class="diagram">
@@ -169,128 +164,219 @@
                 </div>
             </section>
 
-            <!--<section class="section_effect mt88" style="margin-top: 100px;">
-                <div class="ex_effect_top bg_pagecode" style="width:100%">
-                    <div class="inner">
-                        <h2>기대효과</h2>
-                        <p>내 가게 주변에 대한 정보를 습득하고, 가게 운영에 참고할 수 있습니다.</p>
-                        <ul>
-                            <li>내 가게 실제 상권 확인하기</li>
-                            <li>내  가게 주변 동종 업종 점포의 매출 분석</li>
-                        </ul>
-                        <ul>
-                            <li>내 가게 주변 유동인구 정보</li>
-                            <li>내 가게 주변 경쟁 환경</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="ex_effect_info">
-                    <div class="mid">
-                        <ul class="effect_list case3">
-                            <li>
-                                <dl>
-                                    <dt><span>실제 상권 영역 확인</span></dt>
-                                    <dd>구역 기준이 아닌, 점포마다 달라지는 실제 상권 영역을 보여줍니다. </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt><span>빅데이터가 제공하는 상권 정보</span></dt>
-                                    <dd>내 가게 주변 유동인구, 매출 분석, 경쟁 환경 분석 등의 정보를 제공합니다.</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt><span>맞춤형 영업 TIP</span></dt>
-                                    <dd>내 가게에 맞는 영업 TIP으로 가게 운영에 참고해 보세요.</dd>
-                                </dl>
-                            </li>		
-                        </ul>
-                    </div>
-                </div>
-            </section>-->
-            <!--<section class="section_fare mt100">
+            <!-- 기대효과 -->
+            <section id="section2" class="section_detail mt100">
                 <div class="mid">
-                    <div class="tit">
-                        <h2 data-txt="요금안내">요금안내</h2>
-                    </div>
-                    <div class="cont mt33">
-                        <span class="desc">※ VAT 별도</span>
-                        <table class="tbl_list">
-                            <caption>서비스 구분,서비스 내용,월이용료 으로 구성된 테이블</caption>
-                            <colgroup>
-                                <col width="30%">
-                                <col width="40%">
-                                <col width="30%">
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th>서비스 구분</th>
-                                <th>서비스 내용</th>
-                                <th>월이용료</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="td_thead">기본서비스</td>
-                                <td>유동인구, 매출분석, 경쟁분석, 배달분석, 트렌드/이슈</td>
-                                <td>무료</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <section class="section_insight" data-wrap-insight="">
-                <div class="mid">
-                    <div class="tit">
-                        <h2 data-txt="DX Story">DX Story</h2>
-                    </div>
                     <div class="cont">
-                        <div class="bnr_list more_list j_bnr_list">
-                            <ul>
-                                
+                        <div class="diagram">
+                            <h2 style="margin-top:100px;"><strong class="tit_left">기대효과</strong></h2>
+                            <ul class="list_dot_big mt20">
+                                <li>내 가게 주변에 대한 정보를 습득하고, 가게 운영에 참고할 수 있습니다.</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section_library" data-wrap-userguide="">
-                <div class="mid">
-                    <div class="tit">
-                        <h2 data-txt="사용자 가이드">사용자 가이드</h2>
-                        <p class="tit_desc">다양한 문제 해결을 KT가 도와드립니다.</p>
-                    </div>
-                    <div class="cont" data-wrap-library="">
-                        
-                    </div>
-                    <div data-wrap-faq="">
-                        <div class="cont">
-                            <div class="faq_list more_list">
-                                <ul>
-                                    
-                                </ul>
+                            <div class="content-sec-11">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="services-single d-flex p-sm-5 p-4">
+                                            <div class="service-icon mr-sm-4 mr-3">
+                                                <img src="assets/images/s3.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="services-content">
+                                                <h4><strong>내 가게 실제 상권 확인하기</strong></h4>
+                                                <p>구역 기준이 아닌, 점포마다 달라지는<br>
+                                                    실제 상권 영역을 보여줍니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="services-single d-flex p-sm-5 p-4">
+                                            <div class="service-icon mr-sm-4 mr-3">
+                                                <img src="assets/images/s1.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="services-content">
+                                                <h4><strong>내 가게 주변 유동인구 정보</strong></h4>
+                                                <p>내 가게 주변 유동인구를 분석하여<br>
+                                                    효율적인 가게 운영을 도와줍니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="services-single d-flex p-sm-5 p-4 mb-lg-0">
+                                            <div class="service-icon mr-sm-4 mr-3">
+                                                <img src="assets/images/s2.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="services-content">
+                                                <h4><strong>빅데이터가 제공하는 주변 상권 정보</strong></h4>
+                                                <p>내 가게 주변 동종 업종 점포의 매출 분석,<br>
+                                                    경쟁 환경 분석 등의 정보를 제공합니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="services-single d-flex p-sm-5 p-4 mb-0">
+                                            <div class="service-icon mr-sm-4 mr-3">
+                                                <img src="assets/images/s4.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="services-content">
+                                                <h4><strong>맞춤형 영업 TIP</strong></h4>
+                                                <p>내 가게에 맞는 영업 TIP을<br> 가게 운영에 참고해 보세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="btn">
-                            <a href="javascript:void(0)" class="btn_more j_btn_more">전체보기</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 요금안내 -->
+            <section id="section3" class="section_detail mt100" style="margin-top:100px">
+                <div class="mid">
+                    <div class="cont">
+                        <div class="diagram">
+                            <h2><strong class="tit_left">요금안내</strong></h2>
+                            <table class="table table-striped" style="margin-top:30px; text-align:center">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">서비스 구분</th>
+                                        <th style="text-align: center;">서비스 내용</th>
+                                        <th style="text-align: center;">월이용료</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>기본 서비스</td>
+                                        <td>유동인구, 매출분석, 경쟁분석, 배달분석, 트렌드/이슈</td>
+                                        <td>무료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
+
+            <!-- FAQ section -->
+            <section id="section4" class="section_detail mt100" style="margin-top:100px">
+                <div class="mid">
+                    <div class="cont">
+                        <div class="diagram">
+                            <h2><strong class="tit_left">사용자 가이드</strong></h2>
+                            <div class="card-body">
+                                <div class="mt-4">
+                                    <div class="accordion" id="accordion" role="tablist">
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="heading-1">
+                                                <h6 class="mb-0">
+                                                    <a data-toggle="collapse" href="#collapse-1" aria-expanded="false"
+                                                        aria-controls="collapse-1" data-abc="true" class="collapsed">
+                                                        가맹점주나 직영점 책임자별이 아닌 프랜차이즈 본사 차원에서 일괄 가입하고 싶습니다.
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse-1" class="collapse" role="tabpanel"
+                                                aria-labelledby="heading-1" data-parent="#accordion" style="">
+                                                <div class="card-body">
+                                                    <p class="mb-0">잘나가게 서비스는 점포기반 서비스라, 가맹점은 가맹점별로 가입이 필요하고
+                                                        직영점이라고 하더라도 개별 직영점 점포별로 홈페이지에서 직접 가입을 해야 합니다.
+                                                        회원가입 시 점포등록은 가입을 전제로 하므로,
+                                                        직영점 책임자가 전출이나 퇴사를 하는 경우라면 새로운 책임자가 다시 가입하는 것이 필요합니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="heading-2">
+                                                <h6 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapse-2"
+                                                        aria-expanded="false" aria-controls="collapse-2"
+                                                        data-abc="true">
+                                                        메뉴별로 원치 않는 정보는 발송 받지 않도록 설정할 수 있나요?
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse-2" class="collapse" role="tabpanel"
+                                                aria-labelledby="heading-2" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>현재는 해당 기능이 없습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="heading-3">
+                                                <h6 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapse-3"
+                                                        aria-expanded="false" aria-controls="collapse-3"
+                                                        data-abc="true">
+                                                        트렌드분석에 활용된 SNS는 어떤 걸 말하나요?
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse-3" class="collapse" role="tabpanel"
+                                                aria-labelledby="heading-3" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="mb-0">페이스북과 인스타그램이며,
+                                                        업종별 프랜차이즈에 대한 월간 언급량을 기준으로 정보가 제공됩니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="heading-4">
+                                                <h6 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapse-4"
+                                                        aria-expanded="false" aria-controls="collapse-4"
+                                                        data-abc="true">
+                                                        서비스에 제공되는 업종 기준은 무엇인가요?
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse-4" class="collapse" role="tabpanel"
+                                                aria-labelledby="heading-4" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="mb-0">공정거래위원회에 등록된 43개 업종에 대해 제공 합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="heading-5">
+                                                <h6 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapse-5"
+                                                        aria-expanded="false" aria-controls="collapse-5"
+                                                        data-abc="true">
+                                                        사업장 등록을 해도 내 상권 정보가 보이지 않는데 왜 그런가요?
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse-5" class="collapse" role="tabpanel"
+                                                aria-labelledby="heading-5" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="mb-0">사장님 가게의 유동인구 데이터가 아직 수집되지 않았습니다.
+                                                        1:1 문의 게시판에 남겨 주시면 빠른 시간 내 정보를 제공해 드릴 수 있도록 하겠습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="label-blue" style="margin-left:42%"><a href="about.html">전체 보기</a></span>
+            </section>
         </div>
     </div>
 
+    <!-- 가입하기 버튼 -->
+    <a href="https://jalnagage.kt.co.kr/home/" class="label-blue-button">가입하기</a>
+
 
     <!-- bg with text section -->
-    <section class="w3l-covers-14 position-relative">
+    <section class="w3l-covers-14 position-relative" style="margin-bottom:100px">
         <div class="covers14-block py-5">
             <div class="container py-md-5 py-4">
-                <!-- fireworks effect -->
-                <div class="pyro">
-                    <div class="before"></div>
-                    <div class="after"></div>
-                </div>
                 <div class="covers14-text text-center mx-auto py-lg-5" style="max-width:950px">
                     <h4>비즈니스 솔루션 문의 및 상품 문의에 이르기까지 KT가 도와드립니다.</h4>
                     <p class="mt-3 sub-title">(기업 상담) 1588-0114</p>
@@ -300,346 +386,6 @@
         </div>
     </section>
     <!-- //bg with text section -->
-
-    <!-- services section -->
-    <section class="w3l-content-11-main position-relative">
-        <div class="content-design-11 py-5">
-            <div class="container py-md-5 py-4">
-                <h3 class="title-style text-center mb-md-5 mb-4">We Provide Best Services</h3>
-                <div class="content-sec-11">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="services-single d-flex p-sm-5 p-4">
-                                <div class="service-icon mr-sm-4 mr-3">
-                                    <img src="assets/images/s3.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="services-content">
-                                    <h5><a href="services.html">Awesome Design</a></h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                        porttitor vehicula nullam augue ipsum dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="services-single d-flex p-sm-5 p-4">
-                                <div class="service-icon mr-sm-4 mr-3">
-                                    <img src="assets/images/s1.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="services-content">
-                                    <h5><a href="services.html">Organised</a></h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                        porttitor vehicula nullam augue ipsum dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="services-single d-flex p-sm-5 p-4 mb-lg-0">
-                                <div class="service-icon mr-sm-4 mr-3">
-                                    <img src="assets/images/s2.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="services-content">
-                                    <h5><a href="services.html">We are the best</a></h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                        porttitor vehicula nullam augue ipsum dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="services-single d-flex p-sm-5 p-4 mb-0">
-                                <div class="service-icon mr-sm-4 mr-3">
-                                    <img src="assets/images/s4.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="services-content">
-                                    <h5><a href="services.html">Creativity</a></h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                        porttitor vehicula nullam augue ipsum dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-5 text-center">
-                        <a class="btn btn-style" href="services.html">Learn More Services</a>
-                    </div>
-                </div>
-            </div>
-            <!-- balloon animation -->
-            <div class="circle">
-
-            </div>
-            <!-- balloon animation -->
-            <div class="animation-2">
-
-            </div>
-        </div>
-    </section>
-    <!-- //services section -->
-
-    <!-- team sections -->
-    <section class="w3l-team-main" id="team">
-        <div class="team py-5">
-            <div class="container py-md-5 py-4">
-                <div class="waviy white-text text-center mb-sm-5 mb-4">
-                    <span style="--i:1">O</span>
-                    <span style="--i:2">u</span>
-                    <span style="--i:3">r</span>
-                    <span style="--i:4"></span>
-                    <span style="--i:5">T</span>
-                    <span style="--i:6">e</span>
-                    <span style="--i:7">a</span>
-                    <span style="--i:8">m</span>
-                    <span style="--i:9"></span>
-                    <span style="--i:10">M</span>
-                    <span style="--i:11">e</span>
-                    <span style="--i:12">m</span>
-                    <span style="--i:13">b</span>
-                    <span style="--i:14">e</span>
-                    <span style="--i:15">r</span>
-                    <span style="--i:16">s</span>
-                </div>
-                <!-- fireworks effect -->
-                <div class="pyro">
-                    <div class="before"></div>
-                    <div class="after"></div>
-                </div>
-                <div class="row team-row mt-md-5 mt-4">
-                    <div class="col-lg-3 col-6 team-wrap">
-                        <div class="team-member text-center">
-                            <div class="team-img">
-                                <img src="assets/images/team1.jpg" alt="" class="radius-image">
-                            </div>
-                            <a href="#url" class="team-title">Lyn Victor</a>
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fa fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end team member -->
-                    <div class="col-lg-3 col-6 team-wrap">
-                        <div class="team-member text-center">
-                            <div class="team-img">
-                                <img src="assets/images/team2.jpg" alt="" class="radius-image">
-                            </div>
-                            <a href="#url" class="team-title">Meyer Lson</a>
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fa fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end team member -->
-                    <div class="col-lg-3 col-6 team-wrap mt-lg-0 mt-5">
-                        <div class="team-member last text-center">
-                            <div class="team-img">
-                                <img src="assets/images/team3.jpg" alt="" class="radius-image">
-                            </div>
-                            <a href="#url" class="team-title">Lyn Meyer</a>
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fa fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end team member -->
-                    <div class="col-lg-3 col-6 team-wrap mt-lg-0 mt-5">
-                        <div class="team-member last text-center">
-                            <div class="team-img">
-                                <img src="assets/images/team4.jpg" alt="" class="radius-image">
-                            </div>
-                            <a href="#url" class="team-title">Sam Mills</a>
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fa fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end team member -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //team sections -->
-
-    <!-- testimonials -->
-    <section class="w3l-clients-1" id="testimonials">
-        <div class="cusrtomer-layout py-5">
-            <div class="container py-md-5 py-4">
-                <div class="waviy text-center mb-sm-5 mb-4">
-                    <span style="--i:1">W</span>
-                    <span style="--i:2">h</span>
-                    <span style="--i:3">a</span>
-                    <span style="--i:4">t</span>
-                    <span style="--i:5"></span>
-                    <span style="--i:6">P</span>
-                    <span style="--i:7">e</span>
-                    <span style="--i:8">o</span>
-                    <span style="--i:1">p</span>
-                    <span style="--i:2">l</span>
-                    <span style="--i:3">e</span>
-                    <span style="--i:4"></span>
-                    <span style="--i:5">S</span>
-                    <span style="--i:6">a</span>
-                    <span style="--i:7">y</span>
-                </div>
-                <div class="testimonial-row">
-                    <div id="owl-demo2" class="owl-two owl-carousel owl-theme mb-md-3 mb-sm-5 mb-4">
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                            est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                    </blockquote>
-                                    <div class="testi-des">
-                                        <a href="#url" class="testi-img">
-                                            <img src="assets/images/testi1.jpg" alt="" class="radius-image img-fluid">
-                                        </a>
-                                        <div class="peopl align-self">
-                                            <h3>Dennis wilson</h3>
-                                            <p class="identity">Customer </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                            est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                    </blockquote>
-                                    <div class="testi-des">
-                                        <a href="#url" class="testi-img">
-                                            <img src="assets/images/testi2.jpg" alt="" class="radius-image img-fluid">
-                                        </a>
-                                        <div class="peopl align-self">
-                                            <h3>Tommy sakura</h3>
-                                            <p class="identity">Customer </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                            est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                    </blockquote>
-                                    <div class="testi-des">
-                                        <a href="#url" class="testi-img">
-                                            <img src="assets/images/testi3.jpg" alt="" class="radius-image img-fluid">
-                                        </a>
-                                        <div class="peopl align-self">
-                                            <h3>Roy Linderson</h3>
-                                            <p class="identity">Customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                            laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                            facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                            voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                            est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                    </blockquote>
-                                    <div class="testi-des">
-                                        <a href="#url" class="testi-img">
-                                            <img src="assets/images/testi2.jpg" alt="" class="radius-image img-fluid">
-                                        </a>
-                                        <div class="peopl align-self">
-                                            <h3>Mike Thyson</h3>
-                                            <p class="identity">Customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //testimonials -->
-
-    <!-- call section -->
-    <section class="w3l-call-to-action-6">
-        <div class="call-sec-style py-5">
-            <div class="container py-md-4 py-3">
-                <div class="row align-items-center">
-                    <div class="col-md-5 col-float-lt">
-                        <h3 class="title-big">Register now !</h3>
-                        <p>Wanna Join in, please call us today</p>
-                    </div>
-                    <div class="col-md-7 float-rt text-md-right align-items-center mt-md-0 mt-4">
-                        <ul class="buttons">
-                            <li class="phone-sec"><span class="fa fa-volume-control-phone mr-1"
-                                    aria-hidden="true"></span>
-                                <a class="call-style-w3" href="tel:+1(23) 456 789 0000">+1(23) 456 789 0000</a>
-                            </li>
-                            <li class="green">Or</li>
-                            <li><a href="contact.html" class="btn btn-style">Get in touch</a> </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //call section -->
 
     <!-- footer -->
     <section class="w3l-footer-29-main">
@@ -682,6 +428,7 @@
         </div>
     </section>
     <!-- //footer -->
+
     <!-- copyright -->
     <section class="w3l-copyright">
         <div class="container">
@@ -703,6 +450,7 @@
 
     <!-- Js scripts -->
     <!-- move top -->
+    <a href="https://jalnagage.kt.co.kr/home/" id="signup" title="Sign up">가입<br>하기</a>
     <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fa fa-level-up" aria-hidden="true"></span>
     </button>
@@ -795,7 +543,7 @@
         });
 
         //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
+        $(".template-navbar-toggler").on("click", function () {
             $("header").toggleClass("active");
         });
         $(document).on("ready", function () {
@@ -811,15 +559,15 @@
     </script>
     <!-- //MENU-JS -->
 
-    <!-- disable body scroll which navbar is in active -->
+    <!-- disable body scroll which template-navbar is in active -->
     <script>
         $(function () {
-            $('.navbar-toggler').click(function () {
+            $('.template-navbar-toggler').click(function () {
                 $('body').toggleClass('noscroll');
             })
         });
     </script>
-    <!-- //disable body scroll which navbar is in active -->
+    <!-- //disable body scroll which template-navbar is in active -->
 
     <!--bootstrap-->
     <script src="assets/js/bootstrap.min.js"></script>
