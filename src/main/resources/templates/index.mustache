@@ -389,12 +389,13 @@
                 </div>
             </div>
             <div class="row">
+                {{ !anchor_tab }}
                 <div style="margin: 0 auto 30px">
                     <span class="label-blue" style="margin: 3px">전체</span>
                 {{#serviceypelist}}
                     <span class="label-blue" style="margin: 3px">{{name}}</span>
-                </div>
                 {{/serviceypelist}}
+                </div>
                 {{#productlist}}
                 <div class="col-lg-4 col-md-6 item">
                     <div class="card">
@@ -412,9 +413,11 @@
                             <span class="label-blue" style="margin: 3px;">공공/국방</span>
                         </div>
                     </div>
+                    <div>
+                        <p>{{taglist}}</p>
+                    </div>
                     {{/productlist}}
                 </div>
-
 
 
 

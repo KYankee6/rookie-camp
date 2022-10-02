@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "hashtag")
 public class Hashtag {
     @Id
@@ -27,10 +26,10 @@ public class Hashtag {
     @Column(name = "type")
     private String type;
 
-//    @Builder
-//    public Hashtag(int id,String name,String type){
-//        this.id=id;
-//        this.name=name;
-//        this.type=type;
-//    }
+    @Builder
+    public Hashtag(int id,String name,String type){
+        this.id=id;
+        this.name=name;
+        this.type=type;
+    }
 }
