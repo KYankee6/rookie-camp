@@ -370,95 +370,133 @@
             </div>
 
             <div class="row">
+                {{#productlist}}
                 <div class="col-lg-4 col-md-6 item">
                     <div class="card">
                         <div class="card-header p-0 position-relative">
                             <a href="single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_4.jpg"
-                                    alt="Card image cap">
+                                <p>{{img}}</p>
                             </a>
                         </div>
                         <div class="card-body blog-details">
-                            
-                            <a href="single.html" class="blog-desc">생활인구솔루션 (ALP)</a>
+
+                            <a href="single.html" class="blog-desc">{{name}}</a>
                             <br>
-                           
+
                             <span class="label-blue" style="margin: 3px;">부동산업</span>
                             <span class="label-blue" style="margin: 3px;">공공/국방</span>
-                            
+
                             <div class="author align-items-center mt-3 mb-1">
-                                <!-- <img src="assets/images/testi1.jpg" alt="" class="img-fluid rounded-circle" /> -->
-                                <!-- <ul class="blog-meta">
-                                    <li>
-                                        <a href="single.html">Isabella ava</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> Jan 28 2021 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                    </li>
-                                </ul> -->
+-
                             </div>
                         </div>
                     </div>
+                    {{/productlist}}
                 </div>
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative">
-                            <a href="single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_5.jpg"
-                                    alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="card-body blog-details">
-                             <a href="single.html" class="blog-desc">상권분석솔루션(GrIP)</a>
-                             <br>
-                            <span class="label-blue" style="margin: 3px;">요식업</span><span class="label-blue" style="margin:3px;">미용업</span><span class="label-blue" style="margin:3px;">서비스업</span><span class="label-blue" style="margin:3px;">판매업</span><span class="label-blue" style="margin:3px;">숙박업</span><span class="label-blue" style="margin:3px;">부동산업</span>
-                            
-                           
-                            <div class="author align-items-center mt-3 mb-1">
-                                <!-- <img src="assets/images/testi2.jpg" alt="" class="img-fluid rounded-circle" />
-                                <ul class="blog-meta">
-                                    <li>
-                                        <a href="single.html">Charlotte mia</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> Jan 13, 2021 </span>. <span
-                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                    </li>
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative">
-                            <a href="single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_6.jpg"
-                                    alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="card-body blog-details">
-                            <a href="single.html" class="blog-desc">잘나가게</a>
-                            <br>
-                           <span class="label-blue" style="margin: 3px;">소상공인</span>
-                           <span class="label-blue" style="margin: 3px;">요식업</span><span class="label-blue" style="margin:3px;">미용업</span><span class="label-blue" style="margin:3px;">서비스업</span><span class="label-blue" style="margin:3px;">판매업</span><span class="label-blue" style="margin:3px;">숙박업</span>
-                          
-                           <div class="author align-items-center mt-3 mb-1">
-                               <!-- <img src="assets/images/testi2.jpg" alt="" class="img-fluid rounded-circle" />
-                               <ul class="blog-meta">
-                                   <li>
-                                       <a href="single.html">Charlotte mia</a> </a>
-                                   </li>
-                                   <li class="meta-item blog-lesson">
-                                       <span class="meta-value"> Jan 13, 2021 </span>. <span
-                                           class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                   </li>
-                               </ul> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                <div class="col-lg-4 col-md-6 item">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-header p-0 position-relative">-->
+<!--                            <a href="single.html">-->
+<!--                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_4.jpg"-->
+<!--                                    alt="Card image cap">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="card-body blog-details">-->
+<!--                            -->
+<!--                            <a href="single.html" class="blog-desc">생활인구솔루션 (ALP)</a>-->
+<!--                            <br>-->
+<!--                           -->
+<!--                            <span class="label-blue" style="margin: 3px;">부동산업</span>-->
+<!--                            <span class="label-blue" style="margin: 3px;">공공/국방</span>-->
+<!--                            -->
+<!--                            <div class="author align-items-center mt-3 mb-1">-->
+<!--                                &lt;!&ndash; <img src="assets/images/testi1.jpg" alt="" class="img-fluid rounded-circle" /> &ndash;&gt;-->
+<!--                                &lt;!&ndash; <ul class="blog-meta">-->
+<!--                                    <li>-->
+<!--                                        <a href="single.html">Isabella ava</a> </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="meta-item blog-lesson">-->
+<!--                                        <span class="meta-value"> Jan 28 2021 </span>. <span-->
+<!--                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>-->
+<!--                                    </li>-->
+<!--                                </ul> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-5 mt-4">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-header p-0 position-relative">-->
+<!--                            <a href="single.html">-->
+<!--                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_5.jpg"-->
+<!--                                    alt="Card image cap">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="card-body blog-details">-->
+<!--                             <a href="single.html" class="blog-desc">상권분석솔루션(GrIP)</a>-->
+<!--                             <br>-->
+<!--                            <span class="label-blue" style="margin: 3px;">요식업</span><span class="label-blue" style="margin:3px;">미용업</span><span class="label-blue" style="margin:3px;">서비스업</span><span class="label-blue" style="margin:3px;">판매업</span><span class="label-blue" style="margin:3px;">숙박업</span><span class="label-blue" style="margin:3px;">부동산업</span>-->
+<!--                            -->
+<!--                           -->
+<!--                            <div class="author align-items-center mt-3 mb-1">-->
+<!--                                &lt;!&ndash; <img src="assets/images/testi2.jpg" alt="" class="img-fluid rounded-circle" />-->
+<!--                                <ul class="blog-meta">-->
+<!--                                    <li>-->
+<!--                                        <a href="single.html">Charlotte mia</a> </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="meta-item blog-lesson">-->
+<!--                                        <span class="meta-value"> Jan 13, 2021 </span>. <span-->
+<!--                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>-->
+<!--                                    </li>-->
+<!--                                </ul> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-header p-0 position-relative">-->
+<!--                            <a href="single.html">-->
+<!--                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_6.jpg"-->
+<!--                                    alt="Card image cap">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="card-body blog-details">-->
+<!--                            <a href="single.html" class="blog-desc">잘나가게</a>-->
+<!--                            <br>-->
+<!--                           <span class="label-blue" style="margin: 3px;">소상공인</span>-->
+<!--                           <span class="label-blue" style="margin: 3px;">요식업</span><span class="label-blue" style="margin:3px;">미용업</span><span class="label-blue" style="margin:3px;">서비스업</span><span class="label-blue" style="margin:3px;">판매업</span><span class="label-blue" style="margin:3px;">숙박업</span>-->
+<!--                          -->
+<!--                           <div class="author align-items-center mt-3 mb-1">-->
+<!--                               &lt;!&ndash; <img src="assets/images/testi2.jpg" alt="" class="img-fluid rounded-circle" />-->
+<!--                               <ul class="blog-meta">-->
+<!--                                   <li>-->
+<!--                                       <a href="single.html">Charlotte mia</a> </a>-->
+<!--                                   </li>-->
+<!--                                   <li class="meta-item blog-lesson">-->
+<!--                                       <span class="meta-value"> Jan 13, 2021 </span>. <span-->
+<!--                                           class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>-->
+<!--                                   </li>-->
+<!--                               </ul> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>

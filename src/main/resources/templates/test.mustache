@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+<table class = "table table-horizontal table-bordered">
+    <thead>
+    <tr>
+        <th>게시글번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>최종수정일</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#productlist}} <!--posts라는 List를 순회합니다.-->
+    <tr>
+        <td>{{id}}</td> <!--posts에 돌아가는 객체의 필드를 가져옴-->
+        <td>{{name}}</td>
+        <td>{{img}}</td>
+        <td>{{description}}</td>
+    </tr>
+    {{/productlist}}
+    </tbody>
+</table>
+
+</html>
