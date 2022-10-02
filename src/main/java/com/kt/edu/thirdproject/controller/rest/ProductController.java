@@ -1,8 +1,9 @@
-package com.kt.edu.thirdproject.controller;
+package com.kt.edu.thirdproject.controller.rest;
 import com.kt.edu.thirdproject.dto.ProductDto;
 //import com.kt.edu.thirdproject.model.Category;
 import com.kt.edu.thirdproject.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,16 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Controller
 public class ProductController {
+    @Autowired
     private final ProductService productService;
-//
-//    private final ProductRepository productRepository;
-
-//    //mysql 연동 테스트
-//    @GetMapping("mysql")
-//    public List<Product> findAllMember() {
-//        return productRepository.findAll();
-//    }
-
 
     @GetMapping("/")
     public String list(Model model){

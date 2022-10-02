@@ -1,4 +1,4 @@
-package com.kt.edu.thirdproject.controller;
+package com.kt.edu.thirdproject.controller.rest;
 
 import com.kt.edu.thirdproject.exception.ResourceNotFoundException;
 import com.kt.edu.thirdproject.model.Hashtag;
@@ -28,8 +28,8 @@ public class HashtagController {
 
 	// create hastag rest api
 	@PostMapping("/hashtag")
-	public Hashtag createHashtag(@RequestBody Hashtag hastag) {
-		return hashtagRepository.save(hastag);
+	public Hashtag createHashtag(@RequestBody Hashtag hashtag) {
+		return hashtagRepository.save(hashtag);
 	}
 	
 	// get hastag by id rest api

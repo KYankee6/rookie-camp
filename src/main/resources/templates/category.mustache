@@ -172,7 +172,7 @@
             <div style="margin: 0 auto 30px;" id="tabs">
                 <span class="label-blue" style="margin: 3px;">전체</span>
                 {{#categories}}
-                    <span class="label-blue" id="category-{{id}}" style="margin: 3px;">{{name}}ss</span>
+                    <span class="label-blue" id="category-{{id}}" style="margin: 3px;">{{name}}</span>
                 {{/categories}}
 
                 <!--                <span class="label-blue" style="margin: 3px;">AI/BigData</span>-->
@@ -674,12 +674,13 @@
             $('#tabs').on('click', function () {
                 _this.loadServices();
             });
+
         },
 
         loadServices: (id) => {
             $.ajax({
                 type: 'GET',
-                url: '/api/v1/hastag/' + id,
+                url: '/api/v1/hashtag/' + id,
                 dataType: 'json',
                 contentType: 'application/json; charset=utf-8',
                 data: JSON.stringify(data)

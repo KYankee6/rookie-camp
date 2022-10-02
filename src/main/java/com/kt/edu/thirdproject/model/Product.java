@@ -32,11 +32,11 @@ public class Product {
 
     @NotNull
     @Column(name = "serv_id")
-    private int serv_id;
+    private int servId;
 
     @NotNull
     @Column(name = "serv_sub_id")
-    private int serv_sub_id;
+    private int servSubId;
 
     @NotNull
     @Column(name = "taglist")
@@ -52,8 +52,8 @@ public class Product {
         this.name=name;
         this.description=description;
         this.img=img;
-        this.serv_id=serv_id;
-        this.serv_sub_id=serv_sub_id;
+        this.servId=serv_id;
+        this.servSubId=serv_sub_id;
         this.taglist=taglist;
         this.pd_cnt=pd_cnt;
 
