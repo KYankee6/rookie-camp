@@ -22,7 +22,6 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -105,9 +104,11 @@ jobs:
         run: echo "${{ steps.meta.outputs.tags }}" | xargs -I {} cosign sign {}@${{ steps.build-and-push.outputs.digest }}
 
   deploy:
+    if: github.event_name != 'pull_request' 
     needs: build
     name: Deploy
     runs-on: self-hosted
+    
     steps:
       - name: PrepareReg Names
         run: |
@@ -124,19 +125,5 @@ jobs:
         run: |
            docker ps -qa --filter "name=spring" | xargs -r docker stop | xargs -r docker rm 
            docker pull ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
-           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --restart always ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
+           docker run -d -p ${{secrets.PORT}}:8081 --name springboot-instance --network springboot-mysql-net --restart always ${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}
           
-#  cleanup:
-#    needs: [ build, deploy ]
-#    name: Clean up docker images
-#    runs-on: self-hosted
-#    steps:
-#      - name: PrepareReg Names
-#        run: |
-#          echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
-#          echo IMAGE_TAG=$(echo ${{ github.ref }} | tr '[:upper:]' '[:lower:]' | awk '{split($0,a,"/"); print a[3]}') >> $GITHUB_ENV
-#        
-#      -   name: Clean up docker images
-#          run:
-#            docker rmi $(docker images --filter "before=${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:${{ env.IMAGE_TAG }}" --filter=reference="${{env.REGISTRY}}/${{ env.IMAGE_REPOSITORY }}:*" -q)
-
