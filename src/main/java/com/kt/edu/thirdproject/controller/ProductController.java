@@ -1,7 +1,9 @@
 package com.kt.edu.thirdproject.controller;
 import com.kt.edu.thirdproject.dto.ProductDto;
 //import com.kt.edu.thirdproject.model.Category;
+import com.kt.edu.thirdproject.dto.ServicetypeDto;
 import com.kt.edu.thirdproject.service.ProductService;
+import com.kt.edu.thirdproject.service.ServicetypeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,7 @@ import java.util.List;
 @Controller
 public class ProductController {
     private final ProductService productService;
+    private final ServicetypeService servicetypeService;
 //
 //    private final ProductRepository productRepository;
 
@@ -27,6 +30,8 @@ public class ProductController {
     public String list(Model model){
         List<ProductDto> productDtoList=productService.getProductlist();
         model.addAttribute("productlist",productDtoList);
+        List<ServicetypeDto> servicetypeDtoList=servicetypeService.getServicetypelist();
+        model.addAttribute("serviceypelist",servicetypeDtoList);
         return "index";
     }
 

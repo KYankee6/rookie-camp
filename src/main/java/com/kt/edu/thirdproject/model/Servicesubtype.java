@@ -11,9 +11,8 @@ import javax.validation.constraints.NotNull;
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
-@Table(name = "service_type")
-public class Service_type {
+@Table(name = "service_subtype")
+public class Servicesubtype {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")  // 컬럼 지정
@@ -24,20 +23,15 @@ public class Service_type {
     private String name;
 
     @NotNull
-    @Column(name = "img")
-    private String img;
+    @Column(name = "serv_id")
+    private int serv_id;
 
-    @NotNull
-    @Column(name = "cnt")
-    private int cnt;
+    @Builder
+    public Servicesubtype(int id,String name,int serv_id){
+        this.id=id;
+        this.name=name;
+        this.serv_id=serv_id;
 
-//    @Builder
-//    public Service_type(int id,String name,String img,int cnt){
-//        this.id=id;
-//        this.name=name;
-//        this.img=img;
-//        this.cnt=cnt;
-//
-//    }
+    }
 
 }
