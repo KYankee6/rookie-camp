@@ -10,9 +10,8 @@ import com.kt.edu.thirdproject.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 @Service
 public class ProductService {
     private ProductRepository productRepository;
@@ -31,11 +30,32 @@ public class ProductService {
             String str=product.getTaglist();
             System.out.println("taglist"+str);
             String[] res = str.split("[,]", 0);
+
+            Map<String,Object> info=new HashMap();
+            List<Integer> entsize=new ArrayList<Integer>();
+            List<Integer> category=new ArrayList<Integer>();
+            List<Integer> serv_type=new ArrayList<Integer>();
             for(String myStr: res) {
-                System.out.println(myStr);
+                int tagnum=Integer.parseInt(myStr);
+//                System.out.println(tagnum);
+                if(tagnum>=1 && tagnum<=3){
+//                    System.out.println("규모"+tagnum);
+                    entsize.add(tagnum);
+                }
+                else if(tagnum>=4 && tagnum<=18){
+//                    System.out.println("업종"+tagnum);
+                    category.add(tagnum);
+                }
+                else{
+//                    System.out.println("서비스"+tagnum);
+                    serv_type.add(tagnum);
+                }
 
             }
-
+            info.put("규모",entsize);
+            info.put("업종",category);
+            info.put("서비스",serv_type);
+//            System.out.println("최종---------------------------"+info);
             ProductDto productDto = ProductDto.builder()
                     .id(product.getId())
                     .name(product.getName())
@@ -43,7 +63,7 @@ public class ProductService {
                     .description(product.getDescription())
                     .serv_id(product.getServ_id())
                     .serv_sub_id(product.getServ_sub_id())
-                    .taglist(Arrays.toString(res))
+                    .taglist(info.toString())
                     .pd_cnt(product.getPd_cnt())
                     .build();
             productDtoList.add(productDto);
