@@ -1,6 +1,6 @@
 package com.kt.edu.thirdproject.dto;
 
-import com.kt.edu.thirdproject.model.Servicetype;
+import com.kt.edu.thirdproject.model.ServiceType;
 import lombok.Builder;
 public class ServicetypeDto {
     private int id;
@@ -8,8 +8,8 @@ public class ServicetypeDto {
     private String img;
     private int cnt;
 
-    public Servicetype toEntity(){
-        Servicetype build= Servicetype.builder()
+    public ServiceType toEntity(){
+        ServiceType build= ServiceType.builder()
                 .id(id)
                 .name(name)
                 .img(img)

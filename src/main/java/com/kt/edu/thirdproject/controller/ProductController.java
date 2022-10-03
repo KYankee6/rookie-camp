@@ -33,7 +33,7 @@ public class ProductController {
     @GetMapping("/")
     public String list(Model model){
         List<ServicetypeDto> servicetypeDtoList=servicetypeService.getServicetypelist();
-        model.addAttribute("serviceypelist",servicetypeDtoList);
+        model.addAttribute("serviceTypeList",servicetypeDtoList);
         List<HashtagDto> hashtagDtoList=hashtagService.getHashtaglist();
         model.addAttribute("hashtaglist",hashtagDtoList);
         List<ProductDto> productDtoList=productService.getProductlist();

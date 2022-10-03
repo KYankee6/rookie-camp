@@ -1,6 +1,5 @@
 package com.kt.edu.thirdproject.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @NoArgsConstructor
 @Table(name = "service_type")
-public class Servicetype {
+public class ServiceType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")  // 컬럼 지정
@@ -31,7 +30,7 @@ public class Servicetype {
     private int cnt;
 
     @Builder
-    public Servicetype(int id, String name, String img, int cnt){
+    public ServiceType(int id, String name, String img, int cnt){
         this.id=id;
         this.name=name;
         this.img=img;

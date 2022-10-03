@@ -61,8 +61,8 @@ public class ProductService {
                     .name(product.getName())
                     .img(product.getImg())
                     .description(product.getDescription())
-                    .serv_id(product.getServ_id())
-                    .serv_sub_id(product.getServ_sub_id())
+                    .servId(product.getServId())
+                    .servSubId(product.getServSubId())
                     .taglist(info.toString())
                     .pd_cnt(product.getPd_cnt())
                     .build();
