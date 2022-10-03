@@ -9,6 +9,7 @@ import com.kt.edu.thirdproject.repository.HashtagRepository;
 import com.kt.edu.thirdproject.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
 import java.util.*;
@@ -36,6 +37,13 @@ public class ProductService {
 //        List<ProductDto> productDtoList = getProductDtos(products);
 //        return productDtoList;
     }
+//    @Transactional
+//    public List<ProductDto> findAllTagList() {
+//        ServiceTypeService.getServiceTypeList();
+//        return (List<ProductDto>) productRepository.findAll().stream()
+//                .filter(p->p.getServId()==1)
+//                .findFirst().get();
+//    }
 
 
     @Transactional

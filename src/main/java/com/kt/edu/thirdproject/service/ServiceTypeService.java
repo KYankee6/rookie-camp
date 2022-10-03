@@ -12,13 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 @Service
 public class ServiceTypeService {
-    private ServiceTypeRepository servicetypeRepository;
+    private static ServiceTypeRepository servicetypeRepository;
     public ServiceTypeService(ServiceTypeRepository servicetypeRepository){
         this.servicetypeRepository=servicetypeRepository;
     }
 
     @Transactional
-    public List<ServiceTypeDto> getServiceTypeList() {
+    public static List<ServiceTypeDto> getServiceTypeList() {
         List<ServiceType> servicetypes = servicetypeRepository.findAll();
         List<ServiceTypeDto> servicetypeDtoList = new ArrayList<>();
 

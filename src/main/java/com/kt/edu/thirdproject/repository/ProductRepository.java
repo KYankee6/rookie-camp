@@ -11,4 +11,7 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Integer> {
     @Query("select p from Product p where p.servId = ?1")
     List<Product> findByServId(int servId);
+//    @Query("select p from Product p where p.taglist in ?1")
+//    List<Product> findByTagList(String taglist);
+
 }
