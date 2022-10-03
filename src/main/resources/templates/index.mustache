@@ -387,39 +387,40 @@
                 </ul>
             </div>
         </div>
-        {{ !anchor_tab }}
-        <div style="margin: 0">
-            <span class="label-blue" style="margin: 3px">전체</span>
-            {{#serviceTypeList}}
-                <span class="label-blue" style="margin: 3px">{{name}}</span>
-            {{/serviceTypeList }}
+        <div class="row" id="crow">
+            <div style="margin: 0 auto 30px;" id="cartegories">
+                <span class="label-blue" style="margin: 3px" id="tabs">전체</span>
+                {{#serviceTypeList}}
+                    <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
+                          id="{{id}}">{{name}}</span>
+                {{/serviceTypeList}}
+            </div>
+
         </div>
-        <div class="row" style="margin-top:20px">
-            {{#productlist}}
-                <div class="col-lg-4 col-md-6 item" style="margin-top:30px">
-                    <div class="card">
+    </div>
+</div>
+<div id="card-target">
+    <div class="col-lg-4 col-md-6 item">
+        <div class="card">
+            <div class="card-header p-0 position-relative">
+                <a href="/product" data-role="cat1">
+                    <img src="" class="card-img-bottom d-block radius-image-full" data-role="cat2"
+                         alt="Card image cap"/>
+                </a>
+            </div>
 
-                        <div class="card-header p-0 position-relative">
-                            <a href="single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="/images/pd/{{img}}.png"
-                                     alt="product이미지">
-                            </a>
-                        </div>
-                        <div class="card-body blog-details">
-
-                            <a href="single.html" class="blog-desc">{{name}}</a>
-                            <br>
-                            {{#hashtaglist}}
-                                <span class="label-blue" style="margin: 3px;">{{name}}</span>
-                            {{/hashtaglist}}
-                            <!--                            <span class="label-blue" style="margin: 3px;">공공/국방</span>-->
-                        </div>
-                        <div>
-                            <p>{{taglist}}</p>
-                        </div>
-                    </div>
+            <div class="card-body blog-details">
+                <a href="/product" class="blog-desc" data-role="cat3"></a>
+                <br>
+                <div class="align-items-center mt-3 mb-1">
+                    <ul class="blog-meta">
+                        <li class="meta-item blog-lesson">
+                                    <span class="label-blue" style="margin: 3px;"
+                                          data-role="cat5"></span>
+                        </li>
+                    </ul>
                 </div>
-            {{/productlist}}
+            </div>
         </div>
     </div>
 </div>
@@ -445,536 +446,176 @@
 </section>
 <!-- //bg with text section -->
 
-<!-- services section -->
-<section class="w3l-content-11-main position-relative">
-    <div class="content-design-11 py-5">
-        <div class="container py-md-5 py-4">
-            <h3 class="title-style text-center mb-md-5 mb-4">We Provide Best Services</h3>
-            <div class="content-sec-11">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="services-single d-flex p-sm-5 p-4">
-                            <div class="service-icon mr-sm-4 mr-3">
-                                <img src="assets/images/s3.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="services-content">
-                                <h5><a href="services.html">Awesome Design</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                    porttitor vehicula nullam augue ipsum dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="services-single d-flex p-sm-5 p-4">
-                            <div class="service-icon mr-sm-4 mr-3">
-                                <img src="assets/images/s1.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="services-content">
-                                <h5><a href="services.html">Organised</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                    porttitor vehicula nullam augue ipsum dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="services-single d-flex p-sm-5 p-4 mb-lg-0">
-                            <div class="service-icon mr-sm-4 mr-3">
-                                <img src="assets/images/s2.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="services-content">
-                                <h5><a href="services.html">We are the best</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                    porttitor vehicula nullam augue ipsum dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="services-single d-flex p-sm-5 p-4 mb-0">
-                            <div class="service-icon mr-sm-4 mr-3">
-                                <img src="assets/images/s4.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="services-content">
-                                <h5><a href="services.html">Creativity</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
-                                    porttitor vehicula nullam augue ipsum dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-5 text-center">
-                    <a class="btn btn-style" href="services.html">Learn More Services</a>
-                </div>
-            </div>
-        </div>
-        <!-- balloon animation -->
-        <div class="circle">
 
-        </div>
-        <!-- balloon animation -->
-        <div class="animation-2">
-
-        </div>
-    </div>
-</section>
-<!-- //services section -->
-
-<!-- team sections -->
-<section class="w3l-team-main" id="team">
-    <div class="team py-5">
-        <div class="container py-md-5 py-4">
-            <div class="waviy white-text text-center mb-sm-5 mb-4">
-                <span style="--i:1">O</span>
-                <span style="--i:2">u</span>
-                <span style="--i:3">r</span>
-                <span style="--i:4"></span>
-                <span style="--i:5">T</span>
-                <span style="--i:6">e</span>
-                <span style="--i:7">a</span>
-                <span style="--i:8">m</span>
-                <span style="--i:9"></span>
-                <span style="--i:10">M</span>
-                <span style="--i:11">e</span>
-                <span style="--i:12">m</span>
-                <span style="--i:13">b</span>
-                <span style="--i:14">e</span>
-                <span style="--i:15">r</span>
-                <span style="--i:16">s</span>
-            </div>
-            <!-- fireworks effect -->
-            <div class="pyro">
-                <div class="before"></div>
-                <div class="after"></div>
-            </div>
-            <div class="row team-row mt-md-5 mt-4">
-                <div class="col-lg-3 col-6 team-wrap">
-                    <div class="team-member text-center">
-                        <div class="team-img">
-                            <img src="assets/images/team1.jpg" alt="" class="radius-image">
-                        </div>
-                        <a href="#url" class="team-title">Lyn Victor</a>
-                        <div class="team-details text-center">
-                            <div class="socials mt-20">
-                                <a href="#url">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-instagram"></span>
-                                </a>
-                            </div>
-                        </div>
+<!-- //bg with text section -->
+<!-- stats with quote section -->
+{{!
+<section class="w3-bottom-stats py-5">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="mx-auto" style="max-width: 960px">
+            <div class="row">
+                <div class="col-md-5 mb-md-0 mb-4">
+                    <div class="counter p-md-3 text-center">
+                        <div class="timer count-title count-number" data-to="6370" data-speed="1500"></div>
+                        <p class="count-text mt-2">happy People's</p>
                     </div>
                 </div>
-                <!-- end team member -->
-                <div class="col-lg-3 col-6 team-wrap">
-                    <div class="team-member text-center">
-                        <div class="team-img">
-                            <img src="assets/images/team2.jpg" alt="" class="radius-image">
-                        </div>
-                        <a href="#url" class="team-title">Meyer Lson</a>
-                        <div class="team-details text-center">
-                            <div class="socials mt-20">
-                                <a href="#url">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-instagram"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end team member -->
-                <div class="col-lg-3 col-6 team-wrap mt-lg-0 mt-5">
-                    <div class="team-member last text-center">
-                        <div class="team-img">
-                            <img src="assets/images/team3.jpg" alt="" class="radius-image">
-                        </div>
-                        <a href="#url" class="team-title">Lyn Meyer</a>
-                        <div class="team-details text-center">
-                            <div class="socials mt-20">
-                                <a href="#url">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-instagram"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end team member -->
-                <div class="col-lg-3 col-6 team-wrap mt-lg-0 mt-5">
-                    <div class="team-member last text-center">
-                        <div class="team-img">
-                            <img src="assets/images/team4.jpg" alt="" class="radius-image">
-                        </div>
-                        <a href="#url" class="team-title">Sam Mills</a>
-                        <div class="team-details text-center">
-                            <div class="socials mt-20">
-                                <a href="#url">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                                <a href="#url">
-                                    <span class="fa fa-instagram"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end team member -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //team sections -->
-
-<!-- testimonials -->
-<section class="w3l-clients-1" id="testimonials">
-    <div class="cusrtomer-layout py-5">
-        <div class="container py-md-5 py-4">
-            <div class="waviy text-center mb-sm-5 mb-4">
-                <span style="--i:1">W</span>
-                <span style="--i:2">h</span>
-                <span style="--i:3">a</span>
-                <span style="--i:4">t</span>
-                <span style="--i:5"></span>
-                <span style="--i:6">P</span>
-                <span style="--i:7">e</span>
-                <span style="--i:8">o</span>
-                <span style="--i:1">p</span>
-                <span style="--i:2">l</span>
-                <span style="--i:3">e</span>
-                <span style="--i:4"></span>
-                <span style="--i:5">S</span>
-                <span style="--i:6">a</span>
-                <span style="--i:7">y</span>
-            </div>
-            <div class="testimonial-row">
-                <div id="owl-demo2" class="owl-two owl-carousel owl-theme mb-md-3 mb-sm-5 mb-4">
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                        facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <a href="#url" class="testi-img">
-                                        <img src="assets/images/testi1.jpg" alt="" class="radius-image img-fluid">
-                                    </a>
-                                    <div class="peopl align-self">
-                                        <h3>Dennis wilson</h3>
-                                        <p class="identity">Customer </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                        facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <a href="#url" class="testi-img">
-                                        <img src="assets/images/testi2.jpg" alt="" class="radius-image img-fluid">
-                                    </a>
-                                    <div class="peopl align-self">
-                                        <h3>Tommy sakura</h3>
-                                        <p class="identity">Customer </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                        facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <a href="#url" class="testi-img">
-                                        <img src="assets/images/testi3.jpg" alt="" class="radius-image img-fluid">
-                                    </a>
-                                    <div class="peopl align-self">
-                                        <h3>Roy Linderson</h3>
-                                        <p class="identity">Customer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae
-                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis vitae
-                                        facere aperiam sequi optio lacinia id ipsum non velit, culpa.
-                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
-                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <a href="#url" class="testi-img">
-                                        <img src="assets/images/testi2.jpg" alt="" class="radius-image img-fluid">
-                                    </a>
-                                    <div class="peopl align-self">
-                                        <h3>Mike Thyson</h3>
-                                        <p class="identity">Customer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-7 pl-5">
+                    <blockquote class="mb-0">
+                        <p class="quote-main position-relative p-3">
+                            <q>Nibh eu consequat magna ipsum ac ex. Nulla iaculis
+                                tincidunt elit, tortor luctus sit amet.</q>
+                        </p>
+                        <a href="#" class="mt-1 pl-3 blockquote-footer">James Doe</a>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- //testimonials -->
-
-<!-- call section -->
-<section class="w3l-call-to-action-6">
-    <div class="call-sec-style py-5">
-        <div class="container py-md-4 py-3">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-float-lt">
-                    <h3 class="title-big">Register now !</h3>
-                    <p>Wanna Join in, please call us today</p>
-                </div>
-                <div class="col-md-7 float-rt text-md-right align-items-center mt-md-0 mt-4">
-                    <ul class="buttons">
-                        <li class="phone-sec"><span class="fa fa-volume-control-phone mr-1"
-                                                    aria-hidden="true"></span>
-                            <a class="call-style-w3" href="tel:+1(23) 456 789 0000">+1(23) 456 789 0000</a>
-                        </li>
-                        <li class="green">Or</li>
-                        <li><a href="contact.html" class="btn btn-style">Get in touch</a> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //call section -->
-
-<!-- footer -->
-<section class="w3l-footer-29-main">
-    <div class="footer-29 py-5">
-        <div class="container py-lg-4">
-            <div class="row footer-top-29">
-                <div class="col-lg-6 col-12 footer-list-29">
-                    <h2>
-                        <a class="footer-logo" href="index.html">
-                            Happy Events</a>
-                    </h2>
-                    <p class="sub-list-text mt-4 pt-lg-2">Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
-                        Suspendisse a pellentesque
-                        dui, non
-                        felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>
-                </div>
-                <div class="col-lg-3 col-sm-6 footer-list-29 mt-lg-0 mt-sm-5 mt-4 pt-sm-0 pt-2">
-                    <h6 class="footer-title-29">SUPPORT</h6>
-                    <ul>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms"> Terms of Service</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                        <li><a href="#support"> Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-sm-6 footer-contact-list mt-lg-0 mt-sm-5 mt-4 pt-sm-0 pt-2">
-                    <h6 class="footer-title-29">Contact Info </h6>
-                    <ul>
-                        <li class="d-flex align-items-center py-2"><i class="fa fa-map-marker mr-2"
-                                                                      aria-hidden="true"></i>10001, 5th Avenue, USA</li>
-                        <li class="d-flex align-items-center py-2"><i class="fa fa-phone mr-2"
-                                                                      aria-hidden="true"></i><a href="tel:+12 23456790">+12
-                            23456790</a></li>
-                        <li class="d-flex align-items-center py-2"><i class="fa fa-envelope mr-2"
-                                                                      aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //footer -->
-<!-- copyright -->
-<section class="w3l-copyright">
-    <div class="container">
-        <div class="row bottom-copies">
-            <p class="col-lg-8 copy-footer-29">© 2021 Happy Events. All rights reserved.</p>
-            <div class="col-lg-4 text-right">
-                <div class="main-social-footer-29">
-                    <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                    <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                    <a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
-                    <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                    <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+}}
+<!-- //stats with quote section -->
 <!-- //copyright -->
-
 <!-- Js scripts -->
 <!-- move top -->
 <button onclick="topFunction()" id="movetop" title="Go to top">
     <span class="fa fa-level-up" aria-hidden="true"></span>
 </button>
-
-<!-- 해시태그 처리 -->
 <script>
-
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
-
-<script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
 <!-- //move top -->
-
 <!-- common jquery plugin -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
 <!-- //common jquery plugin -->
-
-<!-- slider-js -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/modernizr-2.6.2.min.js"></script>
-<script src="assets/js/jquery.zoomslider.min.js"></script>
-<!-- //slider-js -->
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- owl carousel -->
-<script src="assets/js/owl.carousel.js"></script>
+<script src="js/owl.carousel.js"></script>
 <!-- script for tesimonials carousel slider -->
-<!-- //script for tesimonials carousel slider -->
-
-<!-- theme switch js (light and dark)-->
-<script src="assets/js/theme-change.js"></script>
 <script>
-        function autoType(elementClass, typingSpeed) {
-            var thhis = $(elementClass);
-            thhis.css({
-                "position": "relative",
-                "display": "inline-block"
-            });
-            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
-            thhis = thhis.find(".text-js");
-            var text = thhis.text().trim().split('');
-            var amntOfChars = text.length;
-            var newString = "";
-            thhis.text("|");
-            setTimeout(function () {
-                thhis.css("opacity", 1);
-                thhis.prev().removeAttr("style");
-                thhis.text("");
-                for (var i = 0; i < amntOfChars; i++) {
-                    (function (i, char) {
-                        setTimeout(function () {
-                            newString += char;
-                            thhis.text(newString);
-                        }, i * typingSpeed);
-                    })(i + 1, text[i]);
+    $(document).ready(function () {
+        $("#owl-demo2").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            responsiveClass: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: false,
+                    loop: false
                 }
-            }, 1500);
-        }
-
-        $(document).ready(function () {
-            // Now to start autoTyping just call the autoType function with the
-            // class of outer div
-            // The second paramter is the speed between each letter is typed.
-            autoType(".type-js", 200);
+            }
+        })
+    })
+</script>
+<!-- //script for tesimonials carousel slider -->
+<!-- counter for stats -->
+<script src="js/counter.js"></script>
+<!-- //counter for stats -->
+<!-- theme switch js (light and dark)-->
+<script src="js/theme-change.js"></script>
+<script>
+    function autoType(elementClass, typingSpeed) {
+        var thhis = $(elementClass);
+        thhis.css({
+            "position": "relative",
+            "display": "inline-block"
         });
-    </script>
+        thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+        thhis = thhis.find(".text-js");
+        var text = thhis.text().trim().split('');
+        var amntOfChars = text.length;
+        var newString = "";
+        thhis.text("|");
+        setTimeout(function () {
+            thhis.css("opacity", 1);
+            thhis.prev().removeAttr("style");
+            thhis.text("");
+            for (var i = 0; i < amntOfChars; i++) {
+                (function (i, char) {
+                    setTimeout(function () {
+                        newString += char;
+                        thhis.text(newString);
+                    }, i * typingSpeed);
+                })(i + 1, text[i]);
+            }
+        }, 1500);
+    }
+    $(document).ready(function () {
+        // Now to start autoTyping just call the autoType function with the
+        // class of outer div
+        // The second paramter is the speed between each letter is typed.
+        autoType(".type-js", 200);
+    });
+</script>
 <!-- //theme switch js (light and dark)-->
-
 <!-- MENU-JS -->
 <script>
-        $(window).on("scroll", function () {
-            var scroll = $(window).scrollTop();
-
-            if (scroll >= 80) {
-                $("#site-header").addClass("nav-fixed");
-            } else {
-                $("#site-header").removeClass("nav-fixed");
-            }
-        });
-
-        //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
-            $("header").toggleClass("active");
-        });
-        $(document).on("ready", function () {
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
             if ($(window).width() > 991) {
                 $("header").removeClass("active");
             }
-            $(window).on("resize", function () {
-                if ($(window).width() > 991) {
-                    $("header").removeClass("active");
-                }
-            });
         });
-    </script>
+    });
+</script>
 <!-- //MENU-JS -->
-
 <!-- disable body scroll which navbar is in active -->
 <script>
-        $(function () {
-            $('.navbar-toggler').click(function () {
-                $('body').toggleClass('noscroll');
-            })
-        });
-    </script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
 <!-- //disable body scroll which navbar is in active -->
-
 <!--bootstrap-->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <!-- //bootstrap-->
+</body>
+<!-- Mustache -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
 <!-- //Js scripts -->
+<!-- ajaxs -->
 <script>
     var template = $('#card-target');
     console.log(template);
@@ -994,6 +635,7 @@
                     $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
                     $(template).find('[data-role=cat3]').text(item.name);
                     $(template).find('[data-role=cat4]').text(item.description);
+                    $(template).find('[data-role=cat5]').text(item.taglist);
                     html += $(template).html();
                 })
                 $('#crow').append(html);
@@ -1023,6 +665,7 @@
                 $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
+                $(template).find('[data-role=cat5]').text(item.taglist);
                 // copy = template;
                 html += $(template).html();
             })
@@ -1033,6 +676,4 @@
         });
     });
 </script>
-</body>
-
 </html>
