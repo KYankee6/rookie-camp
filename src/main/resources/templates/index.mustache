@@ -396,9 +396,9 @@
                     <span class="label-blue" style="margin: 3px">{{name}}</span>
                 {{/serviceypelist}}
                 </div>
-                {{#productlist}}
                 <div class="col-lg-4 col-md-6 item">
                     <div class="card">
+                        {{#productlist}}
                         <div class="card-header p-0 position-relative">
                             <a href="single.html">
                                  <img class="card-img-bottom d-block radius-image-full" src="/images/pd/{{img}}.png" alt="product이미지" >
@@ -412,11 +412,13 @@
                             <span class="label-blue" style="margin: 3px;">부동산업</span>
                             <span class="label-blue" style="margin: 3px;">공공/국방</span>
                         </div>
+                        <div>
+                            <p>{{taglist}}</p>
+                        </div>
+                        {{/productlist}}
                     </div>
-                    <div>
-                        <p>{{taglist}}</p>
-                    </div>
-                    {{/productlist}}
+
+
                 </div>
 
 
