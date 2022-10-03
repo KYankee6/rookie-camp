@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -16,6 +15,9 @@
     <link rel="stylesheet" href="/css/style-liberty.css">
 
 </head>
+<script>
+
+</script>
 
 
 <body>
@@ -211,7 +213,7 @@
                                 </svg>
                             </div>
                             <!-- fireworks effect -->
-                           <div class="pyro pyro-2 position-relative">
+                            <div class="pyro pyro-2 position-relative">
                                 <div class="before"></div>
                                 <div class="after"></div>
                             </div>
@@ -344,7 +346,7 @@
     </section> -->
     <!-- //videos section -->
 
-   
+
 
     <!-- blog section -->
     <div class="blog-section py-5">
@@ -370,10 +372,7 @@
             </div>
             {{ !anchor_tab }}
             <div class="anchor_tab_wrap mb-md-5">
-                <div
-                        class="ui_spyscroll_holder"
-                        style="height: 70px; display: none"
-                ></div>
+                <div class="ui_spyscroll_holder" style="height: 70px; display: none"></div>
                 <div class="anchor_tab ui_tabNavi tab_wrap size_3">
                     <ul>
                         <li class="ui_tab_nav tabs on">
@@ -388,20 +387,22 @@
                     </ul>
                 </div>
             </div>
-            <div class="row">
-                {{ !anchor_tab }}
-                <div style="margin: 0 auto 30px">
-                    <span class="label-blue" style="margin: 3px">전체</span>
+            {{ !anchor_tab }}
+            <div style="margin: 0">
+                <span class="label-blue" style="margin: 3px">전체</span>
                 {{#serviceypelist}}
-                    <span class="label-blue" style="margin: 3px">{{name}}</span>
-                {{/serviceypelist}}
-                </div>
-                <div class="col-lg-4 col-md-6 item">
+                <span class="label-blue" style="margin: 3px">{{name}}</span>
+                {{/serviceypelist }}
+            </div>
+            <div class="row" style="margin-top:20px">
+                {{#productlist}}
+                <div class="col-lg-4 col-md-6 item" style="margin-top:30px">
                     <div class="card">
-                        {{#productlist}}
+                        
                         <div class="card-header p-0 position-relative">
                             <a href="single.html">
-                                 <img class="card-img-bottom d-block radius-image-full" src="/images/pd/{{img}}.png" alt="product이미지" >
+                                <img class="card-img-bottom d-block radius-image-full" src="/images/pd/{{img}}.png"
+                                    alt="product이미지">
                             </a>
                         </div>
                         <div class="card-body blog-details">
@@ -411,125 +412,20 @@
                             {{#hashtaglist}}
                             <span class="label-blue" style="margin: 3px;">{{name}}</span>
                             {{/hashtaglist}}
-<!--                            <span class="label-blue" style="margin: 3px;">공공/국방</span>-->
+                            <!--                            <span class="label-blue" style="margin: 3px;">공공/국방</span>-->
                         </div>
                         <div>
                             <p>{{taglist}}</p>
                         </div>
-                        {{/productlist}}
                     </div>
-
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--                <div class="col-lg-4 col-md-6 item">-->
-<!--                    <div class="card">-->
-<!--                        <div class="card-header p-0 position-relative">-->
-<!--                            <a href="single.html">-->
-<!--                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_4.jpg"-->
-<!--                                    alt="Card image cap">-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="card-body blog-details">-->
-<!--                            -->
-<!--                            <a href="single.html" class="blog-desc">생활인구솔루션 (ALP)</a>-->
-<!--                            <br>-->
-<!--                           -->
-<!--                            <span class="label-blue" style="margin: 3px;">부동산업</span>-->
-<!--                            <span class="label-blue" style="margin: 3px;">공공/국방</span>-->
-<!--                            -->
-<!--                            <div class="author align-items-center mt-3 mb-1">-->
-<!--                                &lt;!&ndash; <img src="assets/images/testi1.jpg" alt="" class="img-fluid rounded-circle" /> &ndash;&gt;-->
-<!--                                &lt;!&ndash; <ul class="blog-meta">-->
-<!--                                    <li>-->
-<!--                                        <a href="single.html">Isabella ava</a> </a>-->
-<!--                                    </li>-->
-<!--                                    <li class="meta-item blog-lesson">-->
-<!--                                        <span class="meta-value"> Jan 28 2021 </span>. <span-->
-<!--                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>-->
-<!--                                    </li>-->
-<!--                                </ul> &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-5 mt-4">-->
-<!--                    <div class="card">-->
-<!--                        <div class="card-header p-0 position-relative">-->
-<!--                            <a href="single.html">-->
-<!--                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_5.jpg"-->
-<!--                                    alt="Card image cap">-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="card-body blog-details">-->
-<!--                             <a href="single.html" class="blog-desc">상권분석솔루션(GrIP)</a>-->
-<!--                             <br>-->
-<!--                            <span class="label-blue" style="margin: 3px;">요식업</span><span class="label-blue" style="margin:3px;">미용업</span><span class="label-blue" style="margin:3px;">서비스업</span><span class="label-blue" style="margin:3px;">판매업</span><span class="label-blue" style="margin:3px;">숙박업</span><span class="label-blue" style="margin:3px;">부동산업</span>-->
-<!--                            -->
-<!--                           -->
-<!--                            <div class="author align-items-center mt-3 mb-1">-->
-<!--                                &lt;!&ndash; <img src="assets/images/testi2.jpg" alt="" class="img-fluid rounded-circle" />-->
-<!--                                <ul class="blog-meta">-->
-<!--                                    <li>-->
-<!--                                        <a href="single.html">Charlotte mia</a> </a>-->
-<!--                                    </li>-->
-<!--                                    <li class="meta-item blog-lesson">-->
-<!--                                        <span class="meta-value"> Jan 13, 2021 </span>. <span-->
-<!--                                            class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>-->
-<!--                                    </li>-->
-<!--                                </ul> &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">-->
-<!--                    <div class="card">-->
-<!--                        <div class="card-header p-0 position-relative">-->
-<!--                            <a href="single.html">-->
-<!--                                <img class="card-img-bottom d-block radius-image-full" src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_6.jpg"-->
-<!--                                    alt="Card image cap">-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="card-body blog-details">-->
-<!--                            <a href="single.html" class="blog-desc">잘나가게</a>-->
-<!--                            <br>-->
-<!--                           <span class="label-blue" style="margin: 3px;">소상공인</span>-->
-<!--                           <span class="label-blue" style="margin: 3px;">요식업</span><span class="label-blue" style="margin:3px;">미용업</span><span class="label-blue" style="margin:3px;">서비스업</span><span class="label-blue" style="margin:3px;">판매업</span><span class="label-blue" style="margin:3px;">숙박업</span>-->
-<!--                          -->
-<!--                           <div class="author align-items-center mt-3 mb-1">-->
-<!--                               &lt;!&ndash; <img src="assets/images/testi2.jpg" alt="" class="img-fluid rounded-circle" />-->
-<!--                               <ul class="blog-meta">-->
-<!--                                   <li>-->
-<!--                                       <a href="single.html">Charlotte mia</a> </a>-->
-<!--                                   </li>-->
-<!--                                   <li class="meta-item blog-lesson">-->
-<!--                                       <span class="meta-value"> Jan 13, 2021 </span>. <span-->
-<!--                                           class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>-->
-<!--                                   </li>-->
-<!--                               </ul> &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                {{/productlist}}
             </div>
         </div>
     </div>
     <!-- //blog section -->
 
-    
+
     <!-- bg with text section -->
     <section class="w3l-covers-14 position-relative">
         <div class="covers14-block py-5">
@@ -955,7 +851,7 @@
         <span class="fa fa-level-up" aria-hidden="true"></span>
     </button>
 
-    <!-- 해시태크 처리 -->
+    <!-- 해시태그 처리 -->
     <script>
 
     </script>
