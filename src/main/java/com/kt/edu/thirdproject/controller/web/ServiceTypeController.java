@@ -1,20 +1,31 @@
 package com.kt.edu.thirdproject.controller.web;
 
-import com.kt.edu.thirdproject.repository.ProductRepository;
+import com.kt.edu.thirdproject.dto.ServiceTypeDto;
+import com.kt.edu.thirdproject.model.Product;
+import com.kt.edu.thirdproject.service.ProductService;
+import com.kt.edu.thirdproject.service.ServicetypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
 
 @Controller
 public class ServiceTypeController {
     @Autowired
-    private ProductRepository productRepository;
+    private ProductService productService;
+
+    @Autowired
+    private ServicetypeService serviceTypeService;
+
 
     @GetMapping("/category")
     public String categoryPage(Model model) {
-        model.addAttribute("categories", productRepository.findAll());
+        List<Product> productDtoList=productService.findAll();
+        List<ServiceTypeDto> serviceTypeDtoList=serviceTypeService.getServicetypelist();
+        model.addAttribute("productList",productDtoList);
+        model.addAttribute("serviceTypeList",serviceTypeDtoList);
         return "category";
     }
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -168,98 +169,47 @@
             <span style="--i:8">s</span>
         </div>
 
-        <div class="row">
-            <div style="margin: 0 auto 30px;" id="tabs">
-                <span class="label-blue" style="margin: 3px;">전체</span>
-                {{#categories}}
-                    <span class="label-blue" id="category-{{id}}" style="margin: 3px;">{{name}}</span>
-                {{/categories}}
-
-                <!--                <span class="label-blue" style="margin: 3px;">AI/BigData</span>-->
-                <!--                <span class="label-blue" style="margin: 3px;">인터넷/전용회선</span>-->
-                <!--                <span class="label-blue" style="margin: 3px;">모바일</span>-->
-                <!--                <span class="label-blue" style="margin: 3px;">통신</span>-->
-                <!--                <span class="label-blue" style="margin: 3px;">보안/안전 솔루션</span>-->
-                <!--                <span class="label-blue" style="margin: 3px;">비즈 솔루션</span>-->
-                <!--                <span class="label-blue" style="margin: 3px;">미디어/광고</span>-->
+        <div class="row" id="crow">
+            <div style="margin: 0 auto 30px;" id="cartegories">
+                <span class="label-blue" style="margin: 3px" id="tabs">전체</span>
+                {{#serviceTypeList}}
+                    <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
+                          id="{{id}}">{{name}}</span>
+                {{/serviceTypeList}}
             </div>
-            <div class="col-lg-4 col-md-6 item">
+            <div class="card-target"></div>
+            <!--<div class="col-lg-4 col-md-6 item">
 
-                <div class="card">
-                    <div class="card-header p-0 position-relative">
-                        <a href="single.html">
-                            <img class="card-img-bottom d-block radius-image-full"
-                                 src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_4.jpg"
-                                 alt="Card image cap">
-                        </a>
-                    </div>
-                    <div class="card-body blog-details">
+                <div class="col-lg-4 col-md-6 item card-target">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="/product/#1">
+                                <img class="card-img-bottom d-block radius-image-full"
+                                     src="images/pd/#2.png"
+                                     alt="Card image cap"/>
+                            </a>
+                        </div>
 
-                        <a href="single.html" class="blog-desc">생활인구솔루션 (ALP)</a>
-                        <br>
-                        <div class="align-items-center mt-3 mb-1">
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                        <span class="meta-value">세계 최초로 LTE 시그널 데이터를 이용한
-                                          고해상도의 인구 데이터 제공 솔루션. KT가 보유한
-                                          통신 빅데이터를 활용하여 ‘특정 시점‘,’특정 지역’ 에
-                                          ‘존재’하는 모든 인구의 이동과 분포를 추정한
-                                          신개념 인구정보를 제공 </span>
-                                </li>
-                            </ul>
+                        <div class="card-body blog-details">
+                            <a href="/product/#3" class="blog-desc">#4</a>
+                            <br>
+                            <div class="align-items-center mt-3 mb-1">
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson">
+                                    <span class="meta-value"
+                                          style="text-overflow: ellipsis">#5</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-5 mt-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative">
-                        <a href="single.html">
-                            <img class="card-img-bottom d-block radius-image-full"
-                                 src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_5.jpg"
-                                 alt="Card image cap">
-                        </a>
-                    </div>
-                    <div class="card-body blog-details">
-                        <a href="single.html" class="blog-desc">상권분석솔루션(GrIP)</a>
-                        <br>
-                        <div class="align-items-center mt-3 mb-1">
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                        <span class="meta-value">전국의 모든 상업용 건물 및 사업체 정보를 기반으로
-                                        매장 매출 분석 및 출점 후보지 분석을 지원하는 상권분석 솔루션</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative">
-                        <a href="single.html">
-                            <img class="card-img-bottom d-block radius-image-full"
-                                 src="https://enterprise.kt.com/resource/images/sl/img_sl_fc_related_product_item_6.jpg"
-                                 alt="Card image cap">
-                        </a>
-                    </div>
-                    <div class="card-body blog-details">
-                        <a href="single.html" class="blog-desc">잘나가게</a>
-                        <br>
-                        <div class="align-items-center mt-3 mb-1">
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                        <span class="meta-value">빅데이터를 활용해 유용한 상권 정보와 이에 따른
-                                        영업 TIP을 보내주는 예비창업자/소상공인 대상 문자 알림 서비스</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
+
+
 <!-- //blog section -->
 
 <!-- bg with text section -->
@@ -281,7 +231,8 @@
 </section>
 <!-- //bg with text section -->
 <!-- stats with quote section -->
-{{! <section class="w3-bottom-stats py-5">
+{{!
+<section class="w3-bottom-stats py-5">
     <div class="container py-lg-5 py-md-4 py-3">
         <div class="mx-auto" style="max-width: 960px">
             <div class="row">
@@ -303,11 +254,13 @@
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //stats with quote section -->
 
 <!-- popular section -->
-{{! <section class="w3l-grids1">
+{{!
+<section class="w3l-grids1">
     <div class="hny-three-grids py-5">
         <div class="container py-md-5 py-4">
             <h3 class="title-style text-center mb-md-5 mb-4">We are popular in</h3>
@@ -336,11 +289,13 @@
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //popular section -->
 
 <!-- team sections -->
-{{! <section class="w3l-team-main" id="team">
+{{!
+<section class="w3l-team-main" id="team">
     <div class="team py-5">
         <div class="container py-md-5 py-4">
             <div class="waviy white-text text-center mb-sm-5 mb-4">
@@ -458,11 +413,13 @@
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //team sections -->
 
 <!-- testimonials -->
-{{! <section class="w3l-clients-1" id="testimonials">
+{{!
+<section class="w3l-clients-1" id="testimonials">
     <div class="cusrtomer-layout py-5">
         <div class="container py-md-5 py-4">
             <div class="waviy text-center mb-sm-5 mb-4">
@@ -576,11 +533,13 @@
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //testimonials -->
 
 <!-- call section -->
-{{! <section class="w3l-call-to-action-6">
+{{!
+<section class="w3l-call-to-action-6">
     <div class="call-sec-style py-5">
         <div class="container py-md-4 py-3">
             <div class="row align-items-center">
@@ -591,21 +550,23 @@
                 <div class="col-md-7 float-rt text-md-right align-items-center mt-md-0 mt-4">
                     <ul class="buttons">
                         <li class="phone-sec"><span class="fa fa-volume-control-phone mr-1"
-                                aria-hidden="true"></span>
+                                                    aria-hidden="true"></span>
                             <a class="call-style-w3" href="tel:+1(23) 456 789 0000">+1(23) 456 789 0000</a>
                         </li>
                         <li class="green">Or</li>
-                        <li><a href="contact.mustache" class="btn btn-style">Get in touch</a> </li>
+                        <li><a href="contact.mustache" class="btn btn-style">Get in touch</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //call section -->
 
 <!-- footer -->
-{{! <section class="w3l-footer-29-main" style="background: var(--bg-light)">
+{{!
+<section class="w3l-footer-29-main" style="background: var(--bg-light)">
     <div class="footer-29 py-5">
         <div class="container py-lg-4">
             <div class="row footer-top-29">
@@ -632,21 +593,25 @@
                     <h6 class="footer-title-29">Contact Info </h6>
                     <ul>
                         <li class="d-flex align-items-center py-2"><i class="fa fa-map-marker mr-2"
-                                aria-hidden="true"></i>10001, 5th Avenue, USA</li>
+                                                                      aria-hidden="true"></i>10001, 5th Avenue, USA
+                        </li>
                         <li class="d-flex align-items-center py-2"><i class="fa fa-phone mr-2"
-                                aria-hidden="true"></i><a href="tel:+12 23456790">+12
-                                23456790</a></li>
+                                                                      aria-hidden="true"></i><a href="tel:+12 23456790">+12
+                            23456790</a></li>
                         <li class="d-flex align-items-center py-2"><i class="fa fa-envelope mr-2"
-                                aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+                                                                      aria-hidden="true"></i><a
+                                href="mailto:info@example.com">info@example.com</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //footer -->
 <!-- copyright -->
-{{! <section class="w3l-copyright">
+{{!
+<section class="w3l-copyright">
     <div class="container">
         <div class="row bottom-copies">
             <p class="col-lg-8 copy-footer-29">© 2021 Happy Events. All rights reserved.</p>
@@ -661,61 +626,11 @@
             </div>
         </div>
     </div>
-</section> }}
+</section>
+}}
 <!-- //copyright -->
 
 <!-- Js scripts -->
-<!-- ajaxs -->
-<script>
-    var obj = {
-        "content": [
-        {
-            "id": 1,
-            "pd_name": "잘나가게",
-            "pd_description": "빅데이터를 활용해 유용한 상권 정보와 이에 따른 영업 TIP을 보내주는 예비창업자/소상공인 대상 문자 알림 서비스",
-            "pd_img": "../resource/images/pd/p_pd_cc_it_004.png",
-            "cat_id": "요식업",
-            "serv_id": "AI/BigData"
-        },
-        {
-            "id": 2,
-            "pd_name": "상권분석솔루션(GrIP)",
-            "pd_description": "전국의 모든 상업용 건물 및 사업체 정보를 기반으로 매장 매출 분석 및 출점 후보지 분석을 지원하는 상권분석 솔루션",
-            "pd_img": "../resource/images/pd/CC_TE_005_svdt_01.png",
-            "cat_id": "요식업",
-            "serv_id": "AI/BigData"
-        }
-    ]
-    }
-    var main = {
-        init: function () {
-            var _this = this;
-
-            $('#tabs').on('click', function () {
-                _this.loadServices();
-            });
-
-        },
-
-        loadServices: (id) => {
-            $.ajax({
-                type: 'GET',
-                url: '/api/v1/hashtag/' + id,
-                dataType: 'json',
-                contentType: 'application/json; charset=utf-8',
-                data: JSON.stringify(data)
-            }).done(function () {
-                window.location.href = '/category.mustache';
-            }).fail(function (error) {
-                alert(JSON.stringify(error));
-            });
-
-        }
-    };
-    // main.init();
-
-</script>
-
 
 <!-- move top -->
 <button onclick="topFunction()" id="movetop" title="Go to top">
@@ -746,6 +661,7 @@
 <!-- common jquery plugin -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <!-- //common jquery plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- owl carousel -->
 <script src="js/owl.carousel.js"></script>
@@ -864,7 +780,53 @@
 <!--bootstrap-->
 <script src="js/bootstrap.min.js"></script>
 <!-- //bootstrap-->
-<!-- //Js scripts -->
+
+
 </body>
+
+
+<!-- Mustache -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+<!-- //Js scripts -->
+<!-- ajaxs -->
+
+<script>
+    var main = {
+        init: function () {
+            var _this = this;
+            var tabs = $(".category-tabs");
+            // _this.loadServices();
+            $('.category-tabs').on('click', function () {
+                for (const tab of tabs) {
+                    tab.classList.remove('label-blue-on')
+                }
+                this.classList.add('label-blue-on');
+
+                _this.loadServices(this.dataset.categoryId)
+            });
+        },
+
+        loadServices: function (id) {
+            $.ajax({
+                type: 'GET',
+                url: '/api/v1/category/' + id,
+                dataType: 'json',
+                // contentType: 'application/json; charset=utf-8',
+            }).done(function (res) {
+                console.log(res)
+                var template = $('#category-template').html();
+                Mustache.parse(template);
+                // var render = Mustache.to_html(template, res);
+                // $('#card-target').empty().html(render);
+            }).fail(function (error) {
+                alert(JSON.stringify(error));
+            });
+
+        }
+    }
+    main.init();
+
+</script>
+
 
 </html>

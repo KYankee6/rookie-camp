@@ -3,13 +3,15 @@ package com.kt.edu.thirdproject.dto;
 import com.kt.edu.thirdproject.model.Product;
 import lombok.Builder;
 
+import java.util.Locale;
+
 public class ProductDto {
     private int id;
     private String name;
     private String description;
     private String img;
-    private int serv_id;
-    private int serv_sub_id;
+    private int servId;
+    private int servSubId;
     private  String taglist;
     private int pd_cnt;
 
@@ -17,10 +19,10 @@ public class ProductDto {
         Product build= Product.builder()
                 .id(id)
                 .name(name)
-                .img(img)
+                .img(img.toLowerCase(Locale.ROOT))
                 .description(description)
-                .serv_id(serv_id)
-                .serv_sub_id(serv_sub_id)
+                .servId(servId)
+                .servSubId(servSubId)
                 .taglist(taglist)
                 .pd_cnt(pd_cnt)
                 .build();
@@ -28,15 +30,14 @@ public class ProductDto {
     }
 
     @Builder
-    public ProductDto(int id,String name,String description,String img,int serv_id,int serv_sub_id,String taglist,int pd_cnt){
+    public ProductDto(int id,String name,String description,String img,int servId,int servSubId,String taglist,int pd_cnt){
         this.id=id;
         this.name=name;
         this.description=description;
         this.img=img;
-        this.serv_id=serv_id;
-        this.serv_sub_id=serv_sub_id;
+        this.servId=servId;
+        this.servSubId=servSubId;
         this.taglist=taglist;
         this.pd_cnt=pd_cnt;
-
     }
 }

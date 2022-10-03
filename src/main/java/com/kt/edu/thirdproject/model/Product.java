@@ -1,5 +1,7 @@
 package com.kt.edu.thirdproject.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,6 +10,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @Data
 @Entity
 @NoArgsConstructor
@@ -47,13 +50,13 @@ public class Product {
     private int pd_cnt;
 
     @Builder
-    public Product(int id,String name,String description,String img,int serv_id,int serv_sub_id,String taglist,int pd_cnt){
+    public Product(int id,String name,String description,String img,int servId,int servSubId,String taglist,int pd_cnt){
         this.id=id;
         this.name=name;
         this.description=description;
         this.img=img;
-        this.servId=serv_id;
-        this.servSubId=serv_sub_id;
+        this.servId=servId;
+        this.servSubId=servSubId;
         this.taglist=taglist;
         this.pd_cnt=pd_cnt;
 

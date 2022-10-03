@@ -1,6 +1,8 @@
 package com.kt.edu.thirdproject.model;
 
+import jdk.jshell.Snippet;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +12,6 @@ import javax.validation.constraints.NotNull;
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "service_type")
 public class ServiceType {
     @Id
@@ -30,13 +31,13 @@ public class ServiceType {
     @Column(name = "cnt")
     private int cnt;
 
-//    @Builder
-//    public Service_type(int id,String name,String img,int cnt){
-//        this.id=id;
-//        this.name=name;
-//        this.img=img;
-//        this.cnt=cnt;
-//
-//    }
+
+    @Builder
+    public ServiceType(int id,String name,String img,int cnt){
+        this.id=id;
+        this.name=name;
+        this.img=img;
+        this.cnt=cnt;
+    }
 
 }
