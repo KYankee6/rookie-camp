@@ -46,6 +46,7 @@ public class Product {
     @Column(name = "pd_cnt")
     private int pd_cnt;
 
+
     @Builder
     public Product(int id,String name,String description,String img,int serv_id,int serv_sub_id,String taglist,int pd_cnt){
         this.id=id;

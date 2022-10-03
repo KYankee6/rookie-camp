@@ -408,9 +408,10 @@
 
                             <a href="single.html" class="blog-desc">{{name}}</a>
                             <br>
-
-                            <span class="label-blue" style="margin: 3px;">부동산업</span>
-                            <span class="label-blue" style="margin: 3px;">공공/국방</span>
+                            {{#hashtaglist}}
+                            <span class="label-blue" style="margin: 3px;">{{name}}</span>
+                            {{/hashtaglist}}
+<!--                            <span class="label-blue" style="margin: 3px;">공공/국방</span>-->
                         </div>
                         <div>
                             <p>{{taglist}}</p>
@@ -953,6 +954,12 @@
     <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fa fa-level-up" aria-hidden="true"></span>
     </button>
+
+    <!-- 해시태크 처리 -->
+    <script>
+
+    </script>
+
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
