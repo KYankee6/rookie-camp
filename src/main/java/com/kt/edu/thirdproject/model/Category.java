@@ -30,7 +30,7 @@ public class Category {
     @NotNull
     @Column(name = "cnt")
     private int cnt;
-
+//
 //    @Builder
 //    public Category(int id,String name,String icon,int cnt){
 //        this.id=id;

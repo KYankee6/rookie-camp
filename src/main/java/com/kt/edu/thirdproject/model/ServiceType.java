@@ -1,5 +1,6 @@
 package com.kt.edu.thirdproject.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,7 +31,7 @@ public class ServiceType {
     private int cnt;
 
     @Builder
-    public ServiceType(int id, String name, String img, int cnt){
+    public ServiceType(int id,String name,String img,int cnt){
         this.id=id;
         this.name=name;
         this.img=img;

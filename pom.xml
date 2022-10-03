@@ -8,7 +8,6 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <packaging>war</packaging>
     <groupId>com.kt.edu</groupId>
     <artifactId>thirdproject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
