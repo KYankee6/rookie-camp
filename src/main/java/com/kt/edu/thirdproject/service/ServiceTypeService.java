@@ -18,7 +18,7 @@ public class ServiceTypeService {
     }
 
     @Transactional
-    public static List<ServiceTypeDto> getServiceTypeList() {
+    public List<ServiceTypeDto> getServiceTypeList() {
         List<ServiceType> servicetypes = servicetypeRepository.findAll();
         List<ServiceTypeDto> servicetypeDtoList = new ArrayList<>();
 

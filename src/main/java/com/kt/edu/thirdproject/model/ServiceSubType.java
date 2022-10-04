@@ -23,7 +23,7 @@ public class ServiceSubType {
     private String name;
 
     @NotNull
-    @Column(name = "serv_idx")
+    @Column(name = "serv_id")
     private int servId;
 
 //    @Builder

@@ -170,7 +170,7 @@
         </div>
 
         <div class="row" id="crow">
-            <div style="margin: 0 auto 30px;" id="cartegories">
+            <div style="margin: 0 auto 30px;">
                 <span class="label-blue category-tabs" style="margin: 3px" id="tabs" data-category-id=" "
                       id=" ">전체</span>
                 {{#serviceTypeList}}
@@ -365,6 +365,7 @@
     var template = $('#card-target');
     console.log(template);
     function getCategories() {
+        $("#category-all-tab").addClass('label-blue-on')
         return function () {
             $.ajax({
                 type: 'GET',

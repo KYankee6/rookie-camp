@@ -1,4 +1,4 @@
-package com.kt.edu.thirdproject.controller.web;
+package com.kt.edu.thirdproject.controller.web.category;
 
 import com.kt.edu.thirdproject.dto.ServiceTypeDto;
 import com.kt.edu.thirdproject.model.Product;
@@ -12,13 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @Controller
-public class ServiceTypeController {
+public class CategoryController {
     @Autowired
     private ProductService productService;
 
     @Autowired
     private ServiceTypeService serviceTypeService;
-
 
     @GetMapping("/category")
     public String categoryPage(Model model) {

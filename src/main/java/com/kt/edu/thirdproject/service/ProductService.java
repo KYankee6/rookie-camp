@@ -1,18 +1,17 @@
 package com.kt.edu.thirdproject.service;
 
 
-import com.kt.edu.thirdproject.dto.HashtagDto;
 import com.kt.edu.thirdproject.dto.ProductDto;
-import com.kt.edu.thirdproject.model.Hashtag;
 import com.kt.edu.thirdproject.model.Product;
-import com.kt.edu.thirdproject.repository.HashtagRepository;
 import com.kt.edu.thirdproject.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
 public class ProductService {
