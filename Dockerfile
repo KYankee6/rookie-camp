@@ -14,7 +14,7 @@ ARG port
 EXPOSE ${port}
 
 FROM eclipse-temurin:17.0.2_8-jre-alpine
-COPY --from=MAVEN_BUILD  /build/target/*.war app.jar
+COPY --from=MAVEN_BUILD  /build/target/*.jar app.jar
 
 
 ENV TZ Asia/Seoul
