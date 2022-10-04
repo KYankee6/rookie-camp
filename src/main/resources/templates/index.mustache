@@ -268,29 +268,20 @@
             </div>
         </div>
         <div class="row" id="crow">
-            <div style="margin: 0 auto 30px;" id="categories">
+            <div style="margin: 0 auto 30px;">
                 <span class="label-blue-on label-blue category-tabs" style="margin: 3px" id="category-all-tab"
-                      data-category-id=" "
+
                 >전체</span>
                 {{#serviceTypeList}}
                     <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
                           id="{{id}}">{{name}}</span>
                 {{/serviceTypeList}}
             </div>
-
         </div>
+        <button id="load-more">더보기</button>
     </div>
 </div>
 
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<button id="load-more">더보기</button>
-</div>
 
 <!-- //blog section -->
 
@@ -317,28 +308,6 @@
 <!-- //bg with text section -->
 
 {{> footer}}
-
-
-{{> footer}}
-
-<!-- Js scripts -->
-<!-- move top -->
-<button onclick="topFunction()" id="movetop" title="Go to top">
-    <span class="fa fa-level-up" aria-hidden="true"></span>
-</button>
-<script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
-        }
 
 
 
@@ -389,8 +358,6 @@
         } else {
             document.getElementById("movetop").style.display = "none";
         }
-
-
     }
 
     // When the user clicks on the button, scroll to the top of the document
@@ -400,7 +367,11 @@
 
     }
 
-
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
 <!-- //move top -->
 <!-- common jquery plugin -->
@@ -523,10 +494,10 @@
 <!-- //Js scripts -->
 <!-- ajaxs -->
 <script>
-
+    var template = $('#card-target');
+    var htemplate = $('#hashtag-target');
     const array = [];
     let pointer = 1;
-    var template = $('#card-target');
     let loadMoreBtn = document.querySelector('#load-more');
     loadMoreBtn.addEventListener('click', ()=>{
         let period = (pointer)*6;
@@ -538,72 +509,19 @@
             $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
             $(template).find('[data-role=cat3]').text(item.name);
             $(template).find('[data-role=cat4]').text(item.description);
-            $(template).find('[data-role=cat5]').text(item.taglist);
+            let hashTagList = item.hashTagList.slice(0, 6);
+            let tagHtml = '';
+            hashTagList.forEach(function (tag) {
+                $(htemplate).find('[data-role=cat5]').text(tag);
+                tagHtml += $(htemplate).html();
+            })
+            $(template).find('#hashtag-content').html(tagHtml);
             html += $(template).html();
         })
         $('#crow').find('.item').remove();
         $('#crow').append(html);
         pointer++;
     });
-
-    function getCategories() {
-        return function () {
-            $.ajax({
-                type: 'GET',
-                url: '/api/v1/category',
-                dataType: 'json',
-                // contentType: 'application/json; charset=utf-8',
-            }).done(function (res) {
-                var html = '';
-                res.forEach((item)=>{
-                    array.push(item);
-                });
-                pointer = 1;
-                for(let i = 0; i < 6 ; i++) {
-                    let item = res[i];
-                    console.log(item);
-                    $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
-                    $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                    $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
-                    $(template).find('[data-role=cat3]').text(item.name);
-                    $(template).find('[data-role=cat4]').text(item.description);
-                    $(template).find('[data-role=cat5]').text(item.taglist);
-                    html += $(template).html();
-
-                }
-
-                $('#crow').append(html);
-
-            }).fail(function (error) {
-                alert(JSON.stringify(error));
-            });
-        };
-    }
-    $(document).ready(getCategories())
-    var tabs = $(".category-tabs");
-    $('.category-tabs').on('click', function () {
-        const array = [];
-        let pointer = 1;
-        loadMoreBtn.addEventListener('click', ()=>{
-        let period = (pointer)*6;
-        const newArray = array.slice(0, period+6);
-        let html = '';
-        newArray.forEach((item)=>{
-            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
-            $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
-            $(template).find('[data-role=cat3]').text(item.name);
-            $(template).find('[data-role=cat4]').text(item.description);
-            $(template).find('[data-role=cat5]').text(item.taglist);
-            html += $(template).html();
-        })
-        $('#crow').find('.item').remove();
-        $('#crow').append(html);
-        pointer++;
-    });
-
-    var template = $('#card-target').load('tag.html');
-    var htemplate = $('#hashtag-target').load('tag.html');
 
     $(document).ready(findProductWithServIdAndEntSize())
     $('.ui_tab_nav').on('click', function () {
@@ -616,21 +534,44 @@
     });
 
     $('.category-tabs').on('click', function () {
+
         var tabs = $(".category-tabs");
         for (const tab of tabs) {
             tab.classList.remove('label-blue-on')
         }
         this.classList.add('label-blue-on');
-
-
-
         findProductWithServIdAndEntSize();
     });
 
     function findProductWithServIdAndEntSize() {
+        const array = [];
+        let pointer = 1;
+        let loadMoreBtn = document.querySelector('#load-more');
+        loadMoreBtn.addEventListener('click', ()=>{
+            let period = (pointer)*6;
+            const newArray = array.slice(0, period+6);
+            let html = '';
+            newArray.forEach((item)=>{
+                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').text(item.name);
+                $(template).find('[data-role=cat4]').text(item.description);
+                let hashTagList = item.hashTagList.slice(0, 6);
+                let tagHtml = '';
+                hashTagList.forEach(function (tag) {
+                    $(htemplate).find('[data-role=cat5]').text(tag);
+                    tagHtml += $(htemplate).html();
+                })
+                $(template).find('#hashtag-content').html(tagHtml);
+                html += $(template).html();
+            })
+            $('#crow').find('.item').remove();
+            $('#crow').append(html);
+            pointer++;
+        });
         let categoryId = $('.label-blue-on').data('categoryId');
         let entSize = $(".on").val();
-
         $.ajax({
             type: 'GET',
             url: '/api/v1/index',
@@ -647,28 +588,23 @@
                 array.push(item);
             });
             pointer = 1;
-            for(let i = 0; i < 6 ; i++) {
+            for(let i = 0; i < array.length ; i++) {
+                if(i==6)break;
                 let item = res[i];
-                console.log(item);
-
-            res.forEach(function (item) {
-
+                console.log("this is item!!!"+JSON.stringify(item));
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
                 $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
-                $(template).find('[data-role=cat5]').text(item.taglist);
                 let hashTagList = item.hashTagList.slice(0, 6);
                 let tagHtml = '';
                 hashTagList.forEach(function (tag) {
                     $(htemplate).find('[data-role=cat5]').text(tag);
                     tagHtml += $(htemplate).html();
-                    console.log($(htemplate).html())
                 })
                 $(template).find('#hashtag-content').html(tagHtml);
                 html += $(template).html();
-
             }
             $('#crow').find('.item').remove();
             $('#crow').append(html);

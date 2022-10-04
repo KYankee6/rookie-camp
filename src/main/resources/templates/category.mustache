@@ -171,8 +171,8 @@
 
         <div class="row" id="crow">
             <div style="margin: 0 auto 30px;">
-                <span class="label-blue category-tabs" style="margin: 3px" id="tabs" data-category-id=" "
-                      id=" ">전체</span>
+                <span class="label-blue category-tabs" style="margin: 3px" id="tabs"
+                >전체</span>
                 {{#serviceTypeList}}
                     <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
                           id="{{id}}">{{name}}</span>
@@ -182,7 +182,8 @@
         </div>
     </div>
 </div>
-<div id="card-target" class="hide">
+
+<div id="card-target" style="display: none">
     <div class="col-lg-4 col-md-6 item">
         <div class="card">
             <div class="card-header p-0 position-relative">
@@ -191,6 +192,7 @@
                          alt="Card image cap"/>
                 </a>
             </div>
+
 
             <div class="card-body blog-details">
                 <a href="/product" class="blog-desc" data-role="cat3"></a>
@@ -208,36 +210,37 @@
         </div>
     </div>
 </div>
-<div id="load-more">더보기</div>
+<button id="load-more">더보기</button>
 
-    {{> footer}}
 
-    <!-- Js scripts -->
-    <!-- move top -->
-    <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-level-up" aria-hidden="true"></span>
-    </button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+{{> footer}}
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
-        }
+<!-- Js scripts -->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fa fa-level-up" aria-hidden="true"></span>
+</button>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
         }
     }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+
+    }
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -310,6 +313,7 @@
             }
         }, 1500);
     }
+
     $(document).ready(function () {
         // Now to start autoTyping just call the autoType function with the
         // class of outer div
@@ -366,11 +370,11 @@
     let pointer = 1;
     var template = $('#card-target');
     let loadMoreBtn = document.querySelector('#load-more');
-    loadMoreBtn.addEventListener('click', ()=>{
-        let period = (pointer)*6;
-        const newArray = array.slice(0, period+6);
+    loadMoreBtn.addEventListener('click', () => {
+        let period = (pointer) * 6;
+        const newArray = array.slice(0, period + 6);
         let html = '';
-        newArray.forEach((item)=>{
+        newArray.forEach((item) => {
             $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
             $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
             $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
@@ -383,8 +387,8 @@
         $('#crow').append(html);
         pointer++;
     });
+
     function getCategories() {
-        $("#category-all-tab").addClass('label-blue-on')
         return function () {
             $.ajax({
                 type: 'GET',
@@ -393,11 +397,11 @@
                 // contentType: 'application/json; charset=utf-8',
             }).done(function (res) {
                 var html = '';
-                res.forEach((item)=>{
+                res.forEach((item) => {
                     array.push(item);
                 });
                 pointer = 1;
-                for(let i = 0; i < 6 ; i++) {
+                for (let i = 0; i < 6; i++) {
 
                     let item = res[i];
                     $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
@@ -415,27 +419,28 @@
             });
         };
     }
+
     $(document).ready(getCategories())
     var tabs = $(".category-tabs");
     $('.category-tabs').on('click', function () {
         const array = [];
         let pointer = 1;
-        loadMoreBtn.addEventListener('click', ()=>{
-        let period = (pointer)*6;
-        const newArray = array.slice(0, period+6);
-        let html = '';
-        newArray.forEach((item)=>{
-            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
-            $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
-            $(template).find('[data-role=cat3]').text(item.name);
-            $(template).find('[data-role=cat4]').text(item.description);
-            html += $(template).html();
-        })
-        $('#crow').find('.item').remove();
-        $('#crow').append(html);
-        pointer++;
-    });
+        loadMoreBtn.addEventListener('click', () => {
+            let period = (pointer) * 6;
+            const newArray = array.slice(0, period + 6);
+            let html = '';
+            newArray.forEach((item) => {
+                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').text(item.name);
+                $(template).find('[data-role=cat4]').text(item.description);
+                html += $(template).html();
+            })
+            $('#crow').find('.item').remove();
+            $('#crow').append(html);
+            pointer++;
+        });
         for (const tab of tabs) {
             tab.classList.remove('label-blue-on')
         }
@@ -447,11 +452,11 @@
             // contentType: 'application/json; charset=utf-8',
         }).done(function (res) {
             var html = '';
-            res.forEach((item)=>{
+            res.forEach((item) => {
                 array.push(item);
             });
             pointer = 1;
-            for(let i = 0; i < 6 ; i++) {
+            for (let i = 0; i < 6; i++) {
                 let item = res[i];
                 console.log(item);
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
