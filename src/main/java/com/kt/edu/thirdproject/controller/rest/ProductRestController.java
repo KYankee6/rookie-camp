@@ -1,5 +1,6 @@
 package com.kt.edu.thirdproject.controller.rest;
 //import com.kt.edu.thirdproject.model.Category;
+
 import com.kt.edu.thirdproject.dto.HashtagDto;
 import com.kt.edu.thirdproject.dto.ProductDto;
 import com.kt.edu.thirdproject.dto.ServiceTypeDto;
@@ -37,13 +38,13 @@ public class ProductRestController {
 //    }
 
     @GetMapping("/")
-    public String list(Model model){
-        List<ServiceTypeDto> servicetypeDtoList=servicetypeService.getServiceTypeList();
-        model.addAttribute("serviceTypeList",servicetypeDtoList);
-        List<HashtagDto> hashtagDtoList=hashtagService.getHashtaglist();
-        model.addAttribute("hashtaglist",hashtagDtoList);
-        List<ProductDto> productDtoList=productService.getProductlist();
-        model.addAttribute("productlist",productDtoList);
+    public String list(Model model) {
+        List<ServiceTypeDto> serviceTypeDtoList = servicetypeService.getServiceTypeList();
+        List<HashtagDto> hashtagDtoList = hashtagService.getHashtaglist();
+        List<ProductDto> productDtoList = productService.getProductlist();
+        model.addAttribute("serviceTypeList", serviceTypeDtoList);
+        model.addAttribute("hashtagList", hashtagDtoList);
+        model.addAttribute("productList", productDtoList);
         return "index";
     }
 
