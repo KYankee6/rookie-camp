@@ -16557,6 +16557,20 @@ span.label-blue {
   border-radius: 15px;
 }
 
+
+span.label-blue-on{
+  color: white;
+  display: inline-block;
+  background: #34558b;
+  padding: 5px 20px;
+  border-radius: var(--border-radius-full) solid;
+  font-weight: 600;
+  border-style: solid;
+  border-block-color: white;
+  /* border-radius: 30px; */
+  border-radius: 15px;
+}
+
 a.blog-desc {
   font-size: 1.35rem;
   line-height: 1.33;
