@@ -2,9 +2,11 @@ package com.kt.edu.thirdproject.dto;
 
 import com.kt.edu.thirdproject.model.Product;
 import lombok.Builder;
+import lombok.Data;
 
 import java.util.List;
 
+@Data
 public class ProductDto {
     private int id;
     private String name;

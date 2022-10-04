@@ -529,13 +529,15 @@
         findProductWithServIdAndEntSize()
     });
 
-    function findProductWithServIdAndEntSize(id, size) {
+    function findProductWithServIdAndEntSize() {
+        let categoryId = $('.label-blue-on').data('categoryId');
+        let entSize = $(".on").val();
         $.ajax({
             type: 'GET',
             url: '/api/v1/index',
             data: {
-                servId: id,
-                entSize: size
+                servId: categoryId,
+                entSize: entSize
             },
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
@@ -565,11 +567,7 @@
             tab.classList.remove('label-blue-on')
         }
         this.classList.add('label-blue-on');
-        let categoryId = $('.label-blue-on').data('categoryId');
-        let entSize = $(".on").val();
-        console.log(categoryId)
-        console.log(entSize)
-        findProductWithServIdAndEntSize(categoryId, entSize);
+        findProductWithServIdAndEntSize();
     });
 </script>
 </html>
