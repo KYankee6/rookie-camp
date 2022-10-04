@@ -365,7 +365,6 @@
     const array = [];
     let pointer = 1;
     var template = $('#card-target');
-    console.log(template);
     let loadMoreBtn = document.querySelector('#load-more');
     loadMoreBtn.addEventListener('click', ()=>{
         let period = (pointer)*6;
@@ -384,7 +383,6 @@
         $('#crow').append(html);
         pointer++;
     });
-    console.log(template);
     function getCategories() {
         return function () {
             $.ajax({
