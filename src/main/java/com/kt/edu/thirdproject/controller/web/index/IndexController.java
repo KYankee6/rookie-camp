@@ -15,13 +15,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 @Controller
 public class IndexController {
@@ -57,17 +55,20 @@ public class IndexController {
                 .map(e -> e.getName())
                 .collect(Collectors.toList());
 
+        List<Product> productList = productService.findByServId(Integer.parseInt(servId));
         Map<Integer, String> hashTagMap = IntStream.range(0, hashTagList.size()).boxed()
                 .collect(Collectors.toMap(Function.identity(), hashTagList::get));
 
-        List<Product> productList = productService.findByServId(Integer.parseInt(servId));
-
-        List<Product> filterByEntSizedProductList = productList.stream()
-                .filter(e -> e.getTaglist().contains(entSize))
+        List<Product> productListForResponse = productList
+                .stream()
+                .filter(e -> (Arrays.stream(e.getTaglist().split(",")).anyMatch(q -> q.equals(entSize))))
+                .sorted(Comparator.comparing(Product::getId))
                 .collect(Collectors.toList());
 
-        List<List<String>> filteredHashTagStringList = filterByEntSizedProductList
+        List<List<String>> filteredHashTagStringList = productList
                 .stream()
+                .sorted(Comparator.comparing(Product::getId))
+                .filter(e -> (Arrays.stream(e.getTaglist().split(",")).anyMatch(q -> q.equals(entSize))))
                 .map(e -> (Arrays.stream(e.getTaglist().split(","))
                         .filter(z -> Integer.parseInt(z) >= 3 && Integer.parseInt(z) < 18)
                         .map(k -> hashTagMap.get(Integer.parseInt(k)))
@@ -75,8 +76,8 @@ public class IndexController {
                 .collect(Collectors.toList());
 
         List<ProductDto> productDtoList = new ArrayList<>();
-        for (int i = 0; i < productList.size(); i++) {
-            ProductDto productDto = new ProductDto(productList.get(i),filteredHashTagStringList.get(i));
+        for (int i = 0; i < productListForResponse.size(); i++) {
+            ProductDto productDto = new ProductDto(productListForResponse.get(i), filteredHashTagStringList.get(i));
             productDtoList.add(productDto);
         }
         return productDtoList;
