@@ -281,35 +281,9 @@
         </div>
     </div>
 </div>
-<div id="card-target" class="hide">
-    <div class="col-lg-4 col-md-6 item">
-        <div class="card">
-            <div class="card-header p-0 position-relative">
-                <a href="/product" data-role="cat1">
-                    <img src="" class="card-img-bottom d-block radius-image-full" data-role="cat2"
-                         alt="Card image cap"/>
-                </a>
-            </div>
 
-            <div class="card-body blog-details">
-                <a href="/product" class="blog-desc" data-role="cat3"></a>
-                <br>
-                <div class="align-items-center mt-3 mb-1">
-                    <ul class="blog-meta" id="hashtag-content">
 
-                    </ul>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<div id="hashtag-target">
-    <span class="label-blue" style="margin: 3px;"
-          data-role="cat5"></span>
-</div>
 <!-- //blog section -->
 
 
@@ -334,8 +308,39 @@
 </section>
 <!-- //bg with text section -->
 
-
 {{> footer}}
+
+
+
+<div id="card-target" style="display: none">
+    <div class="col-lg-4 col-md-6 item">
+        <div class="card">
+            <div class="card-header p-0 position-relative">
+                <a href="/product" data-role="cat1">
+                    <img src="" class="card-img-bottom d-block radius-image-full" data-role="cat2"
+                         alt="Card image cap"/>
+                </a>
+            </div>
+
+            <div class="card-body blog-details">
+                <a href="/product" class="blog-desc" data-role="cat3"></a>
+                <br>
+                <div class="align-items-center mt-3 mb-1">
+                    <ul class="blog-meta" id="hashtag-content">
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="hashtag-target" style="display: none">
+    <span class="label-blue" style="margin: 3px;"
+          data-role="cat5"></span>
+</div>
+
 
 <!-- Js scripts -->
 <!-- move top -->
@@ -490,8 +495,8 @@
 <!-- //Js scripts -->
 <!-- ajaxs -->
 <script>
-    var template = $('#card-target');
-    var htemplate = $('#hashtag-target');
+    var template = $('#card-target').load('tag.html');
+    var htemplate = $('#hashtag-target').load('tag.html');
 
     $(document).ready(findProductWithServIdAndEntSize())
     $('.ui_tab_nav').on('click', function () {

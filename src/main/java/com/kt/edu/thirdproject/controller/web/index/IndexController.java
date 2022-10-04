@@ -58,10 +58,6 @@ public class IndexController {
         List<Product> productList = productService.findByServId(Integer.parseInt(servId));
         Map<Integer, String> hashTagMap = IntStream.range(0, hashTagList.size()).boxed()
                 .collect(Collectors.toMap(Function.identity(), hashTagList::get));
-        for (Integer integer : hashTagMap.keySet()) {
-            System.out.println("integer = " + integer);
-            System.out.println("hashTagMap = " + hashTagMap.get(integer));
-        }
 
         List<Product> productListForResponse = productList
                 .stream()
