@@ -561,8 +561,7 @@
                 let tagHtml = '';
                 hashTagList.forEach(function (tag) {
                     $(htemplate).find('[data-role=cat5]').text(tag);
-                    tagHtml += $(hte
-                    mplate).html();
+                    tagHtml += $(htemplate).html();
                 })
                 $(template).find('#hashtag-content').html(tagHtml);
                 html += $(template).html();
