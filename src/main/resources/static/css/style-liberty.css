@@ -19983,6 +19983,54 @@ li {
 .slick-arrow.slick-hidden {
   display: none;
 }
+#load-more {
+    color: #34558b;
+    background-color: #fff;
+    border-radius: 15px;
+    border-style: solid;
+    border-block-color: #34558b;
+    font-size: 23px;
+    color:#34558b ;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display:block;
+    margin: 0 auto;
+}
+
+#load-more:hover {
+    background-color: #34558b;
+    color:#fff;
+    border-radius: 15px;
+    border-style: solid;
+    border-block-color: #34558b;
+}
+#load-more:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#load-more:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
 /*slider*/
 /* //single blog pagination */
 
