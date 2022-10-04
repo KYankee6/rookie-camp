@@ -1,4 +1,4 @@
-package com.kt.edu.thirdproject.controller.rest;
+package com.kt.edu.thirdproject.controller.web.category;
 
 import com.kt.edu.thirdproject.model.Product;
 import com.kt.edu.thirdproject.service.ProductService;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v1")
-public class ServiceTypeRestController {
+public class CategoryService {
     @Autowired
     private ProductService productService;
 

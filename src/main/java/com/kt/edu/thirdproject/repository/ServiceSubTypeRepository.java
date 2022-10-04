@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SeviceSubTypeRepository extends JpaRepository<ServiceSubType, Integer>{
+public interface ServiceSubTypeRepository extends JpaRepository<ServiceSubType, Integer>{
 
 }

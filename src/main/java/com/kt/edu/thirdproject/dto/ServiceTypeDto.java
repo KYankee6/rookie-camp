@@ -2,6 +2,9 @@ package com.kt.edu.thirdproject.dto;
 
 import com.kt.edu.thirdproject.model.ServiceType;
 import lombok.Builder;
+import lombok.Getter;
+
+@Getter
 public class ServiceTypeDto {
     private int id;
     private String name;

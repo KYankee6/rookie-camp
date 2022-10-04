@@ -170,7 +170,7 @@
         </div>
 
         <div class="row" id="crow">
-            <div style="margin: 0 auto 30px;" id="cartegories">
+            <div style="margin: 0 auto 30px;">
                 <span class="label-blue category-tabs" style="margin: 3px" id="tabs" data-category-id=" "
                       id=" ">전체</span>
                 {{#serviceTypeList}}
@@ -182,7 +182,7 @@
         </div>
     </div>
 </div>
-<div id="card-target">
+<div id="card-target" class="hide">
     <div class="col-lg-4 col-md-6 item">
         <div class="card">
             <div class="card-header p-0 position-relative">
@@ -384,6 +384,7 @@
         pointer++;
     });
     function getCategories() {
+        $("#category-all-tab").addClass('label-blue-on')
         return function () {
             $.ajax({
                 type: 'GET',

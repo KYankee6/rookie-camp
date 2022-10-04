@@ -1,7 +1,6 @@
 package com.kt.edu.thirdproject.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

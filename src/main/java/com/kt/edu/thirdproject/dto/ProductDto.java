@@ -2,7 +2,13 @@ package com.kt.edu.thirdproject.dto;
 
 import com.kt.edu.thirdproject.model.Product;
 import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
 
+import java.util.List;
+
+@Data
+@ToString
 public class ProductDto {
     private int id;
     private String name;
@@ -12,6 +18,7 @@ public class ProductDto {
     private int servSubId;
     private  String taglist;
     private int pd_cnt;
+    private List<String> hashTagList;
 
     public Product toEntity(){
         Product build= Product.builder()
@@ -28,7 +35,7 @@ public class ProductDto {
     }
 
     @Builder
-    public ProductDto(int id,String name,String description,String img,int servId,int servSubId,String taglist,int pd_cnt){
+    public ProductDto(int id,String name,String description,String img,int servId,int servSubId,String taglist,int pd_cnt,List<String> hashTagList){
         this.id=id;
         this.name=name;
         this.description=description;
@@ -37,6 +44,19 @@ public class ProductDto {
         this.servSubId=servSubId;
         this.taglist=taglist;
         this.pd_cnt=pd_cnt;
+        this.hashTagList = hashTagList;
+    }
 
+    @Builder
+    public ProductDto(Product product, List<String> hashTagList) {
+        this.id=product.getId();
+        this.name=product.getName();
+        this.description=product.getDescription();
+        this.img=product.getImg();
+        this.servId=product.getServId();
+        this.servSubId=product.getServSubId();
+        this.taglist=product.getTaglist();
+        this.pd_cnt=product.getPd_cnt();
+        this.hashTagList=hashTagList;
     }
 }
