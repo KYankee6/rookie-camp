@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>KT Enterprise</title>
     <!-- google-fonts -->
@@ -409,7 +409,7 @@
                 </ul>
 
             </div>
-          </div>
+        </div>
         <div class="row" id="crow">
             <div style="margin: 0 auto 30px;" id="cartegories">
                 <span class="label-blue category-tabs" style="margin: 3px" id="tabs" data-category-id=" "
@@ -445,11 +445,12 @@
                     </ul>
 
                 </div>
-              </div>
             </div>
-          </div>
         </div>
     </div>
+</div>
+</div>
+<button id="load-more">더보기</button>
 </div>
 <!-- //blog section -->
 
@@ -469,21 +470,21 @@
                 <a href="about.html" class="btn btn-style mt-5 askbtn">1:1 온라인 문의</a>
 
             </div>
-          </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- //bg with text section -->
 
 
-    {{> footer}}
+{{> footer}}
 
-    <!-- Js scripts -->
-    <!-- move top -->
-    <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-level-up" aria-hidden="true"></span>
-    </button>
-    <script>
+<!-- Js scripts -->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fa fa-level-up" aria-hidden="true"></span>
+</button>
+<script>
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
             scrollFunction()
@@ -503,7 +504,6 @@
             document.documentElement.scrollTop = 0;
 
         }
-    }
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -630,7 +630,27 @@
 <!-- //Js scripts -->
 <!-- ajaxs -->
 <script>
+    const array = [];
+    let pointer = 1;
     var template = $('#card-target');
+    let loadMoreBtn = document.querySelector('#load-more');
+    loadMoreBtn.addEventListener('click', ()=>{
+        let period = (pointer)*6;
+        const newArray = array.slice(0, period+6);
+        let html = '';
+        newArray.forEach((item)=>{
+            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat3]').text(item.name);
+            $(template).find('[data-role=cat4]').text(item.description);
+            $(template).find('[data-role=cat5]').text(item.taglist);
+            html += $(template).html();
+        })
+        $('#crow').find('.item').remove();
+        $('#crow').append(html);
+        pointer++;
+    });
     console.log(template);
     function getCategories() {
         return function () {
@@ -641,7 +661,12 @@
                 // contentType: 'application/json; charset=utf-8',
             }).done(function (res) {
                 var html = '';
-                res.forEach(function (item) {
+                res.forEach((item)=>{
+                    array.push(item);
+                });
+                pointer = 1;
+                for(let i = 0; i < 6 ; i++) {
+                    let item = res[i];
                     console.log(item);
                     $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                     $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
@@ -650,8 +675,11 @@
                     $(template).find('[data-role=cat4]').text(item.description);
                     $(template).find('[data-role=cat5]').text(item.taglist);
                     html += $(template).html();
-                })
+
+                }
+
                 $('#crow').append(html);
+
             }).fail(function (error) {
                 alert(JSON.stringify(error));
             });
@@ -660,10 +688,30 @@
     $(document).ready(getCategories())
     var tabs = $(".category-tabs");
     $('.category-tabs').on('click', function () {
+        const array = [];
+        let pointer = 1;
+        loadMoreBtn.addEventListener('click', ()=>{
+        let period = (pointer)*6;
+        const newArray = array.slice(0, period+6);
+        let html = '';
+        newArray.forEach((item)=>{
+            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat3]').text(item.name);
+            $(template).find('[data-role=cat4]').text(item.description);
+            $(template).find('[data-role=cat5]').text(item.taglist);
+            html += $(template).html();
+        })
+        $('#crow').find('.item').remove();
+        $('#crow').append(html);
+        pointer++;
+    });
         for (const tab of tabs) {
             tab.classList.remove('label-blue-on')
         }
         this.classList.add('label-blue-on');
+
         $.ajax({
             type: 'GET',
             url: '/api/v1/category/' + this.dataset.categoryId,
@@ -671,7 +719,12 @@
             // contentType: 'application/json; charset=utf-8',
         }).done(function (res) {
             var html = '';
-            res.forEach(function (item) {
+            res.forEach((item)=>{
+                array.push(item);
+            });
+            pointer = 1;
+            for(let i = 0; i < 6 ; i++) {
+                let item = res[i];
                 console.log(item);
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
@@ -679,9 +732,9 @@
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
                 $(template).find('[data-role=cat5]').text(item.taglist);
-                // copy = template;
                 html += $(template).html();
-            })
+
+            }
             $('#crow').find('.item').remove();
             $('#crow').append(html);
         }).fail(function (error) {
