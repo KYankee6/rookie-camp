@@ -193,6 +193,7 @@
                 </a>
             </div>
 
+
             <div class="card-body blog-details">
                 <a href="/product" class="blog-desc" data-role="cat3"></a>
                 <br>
@@ -209,6 +210,7 @@
         </div>
     </div>
 </div>
+<button id="load-more">더보기</button>
 
 
 {{> footer}}
@@ -238,6 +240,7 @@
         document.documentElement.scrollTop = 0;
 
     }
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -363,11 +366,29 @@
 <!-- //Js scripts -->
 <!-- ajaxs -->
 <script>
+    const array = [];
+    let pointer = 1;
     var template = $('#card-target');
-    console.log(template);
+    let loadMoreBtn = document.querySelector('#load-more');
+    loadMoreBtn.addEventListener('click', () => {
+        let period = (pointer) * 6;
+        const newArray = array.slice(0, period + 6);
+        let html = '';
+        newArray.forEach((item) => {
+            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat3]').text(item.name);
+            $(template).find('[data-role=cat4]').text(item.description);
+            $(template).find('[data-role=cat5]').text(item.taglist);
+            html += $(template).html();
+        })
+        $('#crow').find('.item').remove();
+        $('#crow').append(html);
+        pointer++;
+    });
 
     function getCategories() {
-        $("#category-all-tab").addClass('label-blue-on')
         return function () {
             $.ajax({
                 type: 'GET',
@@ -376,15 +397,22 @@
                 // contentType: 'application/json; charset=utf-8',
             }).done(function (res) {
                 var html = '';
-                res.forEach(function (item) {
-                    console.log(item);
+                res.forEach((item) => {
+                    array.push(item);
+                });
+                pointer = 1;
+                for (let i = 0; i < 6; i++) {
+
+                    let item = res[i];
                     $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                     $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
                     $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
                     $(template).find('[data-role=cat3]').text(item.name);
                     $(template).find('[data-role=cat4]').text(item.description);
                     html += $(template).html();
-                })
+
+                }
+
                 $('#crow').append(html);
             }).fail(function (error) {
                 alert(JSON.stringify(error));
@@ -395,6 +423,24 @@
     $(document).ready(getCategories())
     var tabs = $(".category-tabs");
     $('.category-tabs').on('click', function () {
+        const array = [];
+        let pointer = 1;
+        loadMoreBtn.addEventListener('click', () => {
+            let period = (pointer) * 6;
+            const newArray = array.slice(0, period + 6);
+            let html = '';
+            newArray.forEach((item) => {
+                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').text(item.name);
+                $(template).find('[data-role=cat4]').text(item.description);
+                html += $(template).html();
+            })
+            $('#crow').find('.item').remove();
+            $('#crow').append(html);
+            pointer++;
+        });
         for (const tab of tabs) {
             tab.classList.remove('label-blue-on')
         }
@@ -406,16 +452,22 @@
             // contentType: 'application/json; charset=utf-8',
         }).done(function (res) {
             var html = '';
-            res.forEach(function (item) {
-                console.log(JSON.stringify(item));
+            res.forEach((item) => {
+                array.push(item);
+            });
+            pointer = 1;
+            for (let i = 0; i < 6; i++) {
+                let item = res[i];
+                console.log(item);
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
                 $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
-                // copy = template;
+
                 html += $(template).html();
-            })
+
+            }
             $('#crow').find('.item').remove();
             $('#crow').append(html);
         }).fail(function (error) {
