@@ -171,8 +171,8 @@
 
         <div class="row" id="crow">
             <div style="margin: 0 auto 30px;">
-                <span class="label-blue category-tabs" style="margin: 3px" id="tabs" data-category-id=" "
-                      id=" ">전체</span>
+                <span class="label-blue category-tabs" style="margin: 3px" id="tabs"
+                >전체</span>
                 {{#serviceTypeList}}
                     <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
                           id="{{id}}">{{name}}</span>
@@ -182,7 +182,8 @@
         </div>
     </div>
 </div>
-<div id="card-target" class="hide">
+
+<div id="card-target" style="display: none">
     <div class="col-lg-4 col-md-6 item">
         <div class="card">
             <div class="card-header p-0 position-relative">
@@ -210,33 +211,32 @@
 </div>
 
 
-    {{> footer}}
+{{> footer}}
 
-    <!-- Js scripts -->
-    <!-- move top -->
-    <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-level-up" aria-hidden="true"></span>
-    </button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+<!-- Js scripts -->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fa fa-level-up" aria-hidden="true"></span>
+</button>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
         }
+    }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 
-        }
     }
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
@@ -310,6 +310,7 @@
             }
         }, 1500);
     }
+
     $(document).ready(function () {
         // Now to start autoTyping just call the autoType function with the
         // class of outer div
@@ -364,6 +365,7 @@
 <script>
     var template = $('#card-target');
     console.log(template);
+
     function getCategories() {
         $("#category-all-tab").addClass('label-blue-on')
         return function () {
@@ -389,6 +391,7 @@
             });
         };
     }
+
     $(document).ready(getCategories())
     var tabs = $(".category-tabs");
     $('.category-tabs').on('click', function () {
@@ -404,7 +407,7 @@
         }).done(function (res) {
             var html = '';
             res.forEach(function (item) {
-                console.log(item);
+                console.log(JSON.stringify(item));
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
                 $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);

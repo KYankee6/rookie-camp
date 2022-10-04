@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @RestController
@@ -25,7 +27,18 @@ public class CategoryService {
 
     @GetMapping("/category/{serv_id}")
     public List<Product> productsWithServId(@PathVariable Integer serv_id) {
-        return productService.findByServId(serv_id);
+        String CAT_ID = "8";
+        List<Product> productList = productService.findByServId(serv_id)
+                .stream()
+                .filter(e -> Arrays.stream(e.getTaglist().split(","))
+                        .anyMatch(f -> f.equals(CAT_ID)))
+                .collect(Collectors.toList());
+
+        for (Product product : productList) {
+            System.out.println("product = " + product.getName());
+            System.out.println("product.getTaglist() = " + product.getTaglist());
+        }
+        return productList;
     }
 
 

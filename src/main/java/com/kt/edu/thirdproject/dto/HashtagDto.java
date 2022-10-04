@@ -4,8 +4,6 @@ import com.kt.edu.thirdproject.model.Hashtag;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.util.List;
-
 @Getter
 public class HashtagDto {
     private int id;

@@ -3,11 +3,10 @@ package com.kt.edu.thirdproject.controller.web.index;
 import com.kt.edu.thirdproject.dto.ProductDto;
 import com.kt.edu.thirdproject.dto.ServiceTypeDto;
 import com.kt.edu.thirdproject.model.Product;
-import com.kt.edu.thirdproject.repository.HashtagRepository;
 import com.kt.edu.thirdproject.service.HashtagService;
 import com.kt.edu.thirdproject.service.ProductService;
-import com.kt.edu.thirdproject.service.ServiceSubTypeService;
 import com.kt.edu.thirdproject.service.ServiceTypeService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +18,6 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 @Controller
 public class IndexController {
@@ -48,14 +46,14 @@ public class IndexController {
     public List<ProductDto> findByEntSizeAndServId(HttpServletRequest req, Model model) {
         String servId = req.getParameter("servId");
         String entSize = req.getParameter("entSize");
-        System.out.println("entSize = " + entSize);
-        System.out.println("servId = " + servId);
         List<String> hashTagList = hashtagService.getHashtaglist()
                 .stream()
                 .map(e -> e.getName())
                 .collect(Collectors.toList());
-
-        List<Product> productList = productService.findByServId(Integer.parseInt(servId));
+        List<Product> productList = new ArrayList<>();
+        if (StringUtils.isBlank(servId)) {
+            productList = productService.findAll();
+        } else productList = productService.findByServId(Integer.parseInt(servId));
         Map<Integer, String> hashTagMap = IntStream.range(0, hashTagList.size()).boxed()
                 .collect(Collectors.toMap(Function.identity(), hashTagList::get));
 
@@ -70,8 +68,8 @@ public class IndexController {
                 .sorted(Comparator.comparing(Product::getId))
                 .filter(e -> (Arrays.stream(e.getTaglist().split(",")).anyMatch(q -> q.equals(entSize))))
                 .map(e -> (Arrays.stream(e.getTaglist().split(","))
-                        .filter(z -> Integer.parseInt(z) >= 3 && Integer.parseInt(z) < 18)
-                        .map(k -> hashTagMap.get(Integer.parseInt(k)-1))
+                        .filter(z -> Integer.parseInt(z) >= 4 && Integer.parseInt(z) <= 18)
+                        .map(k -> hashTagMap.get(Integer.parseInt(k) - 1))
                         .collect(Collectors.toList())))
                 .collect(Collectors.toList());
 
