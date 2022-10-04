@@ -1,6 +1,7 @@
 package com.kt.edu.thirdproject.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,7 +10,6 @@ import javax.persistence.*;
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "hashtag")
 public class Hashtag {
 
@@ -23,4 +23,10 @@ public class Hashtag {
     @Column(name = "type")
     private String type;
 
+    @Builder
+    public Hashtag(int id,String name,String type){
+        this.id=id;
+        this.name=name;
+        this.type=type;
+    }
 }

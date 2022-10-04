@@ -7,8 +7,9 @@ public class HashtagDto {
     private int id;
     private String name;
     private String type;
-    public Hashtag toEntity(){
-        Hashtag build= Hashtag.builder()
+
+    public Hashtag toEntity() {
+        Hashtag build = Hashtag.builder()
                 .id(id)
                 .name(name)
                 .type(type)
@@ -17,10 +18,10 @@ public class HashtagDto {
     }
 
     @Builder
-    public HashtagDto(int id,String name,String type){
-        this.id=id;
-        this.name=name;
-        this.type=type;
+    public HashtagDto(int id, String name, String type) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
 
     }
 }
