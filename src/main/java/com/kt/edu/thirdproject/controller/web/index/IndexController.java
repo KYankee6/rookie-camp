@@ -50,15 +50,15 @@ public class IndexController {
     public List<ProductDto> findByEntSizeAndServId(HttpServletRequest req, Model model) {
         String servId = req.getParameter("servId");
         String entSize = req.getParameter("entSize");
+        System.out.println("entSize = " + entSize);
+        System.out.println("servId = " + servId);
         List<String> hashTagList = hashtagService.getHashtaglist()
                 .stream()
                 .map(e -> e.getName())
                 .collect(Collectors.toList());
 
-        System.out.println("hashTagList = " + hashTagList);
         Map<Integer, String> hashTagMap = IntStream.range(0, hashTagList.size()).boxed()
                 .collect(Collectors.toMap(Function.identity(), hashTagList::get));
-        System.out.println("hashTagMap = " + hashTagMap);
 
         List<Product> productList = productService.findByServId(Integer.parseInt(servId));
 

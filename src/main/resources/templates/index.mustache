@@ -269,7 +269,8 @@
         </div>
         <div class="row" id="crow">
             <div style="margin: 0 auto 30px;" id="categories">
-                <span class="label-blue category-tabs" style="margin: 3px" id="category-all-tab" data-category-id=" "
+                <span class="label-blue-on label-blue category-tabs" style="margin: 3px" id="category-all-tab"
+                      data-category-id=" "
                 >전체</span>
                 {{#serviceTypeList}}
                     <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
@@ -280,7 +281,7 @@
         </div>
     </div>
 </div>
-<div id="card-target">
+<div id="card-target" class="hide">
     <div class="col-lg-4 col-md-6 item">
         <div class="card">
             <div class="card-header p-0 position-relative">
@@ -294,11 +295,8 @@
                 <a href="/product" class="blog-desc" data-role="cat3"></a>
                 <br>
                 <div class="align-items-center mt-3 mb-1">
-                    <ul class="blog-meta">
-                        <li class="meta-item blog-lesson">
-                                    <span class="label-blue" style="margin: 3px;"
-                                          data-role="cat5"></span>
-                        </li>
+                    <ul class="blog-meta" id="hashtag-content">
+
                     </ul>
 
                 </div>
@@ -307,6 +305,10 @@
     </div>
 </div>
 </div>
+</div>
+<div id="hashtag-target">
+    <span class="label-blue" style="margin: 3px;"
+          data-role="cat5"></span>
 </div>
 <!-- //blog section -->
 
@@ -489,37 +491,9 @@
 <!-- ajaxs -->
 <script>
     var template = $('#card-target');
-    console.log(template);
+    var htemplate = $('#hashtag-target');
 
-    function getCategories() {
-        $("#category-all-tab").addClass('label-blue-on')
-        return function () {
-            $.ajax({
-                type: 'GET',
-                url: '/api/v1/category',
-                dataType: 'json',
-                // contentType: 'application/json; charset=utf-8',
-            }).done(function (res) {
-                console.log(res)
-                var html = '';
-                res.forEach(function (item) {
-                    $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
-                    $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                    $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
-                    $(template).find('[data-role=cat3]').text(item.name);
-                    $(template).find('[data-role=cat4]').text(item.description);
-                    $(template).find('[data-role=cat5]').text(item.taglist);
-                    html += $(template).html();
-                })
-                $('#crow').find('.item').remove();
-                $('#crow').append(html);
-            }).fail(function (error) {
-                alert(JSON.stringify(error));
-            });
-        };
-    }
-
-    $(document).ready(getCategories())
+    $(document).ready(findProductWithServIdAndEntSize())
     $('.ui_tab_nav').on('click', function () {
         var navTabs = $(".ui_tab_nav");
         for (const navTab of navTabs) {
@@ -527,6 +501,15 @@
         }
         this.classList.add('on');
         findProductWithServIdAndEntSize()
+    });
+
+    $('.category-tabs').on('click', function () {
+        var tabs = $(".category-tabs");
+        for (const tab of tabs) {
+            tab.classList.remove('label-blue-on')
+        }
+        this.classList.add('label-blue-on');
+        findProductWithServIdAndEntSize();
     });
 
     function findProductWithServIdAndEntSize() {
@@ -544,14 +527,20 @@
         }).done(function (res) {
             var html = '';
             res.forEach(function (item) {
-                console.log(item);
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
                 $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
-                $(template).find('[data-role=cat5]').text(item.taglist);
-                // copy = template;
+                let hashTagList = item.hashTagList.slice(0, 6);
+                let tagHtml = '';
+                hashTagList.forEach(function (tag) {
+                    $(htemplate).find('[data-role=cat5]').text(tag);
+                    tagHtml += $(htemplate).html();
+                    console.log($(htemplate).html())
+                })
+                console.log(tagHtml)
+                $(template).find('#hashtag-content').html(tagHtml);
                 html += $(template).html();
             })
             $('#crow').find('.item').remove();
@@ -561,13 +550,6 @@
         });
     }
 
-    $('.category-tabs').on('click', function () {
-        var tabs = $(".category-tabs");
-        for (const tab of tabs) {
-            tab.classList.remove('label-blue-on')
-        }
-        this.classList.add('label-blue-on');
-        findProductWithServIdAndEntSize();
-    });
+
 </script>
 </html>
