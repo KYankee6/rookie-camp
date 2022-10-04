@@ -1,4 +1,4 @@
-package com.kt.edu.thirdproject.controller;
+package com.kt.edu.thirdproject.controller.web;
 
 import com.kt.edu.thirdproject.exception.ResourceNotFoundException;
 import com.kt.edu.thirdproject.model.Hashtag;
