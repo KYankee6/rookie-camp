@@ -1,423 +1,514 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>KT Enterprise</title>
     <!-- google-fonts -->
-    <link href="//fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-          rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+    <link
+      href="//fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css2?family=Sail&display=swap"
+      rel="stylesheet"
+    />
     <!-- //google-fonts -->
     <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="css/style-liberty.css">
-</head>
+    <link rel="stylesheet" href="css/style-liberty.css" />
+  </head>
 
-<body>
-<!--header-->
-<header id="site-header" class="fixed-top">
-    <div class="container-fluid">
+  <body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+      <div class="container-fluid">
         <nav class="navbar navbar-expand-lg stroke">
-            <h1>
-                <a class="navbar-brand d-flex align-items-center" href="/">
-                    Happy Events</a>
-            </h1>
-            <!-- if logo is image enable this
+          <h1>
+            <a class="navbar-brand d-flex align-items-center" href="/">
+              Happy Events</a
+            >
+          </h1>
+          <!-- if logo is image enable this
 <a class="navbar-brand" href="#index.mustache">
     <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
 </a> -->
-            <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-            </button>
+          <button
+            class="navbar-toggler collapsed bg-gradient"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/category">category</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.mustache">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" u role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pages <span class="fa fa-angle-down"></span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="services.mustache">Services</a>
-                            <a class="dropdown-item" href="single.mustache">Single Page</a>
-                            <a class="dropdown-item" href="error.mustache">404 Page</a>
-                            <a class="dropdown-item" href="landing-single.mustache">Landing Page</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.mustache">Contact Us</a>
-                    </li>
-                    <!-- search button -->
-                    <div class="search-right ml-lg-3">
-                        <form action="error.mustache" method="GET" class="search-box position-relative">
-                            <div class="input-search">
-                                <input type="search" placeholder="Enter Keyword" name="search" required="required"
-                                       autofocus="" class="search-popup">
-                            </div>
-                            <button type="submit" class="btn search-btn"><i class="fa fa-search"
-                                                                            aria-hidden="true"></i></button>
-                        </form>
-                    </div>
-                    <!-- //search button -->
-                </ul>
-            </div>
-            <!-- toggle switch for light and dark theme -->
-            <div class="cont-ser-position">
-                <nav class="navigation">
-                    <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox">
-                            <div class="mode-container">
-                                <i class="gg-sun"></i>
-                                <i class="gg-moon"></i>
-                            </div>
-                        </label>
-                    </div>
-                </nav>
-            </div>
-            <!-- //toggle switch for light and dark theme -->
-        </nav>
-    </div>
-</header>
-<!--//header-->
-
-<!-- inner banner -->
-<div class="category-inner-banner">
-    <section class="w3l-breadcrumb">
-        <div class="container">
-            <h4 class="inner-text-title font-weight-bold text-white mb-sm-3 mb-2">요식업</h4>
-            <ul class="breadcrumbs-custom-path">
-                <li>요식업의 이슈를 해결하기 위한 통합 디지털 솔루션</li>
-                {{! <li><a href="index.mustache">Home</a></li> }}
-                {{! <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Category</li>
-                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>요식업</li> }}
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/category">category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.mustache">Events</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  u
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pages <span class="fa fa-angle-down"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="services.mustache">Services</a>
+                  <a class="dropdown-item" href="single.mustache"
+                    >Single Page</a
+                  >
+                  <a class="dropdown-item" href="error.mustache">404 Page</a>
+                  <a class="dropdown-item" href="landing-single.mustache"
+                    >Landing Page</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.mustache">Contact Us</a>
+              </li>
+              <!-- search bFutton -->
+              <div class="search-right ml-lg-3">
+                <form
+                  action="error.mustache"
+                  method="GET"
+                  class="search-box position-relative"
+                >
+                  <div class="input-search">
+                    <input
+                      type="search"
+                      placeholder="Enter Keyword"
+                      name="search"
+                      required="required"
+                      autofocus=""
+                      class="search-popup"
+                    />
+                  </div>
+                  <button type="submit" class="btn search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              <!-- //search button -->
             </ul>
-        </div>
-    </section>
-</div>
-<!-- //inner banner -->
+          </div>
+          <!-- toggle switch for light and dark theme -->
+          <div class="cont-ser-position">
+            <nav class="navigation">
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="mode-container">
+                    <i class="gg-sun"></i>
+                    <i class="gg-moon"></i>
+                  </div>
+                </label>
+              </div>
+            </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
+        </nav>
+      </div>
+    </header>
+    <!--//header-->
 
-<!-- about section -->
-{{! <section class="w3l-features-photo-7 py-5">
-    <div class="container py-md-5 py-4">
+    <!-- inner banner -->
+    <div class="category-inner-banner">
+      <section class="w3l-breadcrumb">
+        <div class="container">
+          <h4 class="inner-text-title font-weight-bold text-white mb-sm-3 mb-2">
+            요식업
+          </h4>
+          <ul class="breadcrumbs-custom-path">
+            <li>요식업의 이슈를 해결하기 위한 통합 디지털 솔루션</li>
+            {{!
+            <li><a href="index.mustache">Home</a></li>
+            }} {{!
+            <li class="active">
+              <span class="fa fa-chevron-right mx-2" aria-hidden="true"></span
+              >Category
+            </li>
+            <li class="active">
+              <span class="fa fa-chevron-right mx-2" aria-hidden="true"></span
+              >요식업
+            </li>
+            }}
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- //inner banner -->
+
+    <!-- about section -->
+    {{!
+    <section class="w3l-features-photo-7 py-5">
+      <div class="container py-md-5 py-4">
         <div class="row w3l-features-photo-7_top align-items-center">
-            <div class="col-lg-6 w3l-features-photo-7_top-left pl-lg-4">
-                <div class="waviy">
-                    <span style="--i:1">요</span>
-                    <span style="--i:2">식</span>
-                    <span style="--i:3">업</span>
-                    {{! <span style="--i:4">t</span>
-                    <span style="--i:5"></span>
-                    <span style="--i:6">U</span>
-                    <span style="--i:7">s</span> }}
-{{! </div>
-<p>Aermentum dolor molestie vel id neque. Donec sed tempus enim, a congue
-    risus. Pellen orci urna. In et augue ornare,
-    tempor massa in, roin a diam et dui tesqu.
-</p>
-<div class="row feat_top mt-4 pt-lg-3">
-    <div class="col-6 w3l-features-photo-7-box">
-        <img src="images/a1.png" alt="" class="img-fluid">
-        <h5 class="w3l-feature-text mb-2 mt-3">Our Mission</h5>
-        <p>In a diam et dui, orci urna. Donec sed tempus enims.</p>
-    </div>
-    <div class="col-6 w3l-features-photo-7-box">
-        <img src="images/s1.png" alt="" class="img-fluid">
-        <h5 class="w3l-feature-text mb-2 mt-3">Our Vision</h5>
-        <p>Et dui elit, orci urnavel id neque. Donec in a diam.</p>
-    </div>
-</div>
-</div>
-<div class="col-lg-6 w3l-features-photo-7_top-right mt-lg-0 mt-sm-5 mt-4">
-<img src="images/blog1.jpg" class="img-responsive" alt="" />
-</div>
-</div>
-<!-- fireworks effect -->
-<div class="pyro">
-<div class="before"></div>
-<div class="after"></div>
-</div>
-</div>
-</section> }}
-<!-- //about section -->
-<!-- blog section -->
-<div class="blog-section py-5">
-    <div class="container py-md-5 py-4">
+          <div class="col-lg-6 w3l-features-photo-7_top-left pl-lg-4">
+            <div class="waviy">
+              <span style="--i: 1">요</span>
+              <span style="--i: 2">식</span>
+              <span style="--i: 3">업</span>
+              {{! <span style="--i: 4">t</span>
+              <span style="--i: 5"></span>
+              <span style="--i: 6">U</span>
+              <span style="--i: 7">s</span> }} {{!
+            </div>
+            <p>
+              Aermentum dolor molestie vel id neque. Donec sed tempus enim, a
+              congue risus. Pellen orci urna. In et augue ornare, tempor massa
+              in, roin a diam et dui tesqu.
+            </p>
+            <div class="row feat_top mt-4 pt-lg-3">
+              <div class="col-6 w3l-features-photo-7-box">
+                <img src="images/a1.png" alt="" class="img-fluid" />
+                <h5 class="w3l-feature-text mb-2 mt-3">Our Mission</h5>
+                <p>In a diam et dui, orci urna. Donec sed tempus enims.</p>
+              </div>
+              <div class="col-6 w3l-features-photo-7-box">
+                <img src="images/s1.png" alt="" class="img-fluid" />
+                <h5 class="w3l-feature-text mb-2 mt-3">Our Vision</h5>
+                <p>Et dui elit, orci urnavel id neque. Donec in a diam.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 w3l-features-photo-7_top-right mt-lg-0 mt-sm-5 mt-4"
+          >
+            <img src="images/blog1.jpg" class="img-responsive" alt="" />
+          </div>
+        </div>
+        <!-- fireworks effect -->
+        <div class="pyro">
+          <div class="before"></div>
+          <div class="after"></div>
+        </div>
+      </div>
+    </section>
+    }}
+    <!-- //about section -->
+    <!-- blog section -->
+    <div class="blog-section py-5">
+      <div class="container py-md-5 py-4">
         <div class="waviy text-center mb-md-5 mb-4">
-            <span style="--i:1">S</span>
-            <span style="--i:2">e</span>
-            <span style="--i:3">r</span>
-            <span style="--i:4">v</span>
-            <span style="--i:5">i</span>
-            <span style="--i:6">c</span>
-            <span style="--i:7">e</span>
-            <span style="--i:8">s</span>
+          <span style="--i: 1">S</span>
+          <span style="--i: 2">e</span>
+          <span style="--i: 3">r</span>
+          <span style="--i: 4">v</span>
+          <span style="--i: 5">i</span>
+          <span style="--i: 6">c</span>
+          <span style="--i: 7">e</span>
+          <span style="--i: 8">s</span>
         </div>
 
         <div class="row" id="crow">
-            <div style="margin: 0 auto 30px;">
-                <span class="label-blue category-tabs" style="margin: 3px" id="tabs" data-category-id=" "
-                      id=" ">전체</span>
-                {{#serviceTypeList}}
-                    <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
-                          id="{{id}}">{{name}}</span>
-                {{/serviceTypeList}}
-            </div>
-
+          <div style="margin: 0 auto 30px" id="cartegories">
+            <span
+              class="label-blue category-tabs"
+              style="margin: 3px"
+              id="tabs"
+              data-category-id=" "
+              id=" "
+              >전체</span
+            >
+            {{#serviceTypeList}}
+            <span
+              class="label-blue category-tabs"
+              style="margin: 3px"
+              data-category-id="{{ id }}"
+              id="{{ id }}"
+              >{{ name }}</span
+            >
+            {{/serviceTypeList}}
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div id="card-target" class="hide">
-    <div class="col-lg-4 col-md-6 item">
+    <div id="card-target">
+      <div class="col-lg-4 col-md-6 item">
         <div class="card">
-            <div class="card-header p-0 position-relative">
-                <a href="/product" data-role="cat1">
-                    <img src="" class="card-img-bottom d-block radius-image-full" data-role="cat2"
-                         alt="Card image cap"/>
-                </a>
-            </div>
+          <div class="card-header p-0 position-relative">
+            <a href="/product" data-role="cat1">
+              <img
+                src=""
+                class="card-img-bottom d-block radius-image-full"
+                data-role="cat2"
+                alt="Card image cap"
+              />
+            </a>
+          </div>
 
-            <div class="card-body blog-details">
-                <a href="/product" class="blog-desc" data-role="cat3"></a>
-                <br>
-                <div class="align-items-center mt-3 mb-1">
-                    <ul class="blog-meta">
-                        <li class="meta-item blog-lesson">
-                                    <span class="meta-value"
-                                          style="text-overflow: ellipsis"
-                                          data-role="cat4"></span>
-                        </li>
-                    </ul>
-                </div>
+          <div class="card-body blog-details">
+            <a href="/product" class="blog-desc" data-role="cat3"></a>
+            <br />
+            <div class="align-items-center mt-3 mb-1">
+              <ul class="blog-meta">
+                <li class="meta-item blog-lesson">
+                  <span
+                    class="meta-value"
+                    style="text-overflow: ellipsis"
+                    data-role="cat4"
+                  ></span>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
 
     {{> footer}}
 
     <!-- Js scripts -->
     <!-- move top -->
     <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-level-up" aria-hidden="true"></span>
+      <span class="fa fa-level-up" aria-hidden="true"></span>
     </button>
     <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
         }
+      }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-
-        }
-    }
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-    }
-</script>
-<!-- //move top -->
-<!-- common jquery plugin -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<!-- //common jquery plugin -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- owl carousel -->
-<script src="js/owl.carousel.js"></script>
-<!-- script for tesimonials carousel slider -->
-<script>
-    $(document).ready(function () {
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- //move top -->
+    <!-- common jquery plugin -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.js"></script>
+    <!-- script for tesimonials carousel slider -->
+    <script>
+      $(document).ready(function () {
         $("#owl-demo2").owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: false,
-            responsiveClass: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            autoplaySpeed: 1000,
-            autoplayHoverPause: false,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                1000: {
-                    items: 1,
-                    nav: false,
-                    loop: false
-                }
-            }
-        })
-    })
-</script>
-<!-- //script for tesimonials carousel slider -->
-<!-- counter for stats -->
-<script src="js/counter.js"></script>
-<!-- //counter for stats -->
-<!-- theme switch js (light and dark)-->
-<script src="js/theme-change.js"></script>
-<script>
-    function autoType(elementClass, typingSpeed) {
+          loop: true,
+          margin: 20,
+          nav: false,
+          responsiveClass: true,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplaySpeed: 1000,
+          autoplayHoverPause: false,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+            },
+            1000: {
+              items: 1,
+              nav: false,
+              loop: false,
+            },
+          },
+        });
+      });
+    </script>
+    <!-- //script for tesimonials carousel slider -->
+    <!-- counter for stats -->
+    <script src="js/counter.js"></script>
+    <!-- //counter for stats -->
+    <!-- theme switch js (light and dark)-->
+    <script src="js/theme-change.js"></script>
+    <script>
+      function autoType(elementClass, typingSpeed) {
         var thhis = $(elementClass);
         thhis.css({
-            "position": "relative",
-            "display": "inline-block"
+          position: "relative",
+          display: "inline-block",
         });
-        thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+        thhis.prepend(
+          '<div class="cursor" style="right: initial; left:0;"></div>'
+        );
         thhis = thhis.find(".text-js");
-        var text = thhis.text().trim().split('');
+        var text = thhis.text().trim().split("");
         var amntOfChars = text.length;
         var newString = "";
         thhis.text("|");
         setTimeout(function () {
-            thhis.css("opacity", 1);
-            thhis.prev().removeAttr("style");
-            thhis.text("");
-            for (var i = 0; i < amntOfChars; i++) {
-                (function (i, char) {
-                    setTimeout(function () {
-                        newString += char;
-                        thhis.text(newString);
-                    }, i * typingSpeed);
-                })(i + 1, text[i]);
-            }
+          thhis.css("opacity", 1);
+          thhis.prev().removeAttr("style");
+          thhis.text("");
+          for (var i = 0; i < amntOfChars; i++) {
+            (function (i, char) {
+              setTimeout(function () {
+                newString += char;
+                thhis.text(newString);
+              }, i * typingSpeed);
+            })(i + 1, text[i]);
+          }
         }, 1500);
-    }
-    $(document).ready(function () {
+      }
+      $(document).ready(function () {
         // Now to start autoTyping just call the autoType function with the
         // class of outer div
         // The second paramter is the speed between each letter is typed.
         autoType(".type-js", 200);
-    });
-</script>
-<!-- //theme switch js (light and dark)-->
-<!-- MENU-JS -->
-<script>
-    $(window).on("scroll", function () {
+      });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+    <!-- MENU-JS -->
+    <script>
+      $(window).on("scroll", function () {
         var scroll = $(window).scrollTop();
         if (scroll >= 80) {
-            $("#site-header").addClass("nav-fixed");
+          $("#site-header").addClass("nav-fixed");
         } else {
-            $("#site-header").removeClass("nav-fixed");
+          $("#site-header").removeClass("nav-fixed");
         }
-    });
-    //Main navigation Active Class Add Remove
-    $(".navbar-toggler").on("click", function () {
+      });
+      //Main navigation Active Class Add Remove
+      $(".navbar-toggler").on("click", function () {
         $("header").toggleClass("active");
-    });
-    $(document).on("ready", function () {
+      });
+      $(document).on("ready", function () {
         if ($(window).width() > 991) {
-            $("header").removeClass("active");
+          $("header").removeClass("active");
         }
         $(window).on("resize", function () {
-            if ($(window).width() > 991) {
-                $("header").removeClass("active");
-            }
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
         });
-    });
-</script>
-<!-- //MENU-JS -->
-<!-- disable body scroll which navbar is in active -->
-<script>
-    $(function () {
-        $('.navbar-toggler').click(function () {
-            $('body').toggleClass('noscroll');
-        })
-    });
-</script>
-<!-- //disable body scroll which navbar is in active -->
-<!--bootstrap-->
-<script src="js/bootstrap.min.js"></script>
-<!-- //bootstrap-->
-</body>
-<!-- Mustache -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-<!-- //Js scripts -->
-<!-- ajaxs -->
-<script>
-    var template = $('#card-target');
+      });
+    </script>
+    <!-- //MENU-JS -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+      $(function () {
+        $(".navbar-toggler").click(function () {
+          $("body").toggleClass("noscroll");
+        });
+      });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!--bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- //bootstrap-->
+  </body>
+  <!-- Mustache -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <!-- //Js scripts -->
+  <!-- ajaxs -->
+  <script>
+    var template = $("#card-target");
     console.log(template);
     function getCategories() {
-        $("#category-all-tab").addClass('label-blue-on')
-        return function () {
-            $.ajax({
-                type: 'GET',
-                url: '/api/v1/category',
-                dataType: 'json',
-                // contentType: 'application/json; charset=utf-8',
-            }).done(function (res) {
-                var html = '';
-                res.forEach(function (item) {
-                    console.log(item);
-                    $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
-                    $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                    $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
-                    $(template).find('[data-role=cat3]').text(item.name);
-                    $(template).find('[data-role=cat4]').text(item.description);
-                    html += $(template).html();
-                })
-                $('#crow').append(html);
-            }).fail(function (error) {
-                alert(JSON.stringify(error));
-            });
-        };
-    }
-    $(document).ready(getCategories())
-    var tabs = $(".category-tabs");
-    $('.category-tabs').on('click', function () {
-        for (const tab of tabs) {
-            tab.classList.remove('label-blue-on')
-        }
-        this.classList.add('label-blue-on');
+      return function () {
         $.ajax({
-            type: 'GET',
-            url: '/api/v1/category/' + this.dataset.categoryId,
-            dataType: 'json',
-            // contentType: 'application/json; charset=utf-8',
-        }).done(function (res) {
-            var html = '';
+          type: "GET",
+          url: "/api/v1/category",
+          dataType: "json",
+          // contentType: 'application/json; charset=utf-8',
+        })
+          .done(function (res) {
+            var html = "";
             res.forEach(function (item) {
-                console.log(item);
-                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
-                $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
-                $(template).find('[data-role=cat3]').text(item.name);
-                $(template).find('[data-role=cat4]').text(item.description);
-                // copy = template;
-                html += $(template).html();
-            })
-            $('#crow').find('.item').remove();
-            $('#crow').append(html);
-        }).fail(function (error) {
+              console.log(item);
+              $(template)
+                .find("[data-role=cat1]")
+                .attr("href", "/product/" + item.id);
+              $(template)
+                .find("[data-role=cat2]")
+                .attr("src", "/images/pd/" + item.img + ".png");
+              $(template)
+                .find("[data-role=cat3]")
+                .attr("href", "/product/" + item.id);
+              $(template).find("[data-role=cat3]").text(item.name);
+              $(template).find("[data-role=cat4]").text(item.description);
+              html += $(template).html();
+            });
+            $("#crow").append(html);
+          })
+          .fail(function (error) {
             alert(JSON.stringify(error));
+          });
+      };
+    }
+    $(document).ready(getCategories());
+    var tabs = $(".category-tabs");
+    $(".category-tabs").on("click", function () {
+      for (const tab of tabs) {
+        tab.classList.remove("label-blue-on");
+      }
+      this.classList.add("label-blue-on");
+      $.ajax({
+        type: "GET",
+        url: "/api/v1/category/" + this.dataset.categoryId,
+        dataType: "json",
+        // contentType: 'application/json; charset=utf-8',
+      })
+        .done(function (res) {
+          var html = "";
+          res.forEach(function (item) {
+            console.log(item);
+            $(template)
+              .find("[data-role=cat1]")
+              .attr("href", "/product/" + item.id);
+            $(template)
+              .find("[data-role=cat2]")
+              .attr("src", "/images/pd/" + item.img + ".png");
+            $(template)
+              .find("[data-role=cat3]")
+              .attr("href", "/product/" + item.id);
+            $(template).find("[data-role=cat3]").text(item.name);
+            $(template).find("[data-role=cat4]").text(item.description);
+            // copy = template;
+            html += $(template).html();
+          });
+          $("#crow").find(".item").remove();
+          $("#crow").append(html);
+        })
+        .fail(function (error) {
+          alert(JSON.stringify(error));
         });
     });
-</script>
+  </script>
 </html>
