@@ -58,6 +58,10 @@ public class IndexController {
         List<Product> productList = productService.findByServId(Integer.parseInt(servId));
         Map<Integer, String> hashTagMap = IntStream.range(0, hashTagList.size()).boxed()
                 .collect(Collectors.toMap(Function.identity(), hashTagList::get));
+        for (Integer integer : hashTagMap.keySet()) {
+            System.out.println("integer = " + integer);
+            System.out.println("hashTagMap = " + hashTagMap.get(integer));
+        }
 
         List<Product> productListForResponse = productList
                 .stream()
@@ -71,7 +75,7 @@ public class IndexController {
                 .filter(e -> (Arrays.stream(e.getTaglist().split(",")).anyMatch(q -> q.equals(entSize))))
                 .map(e -> (Arrays.stream(e.getTaglist().split(","))
                         .filter(z -> Integer.parseInt(z) >= 3 && Integer.parseInt(z) < 18)
-                        .map(k -> hashTagMap.get(Integer.parseInt(k)))
+                        .map(k -> hashTagMap.get(Integer.parseInt(k)-1))
                         .collect(Collectors.toList())))
                 .collect(Collectors.toList());
 
