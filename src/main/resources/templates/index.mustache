@@ -268,7 +268,7 @@
             </div>
         </div>
         <div class="row" id="crow">
-            <div style="margin: 0 auto 30px;" id="categories">
+            <div style="margin: 0 auto 30px;">
                 <span class="label-blue-on label-blue category-tabs" style="margin: 3px" id="category-all-tab"
 
                 >전체</span>
@@ -494,8 +494,34 @@
 <!-- //Js scripts -->
 <!-- ajaxs -->
 <script>
-    var template = $('#card-target').load('tag.html');
-    var htemplate = $('#hashtag-target').load('tag.html');
+    var template = $('#card-target');
+    var htemplate = $('#hashtag-target');
+    const array = [];
+    let pointer = 1;
+    let loadMoreBtn = document.querySelector('#load-more');
+    loadMoreBtn.addEventListener('click', ()=>{
+        let period = (pointer)*6;
+        const newArray = array.slice(0, period+6);
+        let html = '';
+        newArray.forEach((item)=>{
+            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat3]').text(item.name);
+            $(template).find('[data-role=cat4]').text(item.description);
+            let hashTagList = item.hashTagList.slice(0, 6);
+            let tagHtml = '';
+            hashTagList.forEach(function (tag) {
+                $(htemplate).find('[data-role=cat5]').text(tag);
+                tagHtml += $(htemplate).html();
+            })
+            $(template).find('#hashtag-content').html(tagHtml);
+            html += $(template).html();
+        })
+        $('#crow').find('.item').remove();
+        $('#crow').append(html);
+        pointer++;
+    });
 
     $(document).ready(findProductWithServIdAndEntSize())
     $('.ui_tab_nav').on('click', function () {
@@ -508,6 +534,7 @@
     });
 
     $('.category-tabs').on('click', function () {
+
         var tabs = $(".category-tabs");
         for (const tab of tabs) {
             tab.classList.remove('label-blue-on')
@@ -517,6 +544,33 @@
     });
 
     function findProductWithServIdAndEntSize() {
+        const array = [];
+        let pointer = 1;
+        let loadMoreBtn = document.querySelector('#load-more');
+        loadMoreBtn.addEventListener('click', ()=>{
+            let period = (pointer)*6;
+            const newArray = array.slice(0, period+6);
+            let html = '';
+            newArray.forEach((item)=>{
+                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
+                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').text(item.name);
+                $(template).find('[data-role=cat4]').text(item.description);
+                let hashTagList = item.hashTagList.slice(0, 6);
+                let tagHtml = '';
+                hashTagList.forEach(function (tag) {
+                    $(htemplate).find('[data-role=cat5]').text(tag);
+                    tagHtml += $(hte
+                    mplate).html();
+                })
+                $(template).find('#hashtag-content').html(tagHtml);
+                html += $(template).html();
+            })
+            $('#crow').find('.item').remove();
+            $('#crow').append(html);
+            pointer++;
+        });
         let categoryId = $('.label-blue-on').data('categoryId');
         let entSize = $(".on").val();
         $.ajax({
@@ -530,7 +584,15 @@
             contentType: 'application/json; charset=utf-8'
         }).done(function (res) {
             var html = '';
-            res.forEach(function (item) {
+
+            res.forEach((item)=>{
+                array.push(item);
+            });
+            pointer = 1;
+            for(let i = 0; i < array.length ; i++) {
+                if(i==6)break;
+                let item = res[i];
+                console.log("this is item!!!"+JSON.stringify(item));
                 $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
                 $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
@@ -541,11 +603,10 @@
                 hashTagList.forEach(function (tag) {
                     $(htemplate).find('[data-role=cat5]').text(tag);
                     tagHtml += $(htemplate).html();
-                    console.log($(htemplate).html())
                 })
                 $(template).find('#hashtag-content').html(tagHtml);
                 html += $(template).html();
-            })
+            }
             $('#crow').find('.item').remove();
             $('#crow').append(html);
         }).fail(function (error) {
