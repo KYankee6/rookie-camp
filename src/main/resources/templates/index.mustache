@@ -1,350 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>KT Enterprise</title>
-    <!-- google-fonts -->
-    <link
-      href="//fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="//fonts.googleapis.com/css2?family=Sail&display=swap"
-      rel="stylesheet"
-    />
-    <!-- //google-fonts -->
-    <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="/css/style-liberty.css" />
-    <!--
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    -->
-    <!-- ✅ Load slick theme CSS ✅ -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+{{> header }}
 
-  <body>
-    <!--header-->
-    <header id="site-header" class="fixed-top">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg stroke">
-          <h1>
-            <a class="navbar-brand d-flex align-items-center" href="/">
-              Happy Events</a
-            >
-          </h1>
-          <!-- if logo is image enable this
-<a class="navbar-brand" href="#index.html">
-    <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-</a> -->
-          <button
-            class="navbar-toggler collapsed bg-gradient"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+<!-- banner section -->
+<div class="slick-sample main_visual_top">
+  <div class="visual1 bg13">
+    <div class="inner_wrap">
+      <div class="img">
+        <!--
+        <img
+          src="resource/images/main/m_main_visual11s3.png"
+          alt="세이프넷 배너 이미지"
+          class="kt_mb"
+        />-->
+        <div class="imgDescription"></div>
+      </div>
+      <div class="inner">
+        <span class="sub_tit">SafeNet</span>
+        <p class="main_vs_txt">
+          별도의 장비 구축 및 고비용 투자 없이 <br class="only_pc" />기업용
+          악성사이트 차단서비스를 제공합니다.
+        </p>
+        <ul class="vs_txt_list">
+          <li>
+            실시간으로 악성사이트(피싱, 파밍, 정보유출, 악성코드, 랜섬웨어
+            배포사이트) 차단
+          </li>
+          <li>
+            매월 정기 보안 레포트를 통해 보안 현황 및 실시간 예방조치 안내
+          </li>
+          <li>Premium PC백신 1copy 함께 제공(랜섬웨어 복구 서비스 포함)</li>
+        </ul>
+        <div class="btn left" style="margin-top: 25px">
+          <a href="pd/P_PD_SS_IS_001.do.html" class="btn_link_border"
+            >자세히 보기</a
           >
-            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-lg-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/category">category</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Pages <span class="fa fa-angle-down"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="services.html">Services</a>
-                  <a class="dropdown-item" href="single.html">Single Page</a>
-                  <a class="dropdown-item" href="error.html">404 Page</a>
-                  <a class="dropdown-item" href="landing-single.html"
-                    >Landing Page</a
-                  >
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-              <!-- search button -->
-              <div class="search-right ml-lg-3">
-                <form
-                  action="error.html"
-                  method="GET"
-                  class="search-box position-relative"
-                >
-                  <div class="input-search">
-                    <input
-                      type="search"
-                      placeholder="Enter Keyword"
-                      name="search"
-                      required="required"
-                      autofocus=""
-                      class="search-popup"
-                    />
-                  </div>
-                  <button type="submit" class="btn search-btn">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-              </div>
-              <!-- //search button -->
-            </ul>
-          </div>
-          <!-- toggle switch for light and dark theme -->
-          <div class="cont-ser-position">
-            <nav class="navigation">
-              <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                  <input type="checkbox" id="checkbox" />
-                  <div class="mode-container">
-                    <i class="gg-sun"></i>
-                    <i class="gg-moon"></i>
-                  </div>
-                </label>
-              </div>
-            </nav>
-          </div>
-          <!-- //toggle switch for light and dark theme -->
-        </nav>
-      </div>
-    </header>
-    <!--//header-->
-    <div class="slick-sample main_visual_top">
-      <div class="visual bg13">
-        <div class="inner_wrap">
-          <div class="img">
-            <!--
-            <img
-              src="resource/images/main/m_main_visual13.png"
-              alt="세이프넷 배너 이미지"
-              class="kt_mb"
-            />-->
-            <div class="imgDescription"></div>
-          </div>
-          <div class="inner">
-            <span class="sub_tit">SafeNet</span>
-            <p class="main_vs_txt">
-              별도의 장비 구축 및 고비용 투자 없이 <br class="only_pc" />기업용
-              악성사이트 차단서비스를 제공합니다.
-            </p>
-            <ul class="vs_txt_list">
-              <li>
-                실시간으로 악성사이트(피싱, 파밍, 정보유출, 악성코드, 랜섬웨어
-                배포사이트) 차단
-              </li>
-              <li>
-                매월 정기 보안 레포트를 통해 보안 현황 및 실시간 예방조치 안내
-              </li>
-              <li>Premium PC백신 1copy 함께 제공(랜섬웨어 복구 서비스 포함)</li>
-            </ul>
-            <div class="btn left" style="margin-top: 25px">
-              <a href="pd/P_PD_SS_IS_001.do.html" class="btn_link_border"
-                >자세히 보기</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 기업전용5G -->
-      <div class="visual bg16">
-        <div class="inner_wrap">
-          <div class="img">
-            <!--
-            <img
-              src="resource/images/main/m_main_visual16.png"
-              alt="기업전용 5G 속도 선택 부가 서비스 이미지"
-              class="kt_mb"
-            />-->
-            <div class="imgDescription"></div>
-          </div>
-          <div class="inner">
-            <span class="sub_tit">기업전용5G 속도 선택 부가서비스</span>
-            <p class="main_vs_txt">
-              기업고객 전용의<br />5G 데이터 무제한 요금제
-            </p>
-            <ul class="vs_txt_list">
-              <li>
-                일반 대리점 가입 불가! 법인 및 임직원을 위한 특별한 요금제
-              </li>
-              <li>5G 데이터 무제한(10/20M bps 속도선택), 음성/문자 무제한</li>
-              <li>기업이 가입하는 베이스 회선요금 최저 0원!</li>
-            </ul>
-            <div class="btn left" style="margin-top: 25px">
-              <a href="pd/P_PD_MB_BF_001.do.html" class="btn_link_border"
-                >자세히 보기</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="visual bg19">
-        <div class="inner_wrap">
-          <div class="img">
-            <!--
-            <img
-              src="resource/images/main/m_main_visual19.png"
-              alt="FlexLine 배너 이미지"
-              class="kt_mb"
-            />-->
-            <div class="imgDescription"></div>
-          </div>
-          <div class="inner">
-            <span class="sub_tit">FlexLine</span>
-            <p class="main_vs_txt">
-              최적의 네트워크 구성이 가능한 SD-WAN솔루션 FlexLine 서비스를
-              소개합니다.
-            </p>
-            <ul class="vs_txt_list">
-              <li>최적의 네트워크 구성이 가능한 SD-WAN 솔루션</li>
-              <li>고객선택을 기반으로 유연한 회선 대역폭 변경</li>
-              <li>온라인 포탈을 통한 편리한 서비스 변경/확인</li>
-            </ul>
-            <div class="btn left" style="margin-top: 25px">
-              <a href="pd/P_PD_NW_CI_004.do.html" class="btn_link_border"
-                >자세히 보기</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- AI 방역로봇 -->
-      <div class="visual bg11">
-        <div class="inner_wrap">
-          <div class="img">
-            <!--
-            <img
-              src="resource/images/main/m_main_visual11.png"
-              alt="AI 방역로봇 이미지"
-              class="kt_mb"
-            />-->
-            <div class="imgDescription"></div>
-          </div>
-          <div class="inner">
-            <span class="sub_tit">AI 방역로봇</span>
-            <p class="main_vs_txt">
-              KT의 AI로봇 기술로 제시하는<br />방역 패러다임
-            </p>
-            <ul class="vs_txt_list">
-              <li>세균, 바이러스, 미세먼지, 유해가스를 깨끗하게 제거</li>
-              <li>원격으로 자동 방역 스케줄링</li>
-              <li>AI자율주행 기술로 놓치는 구역없이 꼼꼼하게 제거</li>
-            </ul>
-            <div class="btn left" style="margin-top: 25px">
-              <a href="pd/P_PD_AI_RB_005.do.html" class="btn_link_border"
-                >자세히 보기</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- AI Contact Center -->
-      <div class="visual bg3">
-        <div class="inner_wrap">
-          <div class="img">
-            <!--
-            <img
-              src="resource/images/main/m_main_visual02_q50.png"
-              alt=""
-              class="kt_mb"
-            />-->
-          </div>
-          <div class="inner">
-            <span class="sub_tit">AI Contact Center</span>
-            <p class="main_vs_txt">
-              고객 맞춤형 AI 콜센터 <br class="pc_none" />솔루션을 제공해
-              <br class="m_none" />신속&middot;유연한
-              <br class="pc_none" />고객응대 환경을 지원합니다.
-            </p>
-            <ul class="vs_txt_list">
-              <li>기업 니즈에 따른 맞춤 서비스</li>
-              <li>검증된 AI 기술과 솔루션 제공</li>
-              <li>다양한 AICC 솔루션의 신속한 공급</li>
-            </ul>
-            <div class="btn left" style="margin-top: 25px">
-              <a href="pd/P_PD_AI_CC_001.do.html" class="btn_link_border"
-                >자세히 보기</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 법인폰 -->
-      <div class="visual bg8">
-        <div class="inner_wrap">
-          <div class="img">
-            <!--
-            <img
-              src="resource/images/main/m_main_visual08.png"
-              alt=""
-              class="kt_mb"
-            />-->
-          </div>
-          <div class="inner">
-            <span class="sub_tit">법인폰 | KT Enterprise 공식 모바일샵</span>
-            <p class="main_vs_txt">법인폰 전문 컨설팅을 비대면으로!</p>
-            <ul class="vs_txt_list">
-              <li>법인폰/패드 전문 모바일샵</li>
-              <li>고객 맞춤 솔루션 및 요금 컨설팅</li>
-              <li>법인폰 타사 도입 사례 및 FAQ 제공</li>
-              <li>카카오톡/유선 및 홈페이지를 통한 다양한 상담 채널 제공</li>
-            </ul>
-            <div class="btn left" style="margin-top: 25px">
-              <a
-                href="pd/P_PD_MB_BP_001.do.html"
-                class="btn_link_border"
-                tabindex="0"
-                >자세히 보기</a
-              >
-              <a
-                href="http://pf.kakao.com/_xgyuxfs"
-                target="_blank"
-                class="btn_link_border"
-                tabindex="0"
-                >카톡상담신청</a
-              >
-            </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
+  <!-- 기업전용5G -->
+  <div class="visual1 bg16">
+    <div class="inner_wrap">
+      <div class="img">
+        <!--
+        <img
+          src="resource/images/main/m_main_visual116.png"
+          alt="기업전용 5G 속도 선택 부가 서비스 이미지"
+          class="kt_mb"
+        />-->
+        <div class="imgDescription"></div>
+      </div>
+      <div class="inner">
+        <span class="sub_tit">기업전용5G 속도 선택 부가서비스</span>
+        <p class="main_vs_txt">
+          기업고객 전용의<br />5G 데이터 무제한 요금제
+        </p>
+        <ul class="vs_txt_list">
+          <li>
+            일반 대리점 가입 불가! 법인 및 임직원을 위한 특별한 요금제
+          </li>
+          <li>5G 데이터 무제한(10/20M bps 속도선택), 음성/문자 무제한</li>
+          <li>기업이 가입하는 베이스 회선요금 최저 0원!</li>
+        </ul>
+        <div class="btn left" style="margin-top: 25px">
+          <a href="pd/P_PD_MB_BF_001.do.html" class="btn_link_border"
+            >자세히 보기</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="visual1 bg19">
+    <div class="inner_wrap">
+      <div class="img">
+        <!--
+        <img
+          src="resource/images/main/m_main_visual119.png"
+          alt="FlexLine 배너 이미지"
+          class="kt_mb"
+        />-->
+        <div class="imgDescription"></div>
+      </div>
+      <div class="inner">
+        <span class="sub_tit">FlexLine</span>
+        <p class="main_vs_txt"  >
+          최적의 네트워크 구성이 가능한 SD-WAN솔루션 FlexLine 서비스를
+          소개합니다.
+        </p>
+        <ul class="vs_txt_list">
+          <li>최적의 네트워크 구성이 가능한 SD-WAN 솔루션</li>
+          <li>고객선택을 기반으로 유연한 회선 대역폭 변경</li>
+          <li>온라인 포탈을 통한 편리한 서비스 변경/확인</li>
+        </ul>
+        <div class="btn left"  style="margin-top: 25px;">
+          <a href="pd/P_PD_NW_CI_004.do.html" class="btn_link_border"
+            >자세히 보기</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- AI 방역로봇 -->
+  <div class="visual1 bg11">
+    <div class="inner_wrap">
+      <div class="img">
+        <!--
+        <img
+          src="resource/images/main/m_main_visual111.png"
+          alt="AI 방역로봇 이미지"
+          class="kt_mb"
+        />-->
+        <div class="imgDescription"></div>
+      </div>
+      <div class="inner">
+        <span class="sub_tit">AI 방역로봇</span>
+        <p class="main_vs_txt">
+          KT의 AI로봇 기술로 제시하는<br />방역 패러다임
+        </p>
+        <ul class="vs_txt_list">
+          <li>세균, 바이러스, 미세먼지, 유해가스를 깨끗하게 제거</li>
+          <li>원격으로 자동 방역 스케줄링</li>
+          <li>AI자율주행 기술로 놓치는 구역없이 꼼꼼하게 제거</li>
+        </ul>
+        <div class="btn left" style="margin-top: 25px">
+          <a href="pd/P_PD_AI_RB_005.do.html" class="btn_link_border"
+            >자세히 보기</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- AI Contact Center -->
+  <div class="visual1 bg3">
+    <div class="inner_wrap">
+      <div class="img">
+        <!--
+        <img
+          src="resource/images/main/m_main_visual102_q50.png"
+          alt=""
+          class="kt_mb"
+        />-->
+      </div>
+      <div class="inner">
+        <span class="sub_tit">AI Contact Center</span>
+        <p class="main_vs_txt">
+          고객 맞춤형 AI 콜센터 
+          <br class="pc_none" />솔루션을 제공해 신속&middot;유연한
+          <br class="pc_none" />고객응대 환경을 지원합니다.
+        </p>
+        <ul class="vs_txt_list">
+          <li>기업 니즈에 따른 맞춤 서비스</li>
+          <li>검증된 AI 기술과 솔루션 제공</li>
+          <li>다양한 AICC 솔루션의 신속한 공급</li>
+        </ul>
+        <div class="btn left" style="margin-top: 25px">
+          <a href="pd/P_PD_AI_CC_001.do.html" class="btn_link_border"
+            >자세히 보기</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 법인폰 -->
+  <div class="visual1 bg8">
+    <div class="inner_wrap">
+      <div class="img">
+        <!--
+        <img
+          src="resource/images/main/m_main_visual108.png"
+          alt=""
+          class="kt_mb"
+        />-->
+      </div>
+      <div class="inner">
+        <span class="sub_tit">법인폰 | KT Enterprise 공식 모바일샵</span>
+        <p class="main_vs_txt">법인폰 전문 컨설팅을 비대면으로!</p>
+        <ul class="vs_txt_list">
+          <li>법인폰/패드 전문 모바일샵</li>
+          <li>고객 맞춤 솔루션 및 요금 컨설팅</li>
+          <li>법인폰 타사 도입 사례 및 FAQ 제공</li>
+          <li>카카오톡/유선 및 홈페이지를 통한 다양한 상담 채널 제공</li>
+        </ul>
+        <div class="btn left" style="margin-top: 25px">
+          <a
+            href="pd/P_PD_MB_BP_001.do.html"
+            class="btn_link_border"
+            tabindex="0"
+            >자세히 보기</a
+          >
+          <a
+            href="http://pf.kakao.com/_xgyuxfs"
+            target="_blank"
+            class="btn_link_border"
+            tabindex="0"
+            >카톡상담신청</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -391,7 +245,7 @@
           <span style="--i: 8">t</span>
           <span style="--i: 9">s</span>
         </div>
-        {{ !anchor_tab }}
+
         <div class="anchor_tab_wrap mb-md-5">
           <div
             class="ui_spyscroll_holder"
@@ -472,11 +326,7 @@
     <section class="w3l-covers-14 position-relative">
       <div class="covers14-block py-5">
         <div class="container py-md-5 py-4">
-          <!-- fireworks effect -->
-          <div class="pyro">
-            <div class="before"></div>
-            <div class="after"></div>
-          </div>
+          
           <div
             class="covers14-text text-center mx-auto py-lg-5"
             style="max-width: 950px"
@@ -493,311 +343,19 @@
       </div>
     </section>
     <!-- //bg with text section -->
-    <!-- family site-->
-    <div class="site_family" style="padding-top: 6rem !important">
-      <div class="waviy text-center mb-md-5 mb-4">
-        <span style="--i: 1">F</span>
-        <span style="--i: 2">a</span>
-        <span style="--i: 3">m</span>
-        <span style="--i: 4">i</span>
-        <span style="--i: 5">l</span>
-        <span style="--i: 6">y</span>
-        <span style="--i: 7"></span>
-        <span style="--i: 8"></span>
-        <span style="--i: 1">S</span>
-        <span style="--i: 2">i</span>
-        <span style="--i: 3">t</span>
-        <span style="--i: 4">e</span>
-      </div>
-
-      <div class="site_list j_site_sort slick-initialized slick-slider">
-        <button
-          class="slick-prev slick-arrow slick-disabled"
-          aria-label="Previous"
-          type="button"
-          aria-disabled="true"
-          style="display: block; border: 0"
-        >
-          Previous
-        </button>
-        <div class="slick-list draggable">
-          <div
-            class="slick-track"
-            style="
-              opacity: 1;
-              width: 1690px;
-              transform: translate3d(0px, 0px, 0px);
-            "
-          >
-            <div
-              class="slick-slide slick-current slick-active"
-              data-slick-index="0"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://ktrobot.co.kr/w/main.asp"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon17"
-                    tabindex="0"
-                    >AI Robot</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="1"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://www.kt-aicc.com/user/index"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon18"
-                    tabindex="0"
-                    >AICC</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="2"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://bizcomm.kt.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon03"
-                    tabindex="0"
-                    >기업모바일</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="3"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://www.ktvpn.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon05"
-                    tabindex="0"
-                    >VPN</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="4"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://www.xroshot.com"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon06"
-                    tabindex="0"
-                    >KT 스마트메시지<br />WEB/POP/PRO<br />/API/biz</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="5"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://say.olleh.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon07"
-                    tabindex="0"
-                    >KT 스마트메시지 Plus</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="6"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://www.bizmeka.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon08"
-                    tabindex="0"
-                    >Bizmeka EZ</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide slick-active"
-              data-slick-index="7"
-              aria-hidden="false"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://gw.bizmeka.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon10"
-                    tabindex="0"
-                    >그룹웨어</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide"
-              data-slick-index="8"
-              aria-hidden="true"
-              tabindex="-1"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://call.bizmeka.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon11"
-                    tabindex="-1"
-                    >콜매니저</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide"
-              data-slick-index="9"
-              aria-hidden="true"
-              tabindex="-1"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://bips.bizmeka.com/main.html"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon12"
-                    tabindex="-1"
-                    >사회보험</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide"
-              data-slick-index="10"
-              aria-hidden="true"
-              tabindex="-1"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://biz.securegate.kt.com/consulting.do"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon14"
-                    tabindex="-1"
-                    >정보보안</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide"
-              data-slick-index="11"
-              aria-hidden="true"
-              tabindex="-1"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://gigaenergy.kt.com/"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon15"
-                    tabindex="-1"
-                    >기가에너지</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slick-slide"
-              data-slick-index="12"
-              aria-hidden="true"
-              tabindex="-1"
-              style="width: 130px"
-            >
-              <div>
-                <div style="width: 100%; display: inline-block">
-                  <a
-                    href="https://smartfactory.kt.co.kr/fmportal/#/home"
-                    title="새창열림"
-                    target="_blank"
-                    class="icon16"
-                    tabindex="-1"
-                    >스마트팩토리</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="slick-next slick-arrow"
-          aria-label="Next"
-          type="button"
-          style="display: block; border: 0"
-          aria-disabled="false"
-        >
-          Next
-        </button>
-      </div>
-    </div>
-    <!-- family site-->
+    
 
     {{> footer}}
-
+<!--내비게이션바 main.js 파일 경로-->
+<script src="/js/common.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script src="/js/slick.js"></script>
+<script type="text/javascript">$ = jq = jQuery.noConflict();</script>
+<script src="/js/img_data.js"></script>
+<script src="/js/iscroll.js" id="pageNavigationIscroll"></script>
+<script src="/js/pageNavigation.js" id="pageNavigationJs"></script>
     <!-- Js scripts -->
     <!-- move top -->
     <button onclick="topFunction()" id="movetop" title="Go to top">
@@ -934,28 +492,29 @@
             $("header").removeClass("active");
           }
         });
-      });
-    </script>
-    <!-- //MENU-JS -->
-    <!-- disable body scroll which navbar is in active -->
-    <script>
-      $(function () {
-        $(".navbar-toggler").click(function () {
-          $("body").toggleClass("noscroll");
-        });
-      });
-    </script>
-    <!-- //disable body scroll which navbar is in active -->
-    <!--bootstrap-->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- //bootstrap-->
-  </body>
-  <!-- Mustache -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-  <!-- //Js scripts -->
-  <!-- ajaxs -->
-  <script>
-    var template = $("#card-target");
+    });
+</script>
+<!-- //MENU-JS -->
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- //disable body scroll which navbar is in active -->
+<!--bootstrap-->
+<script src="js/bootstrap.min.js"></script>
+<!-- //bootstrap-->
+</div>
+</body>
+<!-- Mustache -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+<!-- //Js scripts -->
+<!-- ajaxs -->
+<script>
+    var template = $('#card-target');
     console.log(template);
     function getCategories() {
       return function () {

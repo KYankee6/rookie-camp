@@ -15575,15 +15575,15 @@ button.search-btn:hover {
 /* banner slider */
 /* first text effect */
 #Text8 {
-  background-color: #fffe48;
+  /* background-color: #fffe48; */
   width: 100%;
   height: 100%;
 }
 
 #Text8 h1 {
   position: absolute;
-  top: 50px;
-  left: 0;
+  top: 200px;
+  left: -935px;
   right: 0;
   /*left: 50%;*/
   /* transform: translate(-50%, -50%);*/
@@ -19738,7 +19738,7 @@ li {
   margin-top: 60px;
   padding: 0 20px;
 }
-.site_family .site_list .slick-slide a {
+.site_family .site_list .slick-slide2 a {
   display: block;
   width: 100%;
   padding-top: 96px;
@@ -19770,112 +19770,112 @@ li {
 .site_family .site_list .slick-disabled {
   background-position: 0 0;
 }
-.site_family .site_list .slick-slide .icon01 {
+.site_family .site_list .slick-slide2 .icon01 {
   background: url(../images/p_fm_ico01_off.png);
 }
-.site_family .site_list .slick-slide .icon02 {
+.site_family .site_list .slick-slide2 .icon02 {
   background-image: url(../images/p_fm_ico02_off.png);
 }
-.site_family .site_list .slick-slide .icon03 {
+.site_family .site_list .slick-slide2 .icon03 {
   background-image: url(../images/p_fm_ico03_off.png);
 }
-.site_family .site_list .slick-slide .icon04 {
+.site_family .site_list .slick-slide2 .icon04 {
   background-image: url(../images/p_fm_ico04_off.png);
 }
-.site_family .site_list .slick-slide .icon05 {
+.site_family .site_list .slick-slide2 .icon05 {
   background-image: url(../images/p_fm_ico05_off.png);
 }
-.site_family .site_list .slick-slide .icon06 {
+.site_family .site_list .slick-slide2 .icon06 {
   background-image: url(../images/p_fm_ico06_off.png);
 }
-.site_family .site_list .slick-slide .icon07 {
+.site_family .site_list .slick-slide2 .icon07 {
   background-image: url(../images/p_fm_ico07_off.png);
 }
-.site_family .site_list .slick-slide .icon08 {
+.site_family .site_list .slick-slide2 .icon08 {
   background-image: url(../images/p_fm_ico08_off.png);
 }
-.site_family .site_list .slick-slide .icon09 {
+.site_family .site_list .slick-slide2 .icon09 {
   background-image: url(../images/p_fm_ico09_off.png);
 }
-.site_family .site_list .slick-slide .icon10 {
+.site_family .site_list .slick-slide2 .icon10 {
   background-image: url(../images/p_fm_ico10_off.png);
 }
-.site_family .site_list .slick-slide .icon11 {
+.site_family .site_list .slick-slide2 .icon11 {
   background-image: url(../images/p_fm_ico11_off.png);
 }
-.site_family .site_list .slick-slide .icon12 {
+.site_family .site_list .slick-slide2 .icon12 {
   background-image: url(../images/p_fm_ico12_off.png);
 }
-.site_family .site_list .slick-slide .icon13 {
+.site_family .site_list .slick-slide2 .icon13 {
   background-image: url(../images/p_fm_ico13_off.png);
 }
-.site_family .site_list .slick-slide .icon14 {
+.site_family .site_list .slick-slide2 .icon14 {
   background-image: url(../images/p_fm_ico14_off.png);
 }
-.site_family .site_list .slick-slide .icon15 {
+.site_family .site_list .slick-slide2 .icon15 {
   background-image: url(../images/p_fm_ico15_off.png);
 }
-.site_family .site_list .slick-slide .icon16 {
+.site_family .site_list .slick-slide2 .icon16 {
   background-image: url(../images/p_fm_ico16_off.png);
 }
-.site_family .site_list .slick-slide .icon17 {
+.site_family .site_list .slick-slide2 .icon17 {
   background-image: url(../images/p_fm_ico17_off.png);
 }
-.site_family .site_list .slick-slide .icon18 {
+.site_family .site_list .slick-slide2 .icon18 {
   background-image: url(../images/p_fm_ico18_off.png);
 }
-.site_family .site_list .slick-slide a:hover.icon01 {
+.site_family .site_list .slick-slide2 a:hover.icon01 {
   background-image: url(../images/p_fm_ico01_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon02 {
+.site_family .site_list .slick-slide2 a:hover.icon02 {
   background-image: url(../images/p_fm_ico02_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon03 {
+.site_family .site_list .slick-slide2 a:hover.icon03 {
   background-image: url(../images/p_fm_ico03_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon04 {
+.site_family .site_list .slick-slide2 a:hover.icon04 {
   background-image: url(../images/p_fm_ico04_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon05 {
+.site_family .site_list .slick-slide2 a:hover.icon05 {
   background-image: url(../images/p_fm_ico05_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon06 {
+.site_family .site_list .slick-slide2 a:hover.icon06 {
   background-image: url(../images/p_fm_ico06_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon07 {
+.site_family .site_list .slick-slide2 a:hover.icon07 {
   background-image: url(../images/p_fm_ico07_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon08 {
+.site_family .site_list .slick-slide2 a:hover.icon08 {
   background-image: url(../images/p_fm_ico08_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon09 {
+.site_family .site_list .slick-slide2 a:hover.icon09 {
   background-image: url(../images/p_fm_ico09_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon10 {
+.site_family .site_list .slick-slide2 a:hover.icon10 {
   background-image: url(../images/p_fm_ico10_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon11 {
+.site_family .site_list .slick-slide2 a:hover.icon11 {
   background-image: url(../images/p_fm_ico11_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon12 {
+.site_family .site_list .slick-slide2 a:hover.icon12 {
   background-image: url(../images/p_fm_ico12_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon13 {
+.site_family .site_list .slick-slide2 a:hover.icon13 {
   background-image: url(../images/p_fm_ico13_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon14 {
+.site_family .site_list .slick-slide2 a:hover.icon14 {
   background-image: url(../images/p_fm_ico14_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon15 {
+.site_family .site_list .slick-slide2 a:hover.icon15 {
   background-image: url(../images/p_fm_ico15_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon16 {
+.site_family .site_list .slick-slide2 a:hover.icon16 {
   background-image: url(../images/p_fm_ico16_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon17 {
+.site_family .site_list .slick-slide2 a:hover.icon17 {
   background-image: url(../images/p_fm_ico17_on.png);
 }
-.site_family .site_list .slick-slide a:hover.icon18 {
+.site_family .site_list .slick-slide2 a:hover.icon18 {
   background-image: url(../images/p_fm_ico18_on.png);
 }
 /* site_family */
@@ -19947,32 +19947,32 @@ li {
   visibility: hidden;
 }
 
-.slick-slide {
+.slick-slide2 {
   display: none;
   float: left;
 
   height: 100%;
   min-height: 1px;
 }
-[dir="rtl"] .slick-slide {
+[dir="rtl"] .slick-slide2 {
   float: right;
 }
-.slick-slide img {
+.slick-slide2 img {
   display: block;
 }
-.slick-slide.slick-loading img {
+.slick-slide2.slick-loading img {
   display: none;
 }
-.slick-slide.dragging img {
+.slick-slide2.dragging img {
   pointer-events: none;
 }
-.slick-initialized .slick-slide {
+.slick-initialized .slick-slide2 {
   display: block;
 }
-.slick-loading .slick-slide {
+.slick-loading .slick-slide2 {
   visibility: hidden;
 }
-.slick-vertical .slick-slide {
+.slick-vertical .slick-slide2{
   display: block;
 
   height: auto;
