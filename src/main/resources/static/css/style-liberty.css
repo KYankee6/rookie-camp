@@ -16565,7 +16565,7 @@ span.label-blue-on {
   border-radius: var(--border-radius-full) solid;
   font-weight: 600;
   border-style: solid;
-  border-block-color: white;
+  border-color: #34558b;
   /* border-radius: 30px; */
   border-radius: 15px;
 }

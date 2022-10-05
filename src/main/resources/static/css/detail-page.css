@@ -17079,18 +17079,7 @@ h3.video-title {
 /* //bg with text section */
 
 /* blog section */
-span.label-blue {
-  color: #34558b;
-  display: inline-block;
-  background: white;
-  padding: 5px 20px;
-  border-radius: var(--border-radius-full) solid;
-  font-weight: 600;
-  border-style: solid;
-  border-block-color: #34558b;
-  /* border-radius: 30px; */
-  border-radius: 15px;
-}
+
 
 a.label-blue-button {
   color: #fff;
