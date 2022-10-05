@@ -34,10 +34,6 @@ public class CategoryService {
                         .anyMatch(f -> f.equals(CAT_ID)))
                 .collect(Collectors.toList());
 
-        for (Product product : productList) {
-            System.out.println("product = " + product.getName());
-            System.out.println("product.getTaglist() = " + product.getTaglist());
-        }
         return productList;
     }
 

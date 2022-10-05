@@ -1,1772 +1,1770 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>KT Enterprise</title>
     <!-- google-fonts -->
     <link
-      href="//fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
     />
     <link
-      href="//fonts.googleapis.com/css2?family=Sail&display=swap"
-      rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Sail&display=swap"
+            rel="stylesheet"
     />
     <!-- //google-fonts -->
     <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="/css/style-liberty.css" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style-liberty.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
 
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/detail-page.css" />
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/detail-page.css"/>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
     />
 
     <!-- 퍼블리싱 css 시작 -->
-    <link rel="stylesheet" href="/css/slick.css" />
-    <link rel="stylesheet" href="/css/content.css" />
-    <link rel="stylesheet" href="/css/custom.css" />
-    <!-- Facebook Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "709085229200622");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="tr?id=709085229200622&ev=PageView&noscript=1"
-      />
-    </noscript>
-    <style>
-      /* img[data-image="thumbnail"] { width:340px !important; height:230px !important; display:inline-block;data-link-page=' + dataLinkPage + ' } */
-      .kt_mb div.search_total,
-      .kt_pc div.search_total {
-        display: none;
-      }
-
-      .foot_search_total,
-      .footer {
-        display: none;
-      }
-    </style>
-    <style>
-      /*         .visualTop .visualwrap {overflow:hidden;width:100%;height:100%;} */ /* .wrapTop .visualTop .txtVisual {z-index:2;} .wrapTop .visualTop .slick-slide .visual2, .wrapTop .visualTop .slick-slide .visual3, .wrapTop .visualTop .slick-slide .visual4 {transform:scale(1.4);} .wrapTop .visualTop .slick-slide .visual2.ani{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;} .wrapTop .visualTop .slick-slide .visual3.ani{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;} .wrapTop .visualTop .slick-slide .visual4.ani{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;} */ /*.main_visual_top .visual{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;transition:all 1.4s ease-in-out;}*/ /* 2020-11-24 수정 */
-      .main_visual_top .slick-slide.slick-active .visual.bg3 {
-      }
-
-      @keyframes scaleBg {
-        0% {
-          background-size: 140% 130%;
-        }
-        50% {
-          background-size: 100% 100%;
-        }
-        100% {
-          background-size: 140% 130%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/css/slick.css"/>
+    <link rel="stylesheet" href="/css/content.css"/>
+    <link rel="stylesheet" href="/css/custom.css"/>
     <!-- 개별페이지들의 css 영역 -->
     <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
     ></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod
+                        ? n.callMethod.apply(n, arguments)
+                        : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+                window,
+                document,
+                "script",
+                "https://connect.facebook.net/en_US/fbevents.js"
+        );
+        fbq("init", "709085229200622");
+        fbq("track", "PageView");
+    </script>
+    <noscript
+    ><img
+            height="1"
+            width="1"
+            style="display: none"
+            src="tr?id=709085229200622&ev=PageView&noscript=1"
+    />
+    </noscript>
+    <style>
+        /* img[data-image="thumbnail"] { width:340px !important; height:230px !important; display:inline-block;data-link-page=' + dataLinkPage + ' } */
+        .kt_mb div.search_total,
+        .kt_pc div.search_total {
+            display: none;
+        }
+
+        .foot_search_total,
+        .footer {
+            display: none;
+        }
+    </style>
+    <style>
+        /*         .visualTop .visualwrap {overflow:hidden;width:100%;height:100%;} */ /* .wrapTop .visualTop .txtVisual {z-index:2;} .wrapTop .visualTop .slick-slide .visual2, .wrapTop .visualTop .slick-slide .visual3, .wrapTop .visualTop .slick-slide .visual4 {transform:scale(1.4);} .wrapTop .visualTop .slick-slide .visual2.ani{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;} .wrapTop .visualTop .slick-slide .visual3.ani{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;} .wrapTop .visualTop .slick-slide .visual4.ani{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;} */ /*.main_visual_top .visual{animation: scaleBg both ease-in-out 15s;animation-iteration-count: infinite;transition:all 1.4s ease-in-out;}*/ /* 2020-11-24 수정 */
+        .main_visual_top .slick-slide.slick-active .visual.bg3 {
+        }
+
+        @keyframes scaleBg {
+            0% {
+                background-size: 140% 130%;
+            }
+            50% {
+                background-size: 100% 100%;
+            }
+            100% {
+                background-size: 140% 130%;
+            }
+        }
+    </style>
+
 
     <script>
-      var pageReqParams = {};
-      try {
-        pageReqParams = JSON.parse("");
-      } catch (e) {
-        console.log(e.message);
-      }
-      var sessionId = "2zRG6WJo7GnnVOaNmNttb1h_99cp3h5zmRGkFWLQ";
-      var appEnv = "prd";
+        var pageReqParams = {};
+        try {
+            // pageReqParams = JSON.parse("");
+        } catch (e) {
+            console.log(e.message);
+        }
+        var sessionId = "2zRG6WJo7GnnVOaNmNttb1h_99cp3h5zmRGkFWLQ";
+        var appEnv = "prd";
     </script>
 
     <script>
-      $(function () {
-        setTimeout(function () {
-          $(".foot_search_total, .footer").show();
-        }, 500);
-      });
+        $(function () {
+            setTimeout(function () {
+                $(".foot_search_total, .footer").show();
+            }, 500);
+        });
     </script>
 
     <script type="text/javascript">
-      //adobe통계용 문자열
-      /* var adobeStatics = "^www^KT-개인^마이^메인^준회원" ;
-        try{
-            if (adobeStatics!=null && adobeStatics!=''){
-                    s.pageName =  adobeStatics ;
-                    //var s_code=s.t(); if(s_code)document.write(s_code);
-            }
-        }catch(e){
+        //adobe통계용 문자열
+        /* var adobeStatics = "^www^KT-개인^마이^메인^준회원" ;
+          try{
+              if (adobeStatics!=null && adobeStatics!=''){
+                      s.pageName =  adobeStatics ;
+                      //var s_code=s.t(); if(s_code)document.write(s_code);
+              }
+          }catch(e){
 
-        }
-        try{
-            //GA용 통계 스크립트 호출
-            ga('set', 'title', s.pageName); //GA용, adobe 통계 pageName을 그대로 호출
-            ga('rollup.set', 'title', s.pageName); //Adobe s.pageName ga('send', 'pageview'); // GA용, 통계 전송
-            ga('rollup.send', 'pageview');
-        }catch(e){} ; */
+          }
+          try{
+              //GA용 통계 스크립트 호출
+              ga('set', 'title', s.pageName); //GA용, adobe 통계 pageName을 그대로 호출
+              ga('rollup.set', 'title', s.pageName); //Adobe s.pageName ga('send', 'pageview'); // GA용, 통계 전송
+              ga('rollup.send', 'pageview');
+          }catch(e){} ; */
     </script>
-  </head>
-  <script></script>
+</head>
 
-  <body>
-    <!-- header -->
-    <div class="dim"></div>
-    <div class="ktWarp">
-      <div
-        id="kt-head"
-        class="kt-head fixed"
-        style="background-color: white; font-color: black"
-      >
+<body>
+<!-- header -->
+<div class="dim"></div>
+<div class="ktWarp">
+    <div
+            id="kt-head"
+            class="kt-head fixed"
+            style="background-color: white; font-color: black"
+    >
         <div class="in-sec">
-          <h1 class="logo">
-            <a href="/">
-              <img src="/images/my_kt_logo.png" alt="KT Enterprise logo" />
-            </a>
-          </h1>
-          <div id="gnb" class="gnb type1">
-            <ul class="depth1">
-              <li>
-                <a
-                  href="https://enterprise.kt.com/au/P_AU_ID_SM.do"
-                  class="item"
-                  style="color: black; font-weight: bold"
-                  >About Us</a
-                >
-                <div class="depth2">
-                  <p class="depth2_title">About Us</p>
-                  <ul>
+            <h1 class="logo">
+                <a href="/">
+                    <img src="/images/my_kt_logo.png" alt="KT Enterprise logo"/>
+                </a>
+            </h1>
+            <div id="gnb" class="gnb type1">
+                <ul class="depth1">
                     <li>
-                      <a href="au/P_AU_ID_SM.do.html" class="item"
-                        >KT Enterprise 소개</a
-                      >
-                    </li>
-                    <li>
-                      <a href="au/P_AU_MI_SM.do.html" class="item">MISSION</a>
-                    </li>
-                    <li>
-                      <a href="au/P_AU_GR_SM.do.html" class="item">인사말</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a
-                  href="https://enterprise.kt.com/pd/P_PD_AI_SM.do"
-                  class="item"
-                  style="color: black; font-weight: bold"
-                  >상품/서비스</a
-                >
-                <div class="depth2">
-                  <p class="depth2_title">상품/서비스</p>
-                  <ul>
-                    <li>
-                      <a href="#" class="item">AI/BigData</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_AI_CC_001.do.html" class="item"
-                              >AI Contact Center</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_AI_RB_SM.do.html" class="item"
-                              >AI Robot</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_AI_AS_SM.do.html" class="item"
-                              >AI Space</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_AI_ID_SM.do.html" class="item"
-                              >AI Solution</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_AI_BD_SM.do.html" class="item"
-                              >BigData</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#" class="item">인터넷/전용회선</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_NW_CI_SM.do.html" class="item"
-                              >기업인터넷</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_NW_GI_SM.do.html" class="item"
-                              >일반인터넷</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_NW_DL_SM.do.html" class="item"
-                              >전용회선</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_NW_GD_001.do.html" class="item"
-                              >글로벌데이터</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_NW_MS_SM.do.html" class="item"
-                              >매니지드</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#" class="item">모바일</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_MB_BP_001.do.html" class="item"
-                              >법인폰</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_MB_BF_SM.do.html" class="item"
-                              >기업전용5G</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_MB_SL_SM.do.html" class="item"
-                              >기업특화 서비스</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#" class="item">통신</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_CC_CT_SM.do.html" class="item"
-                              >기업일반전화</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_CC_CI_SM.do.html" class="item"
-                              >기업인터넷전화</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_CC_TE_SM.do.html" class="item"
-                              >전화부가서비스</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_CC_IN_SM.do.html" class="item"
-                              >지능망</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_CC_IT_SM.do.html" class="item"
-                              >국제전화</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_CC_CM_SM.do.html" class="item"
-                              >스마트메시지</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_CC_CS_SM.do.html" class="item"
-                              >콜센터</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#" class="item">보안/안전 솔루션</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_SS_VS_SM.do.html" class="item"
-                              >영상보안</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_SS_SF_SM.do.html" class="item"
-                              >안전</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_SS_IS_SM.do.html" class="item"
-                              >정보보안</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#" class="item">비즈 솔루션</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_BS_EP_SM.do.html" class="item"
-                              >Document DX</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_BM_001.do.html" class="item"
-                              >비즈메카EZ</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_ES_SM.do.html" class="item"
-                              >에너지</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_SF_SM.do.html" class="item"
-                              >스마트공간</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_VS_001.do.html" class="item"
-                              >가상공간</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_TS_SM.do.html" class="item"
-                              >모빌리티</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_EN_001.do.html" class="item"
-                              >환경</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_LE_001.do.html" class="item"
-                              >랜선에듀</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_CP_001.do.html" class="item"
-                              >결합/제휴</a
-                            >
-                          </li>
-                          <!-- <li><a href="/pd/P_PD_BS_ML_001.do" class="item">메타라운지</a></li> -->
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#" class="item">미디어/광고</a>
-                      <div class="depth3">
-                        <ul>
-                          <li>
-                            <a href="pd/P_PD_MD_AD_001.do.html" class="item"
-                              >olleh tv LiveAD+</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_MD_UB_001.do.html" class="item"
-                              >olleh tv UHD Biz</a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_MD_WT_SM.do.html" class="item"
-                              >우리TV시리즈</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <p class="depth2_title_2">산업</p>
-                  <hr />
-                  <ol>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/공공국방.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">공공/국방</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/교육업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">교육업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/금융.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">금융</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/물류.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">물류</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href="https://enterprise.kt.com/sl/P_SL_FC_001.do"
-                          ><img
-                            src="/images/요식업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">요식업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/미용업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">미용업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/방송업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">방송업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/부동산업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">부동산업</p>
-                      </div>
-                    </li>
-                    <br />
-                    <br />
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/서비스업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">서비스업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/숙박업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">숙박업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/스마트홈.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">스마트홈</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/의료.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">의료</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/제조.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">제조</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/판매업.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">판매업</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon-ban">
-                        <a href=""
-                          ><img
-                            src="/images/기타.png"
-                            float="left"
-                            width="60px"
-                            height="60px"
-                        /></a>
-                        <p class="icon-title">기타</p>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-              </li>
-              <li>
-                <a
-                  href="https://enterprise.kt.com/bt/P_BT_SM.do"
-                  class="item"
-                  style="color: black; font-weight: bold"
-                  >DX Insight</a
-                >
-                <div class="depth2">
-                  <p class="depth2_title">DX Insight</p>
-                  <ul>
-                    <li><a href="bt/P_BT_SM.do.html" class="item">전체</a></li>
-                    <li>
-                      <a href="bt/P_BT_TI_LT_001.do.html" class="item"
-                        >DX Story</a
-                      >
-                    </li>
-                    <li>
-                      <a href="bt/P_BT_VG_LT_001.do.html" class="item"
-                        >영상 갤러리</a
-                      >
-                    </li>
-                    <li>
-                      <a href="bt/P_BT_MR_LT_001.do.html" class="item"
-                        >언론보도</a
-                      >
-                    </li>
-                    <li>
-                      <a href="bt/P_BT_CR_LT.do.html" class="item">컨퍼런스</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a
-                  href="https://enterprise.kt.com/cs/P_CS_FQ_SC_001.do"
-                  class="item"
-                  style="color: black; font-weight: bold"
-                  >고객지원</a
-                >
-                <div class="depth2">
-                  <p class="depth2_title">고객지원</p>
-                  <ul>
-                    <li>
-                      <a href="cs/P_CS_SI_RE_001.do.html" class="item"
-                        >브로슈어/신청서</a
-                      >
-                    </li>
-                    <li>
-                      <a href="cs/P_CS_FQ_SC_001.do.html" class="item"
-                        >자주하는 질문(FAQ)</a
-                      >
-                    </li>
-                    <li>
-                      <a href="cs/P_CS_CQ_001.do.html" class="item"
-                        >1:1 온라인 문의</a
-                      >
-                    </li>
-                    <li>
-                      <a href="cs/P_CS_NT_LT_001.do.html" class="item"
-                        >공지사항</a
-                      >
-                    </li>
-                    <li class="my-biz-li">
-                      <a
-                        href="https://mkt.enterprise.kt.com/l/900091/2021-07-02/35j75"
-                        target="_blank"
-                        title="새창"
-                        class="my-biz"
-                        >마이비즈</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="util-box1">
-            <ul>
-              <li>
-                <a href="http://www.kt.com" target="_blank" title="새창열림"
-                  >개인</a
-                >
-              </li>
-              <!-- 2020-12-29  title="새창열림" 추가 -->
-              <!-- <li><a href="http://biz.kt.com" target="_blank" title="새창열림">소상공인</a></li> -->
-              <!-- 2020-12-29  title="새창열림" 추가 -->
-              <li>
-                <a href="http://corp.kt.com" target="_blank" title="새창열림"
-                  >회사소개</a
-                >
-              </li>
-              <!-- 2020-12-29  title="새창열림" 추가 -->
-            </ul>
-          </div>
-          <div class="util-box2">
-            <ul>
-              <li>
-                <a
-                  id="search_btn"
-                  href="#"
-                  class="search"
-                  title="검색 레이어 열기"
-                ></a
-                ><em>검색</em>
-                <div id="search_wrap" class="search_wrap">
-                  <div class="scroll">
-                    <div class="search_cont">
-                      <div class="sch_left">
-                        <div class="search_input">
-                          <label class="label_set" for="in_search"
-                            >검색어를 입력</label
-                          >
-                          <input
-                            type="text"
-                            id="in_search"
-                            class="in_search"
-                            placeholder="검색어를 입력하세요"
-                          />
-                          <button type="button" class="btn_del">검색</button>
-                          <button
-                            type="button"
-                            class="btn_srch"
-                            id="btnSearchKeyword"
-                          >
-                            검색
-                          </button>
-                        </div>
-                      </div>
-                      <div class="search_result">
-                        <div class="fleft">
-                          <ul class="search_list" id="autoList"></ul>
-                        </div>
-                        <div class="fright">
-                          <strong>메뉴 바로가기</strong>
-                          <ul class="menu_list_dash" id="menuList"></ul>
-                        </div>
-                      </div>
-                      <div class="btn_close_txt">
-                        <a href="#" onclick="$('#search_btn').click()">닫기</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <!--                    <li><a href="#" onclick="openChatBot(); return false;" class="chat" title="새창 열기"></a><em>케이톡</em>-->
-              <!--                    </li>-->
-              <li>
-                <a
-                  id="btnAllMenu"
-                  href="#"
-                  class="all-menu"
-                  title="전체 메뉴 레이어 열기"
-                  ><span></span></a
-                ><em>전체메뉴</em>
-              </li>
-            </ul>
-          </div>
-
-          <div id="ktAllMenu" class="kt-all-menu">
-            <div class="mb_util-box-wrap">
-              <div class="mb_util-box1">
-                <ul>
-                  <li>
-                    <a href="https://m.kt.com/" target="_blank" title="새창열림"
-                      >개인</a
-                    >
-                  </li>
-                  <li class="enterp"><a href="#">기업</a></li>
-                  <li>
-                    <a
-                      href="https://m.corp.kt.com/"
-                      target="_blank"
-                      title="새창열림"
-                      >회사소개</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <strong class="mb_user">안녕하세요. 반갑습니다.</strong>
-              <a id="btnAllMenu_m" href="#" class="all-menu on"
-                ><span>전체메뉴 닫기</span></a
-              ><!-- 2020-12-29 수정 -->
-            </div>
-            <div class="scroll_wrap">
-              <div class="scroll">
-                <div class="gnb_dth_1 bt on">
-                  <strong><a href="#">About Us</a></strong>
-                  <div class="gnb_dth_2_scroll">
-                    <ul class="gnb_dth_2">
-                      <li>
-                        <a href="au/P_AU_ID_SM.do.html">KT Enterprise 소개</a>
-                      </li>
-                      <li><a href="au/P_AU_MI_SM.do.html">MISSION</a></li>
-                      <li><a href="au/P_AU_GR_SM.do.html">인사말</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="gnb_dth_1">
-                  <strong><a href="#">상품/서비스</a></strong
-                  ><!-- 2020-11-18 <a href="javascirpt:void(0)" 수정 -->
-                  <div class="gnb_dth_2_scroll">
-                    <ul class="gnb_dth_2">
-                      <li>
-                        <a href="#">AI/BigData</a>
-                        <ul class="gnb_dth_3">
-                          <li>
-                            <a href="pd/P_PD_AI_CC_001.do.html"
-                              ><span>AI Contact Center</span></a
-                            >
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_AI_RB_SM.do.html"
-                              ><span>AI Robot</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_AI_RB_005.do.html"
-                                  >AI 방역로봇</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_RB_004.do.html"
-                                  >AI 서비스로봇</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_RB_001.do.html"
-                                  >AI 호텔로봇</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_RB_002.do.html"
-                                  >AI 뉴바리스타 로봇</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_RB_003.do.html"
-                                  >AI 케어로봇 시니어</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_RB_006.do.html"
-                                  >스마트팩토리 Cobot</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_RB_007.do.html"
-                                  >스마트팩토리 Vision</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_AI_AS_SM.do.html"
-                              ><span>AI Space</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_AI_AS_001.do.html"
-                                  >AI 아파트</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_AS_002.do.html"
-                                  >AI 주택형 솔루션</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_AS_003.do.html">AI 호텔</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_AS_005.do.html"
-                                  >AI 케어 서비스</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_AI_ID_SM.do.html"
-                              ><span>AI Solution</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_AI_ID_004.do.html"
-                                  >기가지니 인사이드</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_ID_005.do.html">AI 코딩</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_AI_BD_SM.do.html"
-                              ><span>BigData</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_AI_BD_001.do.html"
-                                  >관광분석솔루션 (TrIP)</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_BD_002.do.html"
-                                  >상권분석솔루션 (GrIP)</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_BD_003.do.html"
-                                  >생활인구솔루션 (ALP)</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_BD_004.do.html"
-                                  >타겟마케팅(K-Ads)</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_BD_005.do.html"
-                                  >마케팅코치</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_BD_006.do.html">잘나가게</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_AI_BD_007.do.html"
-                                  >빅데이터 플랫폼</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">인터넷/전용회선</a>
-                        <ul class="gnb_dth_3">
-                          <li class="more">
-                            <a href="pd/P_PD_NW_CI_SM.do.html"
-                              ><span>기업인터넷</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_NW_CI_004.do.html">Flexline</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_CI_001.do.html"
-                                  >GiGA office</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_CI_002.do.html">Kornet</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_CI_003.do.html">VPN</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_NW_GI_SM.do.html"
-                              ><span>일반인터넷</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_NW_GI_001.do.html"
-                                  >일반인터넷</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_GI_002.do.html"
-                                  >인터넷 와이파이</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_GI_003.do.html">오피스넷</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_GI_004.do.html"
-                                  >오피스넷 보안와이파이</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_GI_005.do.html"
-                                  >오피스넷 와이파이</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_GI_006.do.html">포스넷</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_NW_DL_SM.do.html"
-                              ><span>전용회선</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_NW_DL_001.do.html"
-                                  >국내전용회선</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_DL_002.do.html"
-                                  >방송전용회선</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_DL_003.do.html"
-                                  >CCTV전용회선</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_NW_GD_001.do.html">글로벌데이터</a>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_NW_MS_SM.do.html"
-                              ><span>매니지드</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_NW_MS_001.do.html"
-                                  >매니지드 ON</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_MS_002.do.html"
-                                  >매니지드 스위치&라우터</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_MS_003.do.html"
-                                  >매니지드 Wi-Fi</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_MS_004.do.html"
-                                  >매니지드 통화장비</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_NW_MS_005.do.html"
-                                  >매니지드 서버</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">모바일</a>
-                        <ul class="gnb_dth_3">
-                          <li>
-                            <a href="pd/P_PD_MB_BP_001.do.html"
-                              ><span>법인폰</span></a
-                            >
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_MB_BF_SM.do.html"
-                              ><span>기업전용5G</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_MB_BF_002.do.html"
-                                  >기업전용 음성총량</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_BF_003.do.html"
-                                  >기업전용 로밍</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_BF_001.do.html"
-                                  >기업전용5G 속도선택부가서비스</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_MB_SL_SM.do.html"
-                              ><span>기업특화 서비스</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_MB_SL_001.do.html"
-                                  >기업전용톡</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_005.do.html">랑톡</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_006.do.html"
-                                  >마이오피스</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_003.do.html"
-                                  >법인마케팅 서비스</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_004.do.html"
-                                  >비즈데이터</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_007.do.html"
-                                  >순Biz data 2종</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_008.do.html"
-                                  >비즈멤버십</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_009.do.html"
-                                  >법인명의 본인확인 서비스</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MB_SL_010.do.html"
-                                  >Enterprise IoT</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">통신</a>
-                        <ul class="gnb_dth_3">
-                          <li class="more">
-                            <a href="pd/P_PD_CC_CT_SM.do.html"
-                              ><span>기업일반전화</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_CT_001.do.html"
-                                  >기업구내전화(ISDN,DID/DOD)</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CT_002.do.html">이너텔</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_CC_CI_SM.do.html"
-                              ><span>기업인터넷전화</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_CI_001.do.html"
-                                  >기업인터넷전화 Centrex</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CI_002.do.html"
-                                  >기업인터넷전화 설치형</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_CC_TE_SM.do.html"
-                              ><span>전화부가서비스</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_TE_005.do.html">링고비즈</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_TE_006.do.html"
-                                  >발신정보알리미</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_CC_IN_SM.do.html"
-                              ><span>지능망</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_IN_001.do.html"
-                                  >전국대표번호</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IN_002.do.html"
-                                  >수신자부담 080</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IN_003.do.html"
-                                  >수신자부담 전국대표번호 14YY</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IN_004.do.html"
-                                  >안심번호 0502</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IN_005.do.html">콜체크인</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IN_006.do.html"
-                                  >전화정보 060</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IN_007.do.html"
-                                  >스마트 헌금콜</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_CC_IT_SM.do.html"
-                              ><span>국제전화</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_IT_003.do.html"
-                                  >글로벌 메시징</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_IT_004.do.html"
-                                  >국제 클로버 서비스</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_CC_CM_SM.do.html"
-                              ><span>스마트메시지</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_CM_001.do.html"
-                                  >스마트메시지 Plus</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CM_002.do.html"
-                                  >스마트메시지 WEB/POP/PRO/API/biz</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CM_003.do.html"
-                                  >스마트메시지 RCS</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CM_006.do.html"
-                                  >양방향 문자</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CM_007.do.html">위치문자</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CM_005.do.html"
-                                  >가게정보알림메시지(소상공인형)</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CM_008.do.html"
-                                  >공인알림문자</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_CC_CS_SM.do.html"
-                              ><span>콜센터</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_CC_CS_003.do.html"
-                                  >콜센터 커스텀</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CS_004.do.html"
-                                  >콜센터 커스텀 Pro</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CS_001.do.html"
-                                  >콜센터 클라우드 비즈</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_CC_CS_002.do.html"
-                                  >콜센터 클라우드 옴니</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">보안/안전 솔루션</a>
-                        <ul class="gnb_dth_3">
-                          <li class="more">
-                            <a href="pd/P_PD_SS_VS_SM.do.html"
-                              ><span>영상보안</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_SS_VS_001.do.html"
-                                  >GiGAeyes i-slim/i-view</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_VS_002.do.html"
-                                  >GiGAeyes i-special</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_VS_003.do.html"
-                                  >GiGAeyes i-pass</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_VS_004.do.html"
-                                  >GiGAeyes i-guard</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_VS_005.do.html"
-                                  >GiGAeyes i-guard premium</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_VS_006.do.html"
-                                  >GiGAeyes Pro</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_SS_SF_SM.do.html"
-                              ><span>안전</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_SS_SF_001.do.html"
-                                  >SafeMate 화재서비스</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_SF_002.do.html"
-                                  >SafeMate 방범서비스</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_SF_003.do.html"
-                                  >SafetyOne</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_SS_IS_SM.do.html"
-                              ><span>정보보안</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_SS_IS_001.do.html">SafeNet</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_IS_002.do.html"
-                                  >Secure UTM</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_IS_003.do.html"
-                                  >Secure gate</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_IS_004.do.html"
-                                  >Secure WiFi</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_IS_005.do.html"
-                                  >지능형 위협메일 분석</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_SS_IS_006.do.html">클린존</a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">비즈 솔루션</a>
-                        <ul class="gnb_dth_3">
-                          <li class="more">
-                            <a href="pd/P_PD_BS_EP_SM.do.html"
-                              ><span>Document DX</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_EP_003.do.html"
-                                  >공인전자문서센터</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_EP_001.do.html"
-                                  >Paperless 플랫폼</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_BM_001.do.html"
-                              ><span>비즈메카EZ</span></a
-                            >
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_BS_ES_SM.do.html"
-                              ><span>에너지</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_ES_001.do.html"
-                                  >GiGA energy manager</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_ES_002.do.html"
-                                  >GiGA energy DR</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_ES_006.do.html"
-                                  >GiGA energy trade</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_BS_SF_SM.do.html"
-                              ><span>스마트공간</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_SF_001.do.html"
-                                  >공간컨텐츠관리솔루션(CMS)</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_BS_VS_001.do.html"
-                              ><span>가상공간</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_VS_001.do.html"
-                                  >Real Cube</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_BS_TS_SM.do.html"
-                              ><span>모빌리티</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_TS_001.do.html">정밀측위</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_TS_003.do.html"
-                                  >자율주행 셔틀</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_TS_004.do.html">GIS</a>
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_TS_004.do.html"
-                                  >AI교통영상분석솔루션</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_TS_005.do.html"
-                                  >DTG/법인차량 관제</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_TS_006.do.html"
-                                  >EV 차량관제</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_TS_007.do.html"
-                                  >EV 바이크 관제</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_BS_EN_001.do.html"
-                              ><span>환경</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_EN_001.do.html">Air Map</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_BS_LE_001.do.html"
-                              ><span>랜선에듀</span></a
-                            >
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_BS_CP_001.do.html"
-                              ><span>결합/제휴</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_BS_CP_001.do.html"
-                                  ><span>비즈성공팩</span></a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_BS_CP_002.do.html"
-                                  ><span>주소변경 사업 제휴</span></a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <!-- <li><a href="/pd/P_PD_BS_ML_001.do"><span>메타라운지</span></a></li> -->
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">미디어/광고</a>
-                        <ul class="gnb_dth_3">
-                          <li>
-                            <a href="pd/P_PD_MD_AD_001.do.html"
-                              ><span>olleh tv LiveAD+</span></a
-                            >
-                          </li>
-                          <li>
-                            <a href="pd/P_PD_MD_UB_001.do.html"
-                              ><span>olleh tv UHD Biz</span></a
-                            >
-                          </li>
-                          <li class="more">
-                            <a href="pd/P_PD_MD_WT_SM.do.html"
-                              ><span>우리TV시리즈</span></a
-                            >
-                            <a class="more_plusbtn" href="#"
-                              ><span title="하위메뉴더보기"></span
-                            ></a>
-                            <ul class="gnb_dth_4">
-                              <li>
-                                <a href="pd/P_PD_MD_WT_001.do.html"
-                                  >우리지자체 tv</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MD_WT_002.do.html"
-                                  >우리소방/경찰서 tv</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MD_WT_003.do.html"
-                                  >우리병원 tv</a
-                                >
-                              </li>
-                              <li>
-                                <a href="pd/P_PD_MD_WT_004.do.html"
-                                  >우리조합 tv</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="gnb_dth_1 bt">
-                  <strong><a href="#">산업</a></strong>
-                  <div class="gnb_dth_2_scroll">
-                    <ul class="gnb_dth_2">
-                      <li class="mb20">
-                        <a href="sl/P_SL_FN_001.do.html">금융</a>
-                      </li>
-                      <li class="mb20">
-                        <a href="sl/P_SL_MF_001.do.html">제조</a>
-                      </li>
-                      <li class="mb20">
-                        <a href="sl/P_SL_RT_001.do.html">물류</a>
-                      </li>
-                      <li><a href="sl/P_SL_MD_001.do.html">의료</a></li>
-                      <li class="mb20">
-                        <a href="sl/P_SL_PB_001.do.html">공공/국방</a>
-                      </li>
-                      <li><a href="sl/P_SL_FC_001.do.html">프랜차이즈</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="gnb_dth_1 bt">
-                  <strong><a href="#">DX Insight</a></strong>
-                  <div class="gnb_dth_2_scroll">
-                    <ul class="gnb_dth_2">
-                      <li class="mb20">
-                        <a href="bt/P_BT_SM.do.html">전체</a>
-                      </li>
-                      <li class="mb20">
-                        <a href="bt/P_BT_TI_LT_001.do.html">DX Story</a>
-                      </li>
-                      <li class="mb20">
-                        <a href="bt/P_BT_VG_LT_001.do.html">영상 갤러리</a>
-                      </li>
-                      <li class="mb20">
-                        <a href="bt/P_BT_MR_LT_001.do.html">언론보도</a>
-                      </li>
-                      <li><a href="bt/P_BT_CR_LT.do.html">컨퍼런스</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="gnb_dth_1 cs">
-                  <strong><a href="#">고객지원</a></strong>
-                  <div class="gnb_dth_2_scroll">
-                    <ul class="gnb_dth_2">
-                      <li>
-                        <a href="cs/P_CS_SI_RE_001.do.html">브로슈어/신청서</a>
-                      </li>
-                      <li>
-                        <a href="cs/P_CS_FQ_SC_001.do.html"
-                          ><span>자주하는 질문(FAQ)</span></a
-                        >
-                      </li>
-                      <li>
-                        <a href="cs/P_CS_CQ_001.do.html"
-                          ><span>1:1 온라인 문의</span></a
-                        >
-                      </li>
-                      <li><a href="cs/P_CS_NT_LT_001.do.html">공지사항</a></li>
-                      <li class="my-biz-li">
                         <a
-                          href="https://mkt.enterprise.kt.com/l/900091/2021-07-02/35j75"
-                          target="_blank"
-                          class="my-biz"
-                          >마이비즈</a
+                                href="https://enterprise.kt.com/au/P_AU_ID_SM.do"
+                                class="item"
+                                style="color: black; font-weight: bold"
+                        >About Us</a
                         >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                        <div class="depth2">
+                            <p class="depth2_title">About Us</p>
+                            <ul>
+                                <li>
+                                    <a href="au/P_AU_ID_SM.do.html" class="item"
+                                    >KT Enterprise 소개</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="au/P_AU_MI_SM.do.html" class="item">MISSION</a>
+                                </li>
+                                <li>
+                                    <a href="au/P_AU_GR_SM.do.html" class="item">인사말</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                                href="https://enterprise.kt.com/pd/P_PD_AI_SM.do"
+                                class="item"
+                                style="color: black; font-weight: bold"
+                        >상품/서비스</a
+                        >
+                        <div class="depth2">
+                            <p class="depth2_title">상품/서비스</p>
+                            <ul>
+                                <li>
+                                    <a href="#" class="item">AI/BigData</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_AI_CC_001.do.html" class="item"
+                                                >AI Contact Center</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_AI_RB_SM.do.html" class="item"
+                                                >AI Robot</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_AI_AS_SM.do.html" class="item"
+                                                >AI Space</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_AI_ID_SM.do.html" class="item"
+                                                >AI Solution</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_AI_BD_SM.do.html" class="item"
+                                                >BigData</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">인터넷/전용회선</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_NW_CI_SM.do.html" class="item"
+                                                >기업인터넷</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_NW_GI_SM.do.html" class="item"
+                                                >일반인터넷</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_NW_DL_SM.do.html" class="item"
+                                                >전용회선</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_NW_GD_001.do.html" class="item"
+                                                >글로벌데이터</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_NW_MS_SM.do.html" class="item"
+                                                >매니지드</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">모바일</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_MB_BP_001.do.html" class="item"
+                                                >법인폰</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_MB_BF_SM.do.html" class="item"
+                                                >기업전용5G</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_MB_SL_SM.do.html" class="item"
+                                                >기업특화 서비스</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">통신</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_CC_CT_SM.do.html" class="item"
+                                                >기업일반전화</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_CC_CI_SM.do.html" class="item"
+                                                >기업인터넷전화</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_CC_TE_SM.do.html" class="item"
+                                                >전화부가서비스</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_CC_IN_SM.do.html" class="item"
+                                                >지능망</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_CC_IT_SM.do.html" class="item"
+                                                >국제전화</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_CC_CM_SM.do.html" class="item"
+                                                >스마트메시지</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_CC_CS_SM.do.html" class="item"
+                                                >콜센터</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">보안/안전 솔루션</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_SS_VS_SM.do.html" class="item"
+                                                >영상보안</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_SS_SF_SM.do.html" class="item"
+                                                >안전</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_SS_IS_SM.do.html" class="item"
+                                                >정보보안</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">비즈 솔루션</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_BS_EP_SM.do.html" class="item"
+                                                >Document DX</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_BM_001.do.html" class="item"
+                                                >비즈메카EZ</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_ES_SM.do.html" class="item"
+                                                >에너지</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_SF_SM.do.html" class="item"
+                                                >스마트공간</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_VS_001.do.html" class="item"
+                                                >가상공간</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_TS_SM.do.html" class="item"
+                                                >모빌리티</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_EN_001.do.html" class="item"
+                                                >환경</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_LE_001.do.html" class="item"
+                                                >랜선에듀</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_CP_001.do.html" class="item"
+                                                >결합/제휴</a
+                                                >
+                                            </li>
+                                            <!-- <li><a href="/pd/P_PD_BS_ML_001.do" class="item">메타라운지</a></li> -->
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">미디어/광고</a>
+                                    <div class="depth3">
+                                        <ul>
+                                            <li>
+                                                <a href="pd/P_PD_MD_AD_001.do.html" class="item"
+                                                >olleh tv LiveAD+</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_MD_UB_001.do.html" class="item"
+                                                >olleh tv UHD Biz</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_MD_WT_SM.do.html" class="item"
+                                                >우리TV시리즈</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="depth2_title_2">산업</p>
+                            <hr/>
+                            <ol>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/공공국방.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">공공/국방</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/교육업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">교육업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/금융.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">금융</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/물류.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">물류</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href="https://enterprise.kt.com/sl/P_SL_FC_001.do"
+                                        ><img
+                                                src="/images/요식업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">요식업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/미용업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">미용업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/방송업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">방송업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/부동산업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">부동산업</p>
+                                    </div>
+                                </li>
+                                <br/>
+                                <br/>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/서비스업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">서비스업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/숙박업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">숙박업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/스마트홈.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">스마트홈</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/의료.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">의료</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/제조.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">제조</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/판매업.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">판매업</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-ban">
+                                        <a href=""
+                                        ><img
+                                                src="/images/기타.png"
+                                                float="left"
+                                                width="60px"
+                                                height="60px"
+                                        /></a>
+                                        <p class="icon-title">기타</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                                href="https://enterprise.kt.com/bt/P_BT_SM.do"
+                                class="item"
+                                style="color: black; font-weight: bold"
+                        >DX Insight</a
+                        >
+                        <div class="depth2">
+                            <p class="depth2_title">DX Insight</p>
+                            <ul>
+                                <li><a href="bt/P_BT_SM.do.html" class="item">전체</a></li>
+                                <li>
+                                    <a href="bt/P_BT_TI_LT_001.do.html" class="item"
+                                    >DX Story</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="bt/P_BT_VG_LT_001.do.html" class="item"
+                                    >영상 갤러리</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="bt/P_BT_MR_LT_001.do.html" class="item"
+                                    >언론보도</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="bt/P_BT_CR_LT.do.html" class="item">컨퍼런스</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                                href="https://enterprise.kt.com/cs/P_CS_FQ_SC_001.do"
+                                class="item"
+                                style="color: black; font-weight: bold"
+                        >고객지원</a
+                        >
+                        <div class="depth2">
+                            <p class="depth2_title">고객지원</p>
+                            <ul>
+                                <li>
+                                    <a href="cs/P_CS_SI_RE_001.do.html" class="item"
+                                    >브로슈어/신청서</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="cs/P_CS_FQ_SC_001.do.html" class="item"
+                                    >자주하는 질문(FAQ)</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="cs/P_CS_CQ_001.do.html" class="item"
+                                    >1:1 온라인 문의</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="cs/P_CS_NT_LT_001.do.html" class="item"
+                                    >공지사항</a
+                                    >
+                                </li>
+                                <li class="my-biz-li">
+                                    <a
+                                            href="https://mkt.enterprise.kt.com/l/900091/2021-07-02/35j75"
+                                            target="_blank"
+                                            title="새창"
+                                            class="my-biz"
+                                    >마이비즈</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </div>
+            <div class="util-box1">
+                <ul>
+                    <li>
+                        <a href="http://www.kt.com" target="_blank" title="새창열림"
+                        >개인</a
+                        >
+                    </li>
+                    <!-- 2020-12-29  title="새창열림" 추가 -->
+                    <!-- <li><a href="http://biz.kt.com" target="_blank" title="새창열림">소상공인</a></li> -->
+                    <!-- 2020-12-29  title="새창열림" 추가 -->
+                    <li>
+                        <a href="http://corp.kt.com" target="_blank" title="새창열림"
+                        >회사소개</a
+                        >
+                    </li>
+                    <!-- 2020-12-29  title="새창열림" 추가 -->
+                </ul>
+            </div>
+            <div class="util-box2">
+                <ul>
+                    <li>
+                        <a
+                                id="search_btn"
+                                href="#"
+                                class="search"
+                                title="검색 레이어 열기"
+                        ></a
+                        ><em>검색</em>
+                        <div id="search_wrap" class="search_wrap">
+                            <div class="scroll">
+                                <div class="search_cont">
+                                    <div class="sch_left">
+                                        <div class="search_input">
+                                            <label class="label_set" for="in_search"
+                                            >검색어를 입력</label
+                                            >
+                                            <input
+                                                    type="text"
+                                                    id="in_search"
+                                                    class="in_search"
+                                                    placeholder="검색어를 입력하세요"
+                                            />
+                                            <button type="button" class="btn_del">검색</button>
+                                            <button
+                                                    type="button"
+                                                    class="btn_srch"
+                                                    id="btnSearchKeyword"
+                                            >
+                                                검색
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="search_result">
+                                        <div class="fleft">
+                                            <ul class="search_list" id="autoList"></ul>
+                                        </div>
+                                        <div class="fright">
+                                            <strong>메뉴 바로가기</strong>
+                                            <ul class="menu_list_dash" id="menuList"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn_close_txt">
+                                        <a href="#" onclick="$('#search_btn').click()">닫기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    <li><a href="#" onclick="openChatBot(); return false;" class="chat" title="새창 열기"></a><em>케이톡</em>-->
+                    <!--                    </li>-->
+                    <li>
+                        <a
+                                id="btnAllMenu"
+                                href="#"
+                                class="all-menu"
+                                title="전체 메뉴 레이어 열기"
+                        ><span></span></a
+                        ><em>전체메뉴</em>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="ktAllMenu" class="kt-all-menu">
+                <div class="mb_util-box-wrap">
+                    <div class="mb_util-box1">
+                        <ul>
+                            <li>
+                                <a href="https://m.kt.com/" target="_blank" title="새창열림"
+                                >개인</a
+                                >
+                            </li>
+                            <li class="enterp"><a href="#">기업</a></li>
+                            <li>
+                                <a
+                                        href="https://m.corp.kt.com/"
+                                        target="_blank"
+                                        title="새창열림"
+                                >회사소개</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <strong class="mb_user">안녕하세요. 반갑습니다.</strong>
+                    <a id="btnAllMenu_m" href="#" class="all-menu on"
+                    ><span>전체메뉴 닫기</span></a
+                    ><!-- 2020-12-29 수정 -->
+                </div>
+                <div class="scroll_wrap">
+                    <div class="scroll">
+                        <div class="gnb_dth_1 bt on">
+                            <strong><a href="#">About Us</a></strong>
+                            <div class="gnb_dth_2_scroll">
+                                <ul class="gnb_dth_2">
+                                    <li>
+                                        <a href="au/P_AU_ID_SM.do.html">KT Enterprise 소개</a>
+                                    </li>
+                                    <li><a href="au/P_AU_MI_SM.do.html">MISSION</a></li>
+                                    <li><a href="au/P_AU_GR_SM.do.html">인사말</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb_dth_1">
+                            <strong><a href="#">상품/서비스</a></strong
+                            ><!-- 2020-11-18 <a href="javascirpt:void(0)" 수정 -->
+                            <div class="gnb_dth_2_scroll">
+                                <ul class="gnb_dth_2">
+                                    <li>
+                                        <a href="#">AI/BigData</a>
+                                        <ul class="gnb_dth_3">
+                                            <li>
+                                                <a href="pd/P_PD_AI_CC_001.do.html"
+                                                ><span>AI Contact Center</span></a
+                                                >
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_AI_RB_SM.do.html"
+                                                ><span>AI Robot</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_005.do.html"
+                                                        >AI 방역로봇</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_004.do.html"
+                                                        >AI 서비스로봇</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_001.do.html"
+                                                        >AI 호텔로봇</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_002.do.html"
+                                                        >AI 뉴바리스타 로봇</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_003.do.html"
+                                                        >AI 케어로봇 시니어</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_006.do.html"
+                                                        >스마트팩토리 Cobot</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_RB_007.do.html"
+                                                        >스마트팩토리 Vision</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_AI_AS_SM.do.html"
+                                                ><span>AI Space</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_AS_001.do.html"
+                                                        >AI 아파트</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_AS_002.do.html"
+                                                        >AI 주택형 솔루션</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_AS_003.do.html">AI 호텔</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_AS_005.do.html"
+                                                        >AI 케어 서비스</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_AI_ID_SM.do.html"
+                                                ><span>AI Solution</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_ID_004.do.html"
+                                                        >기가지니 인사이드</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_ID_005.do.html">AI 코딩</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_AI_BD_SM.do.html"
+                                                ><span>BigData</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_001.do.html"
+                                                        >관광분석솔루션 (TrIP)</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_002.do.html"
+                                                        >상권분석솔루션 (GrIP)</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_003.do.html"
+                                                        >생활인구솔루션 (ALP)</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_004.do.html"
+                                                        >타겟마케팅(K-Ads)</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_005.do.html"
+                                                        >마케팅코치</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_006.do.html">잘나가게</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_AI_BD_007.do.html"
+                                                        >빅데이터 플랫폼</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">인터넷/전용회선</a>
+                                        <ul class="gnb_dth_3">
+                                            <li class="more">
+                                                <a href="pd/P_PD_NW_CI_SM.do.html"
+                                                ><span>기업인터넷</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_CI_004.do.html">Flexline</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_CI_001.do.html"
+                                                        >GiGA office</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_CI_002.do.html">Kornet</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_CI_003.do.html">VPN</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_NW_GI_SM.do.html"
+                                                ><span>일반인터넷</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_GI_001.do.html"
+                                                        >일반인터넷</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_GI_002.do.html"
+                                                        >인터넷 와이파이</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_GI_003.do.html">오피스넷</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_GI_004.do.html"
+                                                        >오피스넷 보안와이파이</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_GI_005.do.html"
+                                                        >오피스넷 와이파이</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_GI_006.do.html">포스넷</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_NW_DL_SM.do.html"
+                                                ><span>전용회선</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_DL_001.do.html"
+                                                        >국내전용회선</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_DL_002.do.html"
+                                                        >방송전용회선</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_DL_003.do.html"
+                                                        >CCTV전용회선</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_NW_GD_001.do.html">글로벌데이터</a>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_NW_MS_SM.do.html"
+                                                ><span>매니지드</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_MS_001.do.html"
+                                                        >매니지드 ON</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_MS_002.do.html"
+                                                        >매니지드 스위치&라우터</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_MS_003.do.html"
+                                                        >매니지드 Wi-Fi</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_MS_004.do.html"
+                                                        >매니지드 통화장비</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_NW_MS_005.do.html"
+                                                        >매니지드 서버</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">모바일</a>
+                                        <ul class="gnb_dth_3">
+                                            <li>
+                                                <a href="pd/P_PD_MB_BP_001.do.html"
+                                                ><span>법인폰</span></a
+                                                >
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_MB_BF_SM.do.html"
+                                                ><span>기업전용5G</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_BF_002.do.html"
+                                                        >기업전용 음성총량</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_BF_003.do.html"
+                                                        >기업전용 로밍</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_BF_001.do.html"
+                                                        >기업전용5G 속도선택부가서비스</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_MB_SL_SM.do.html"
+                                                ><span>기업특화 서비스</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_001.do.html"
+                                                        >기업전용톡</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_005.do.html">랑톡</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_006.do.html"
+                                                        >마이오피스</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_003.do.html"
+                                                        >법인마케팅 서비스</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_004.do.html"
+                                                        >비즈데이터</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_007.do.html"
+                                                        >순Biz data 2종</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_008.do.html"
+                                                        >비즈멤버십</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_009.do.html"
+                                                        >법인명의 본인확인 서비스</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MB_SL_010.do.html"
+                                                        >Enterprise IoT</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">통신</a>
+                                        <ul class="gnb_dth_3">
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_CT_SM.do.html"
+                                                ><span>기업일반전화</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CT_001.do.html"
+                                                        >기업구내전화(ISDN,DID/DOD)</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CT_002.do.html">이너텔</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_CI_SM.do.html"
+                                                ><span>기업인터넷전화</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CI_001.do.html"
+                                                        >기업인터넷전화 Centrex</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CI_002.do.html"
+                                                        >기업인터넷전화 설치형</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_TE_SM.do.html"
+                                                ><span>전화부가서비스</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_TE_005.do.html">링고비즈</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_TE_006.do.html"
+                                                        >발신정보알리미</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_IN_SM.do.html"
+                                                ><span>지능망</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_001.do.html"
+                                                        >전국대표번호</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_002.do.html"
+                                                        >수신자부담 080</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_003.do.html"
+                                                        >수신자부담 전국대표번호 14YY</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_004.do.html"
+                                                        >안심번호 0502</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_005.do.html">콜체크인</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_006.do.html"
+                                                        >전화정보 060</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IN_007.do.html"
+                                                        >스마트 헌금콜</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_IT_SM.do.html"
+                                                ><span>국제전화</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IT_003.do.html"
+                                                        >글로벌 메시징</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_IT_004.do.html"
+                                                        >국제 클로버 서비스</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_CM_SM.do.html"
+                                                ><span>스마트메시지</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_001.do.html"
+                                                        >스마트메시지 Plus</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_002.do.html"
+                                                        >스마트메시지 WEB/POP/PRO/API/biz</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_003.do.html"
+                                                        >스마트메시지 RCS</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_006.do.html"
+                                                        >양방향 문자</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_007.do.html">위치문자</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_005.do.html"
+                                                        >가게정보알림메시지(소상공인형)</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CM_008.do.html"
+                                                        >공인알림문자</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_CC_CS_SM.do.html"
+                                                ><span>콜센터</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CS_003.do.html"
+                                                        >콜센터 커스텀</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CS_004.do.html"
+                                                        >콜센터 커스텀 Pro</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CS_001.do.html"
+                                                        >콜센터 클라우드 비즈</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_CC_CS_002.do.html"
+                                                        >콜센터 클라우드 옴니</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">보안/안전 솔루션</a>
+                                        <ul class="gnb_dth_3">
+                                            <li class="more">
+                                                <a href="pd/P_PD_SS_VS_SM.do.html"
+                                                ><span>영상보안</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_VS_001.do.html"
+                                                        >GiGAeyes i-slim/i-view</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_VS_002.do.html"
+                                                        >GiGAeyes i-special</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_VS_003.do.html"
+                                                        >GiGAeyes i-pass</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_VS_004.do.html"
+                                                        >GiGAeyes i-guard</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_VS_005.do.html"
+                                                        >GiGAeyes i-guard premium</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_VS_006.do.html"
+                                                        >GiGAeyes Pro</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_SS_SF_SM.do.html"
+                                                ><span>안전</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_SF_001.do.html"
+                                                        >SafeMate 화재서비스</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_SF_002.do.html"
+                                                        >SafeMate 방범서비스</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_SF_003.do.html"
+                                                        >SafetyOne</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_SS_IS_SM.do.html"
+                                                ><span>정보보안</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_IS_001.do.html">SafeNet</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_IS_002.do.html"
+                                                        >Secure UTM</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_IS_003.do.html"
+                                                        >Secure gate</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_IS_004.do.html"
+                                                        >Secure WiFi</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_IS_005.do.html"
+                                                        >지능형 위협메일 분석</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_SS_IS_006.do.html">클린존</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">비즈 솔루션</a>
+                                        <ul class="gnb_dth_3">
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_EP_SM.do.html"
+                                                ><span>Document DX</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_EP_003.do.html"
+                                                        >공인전자문서센터</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_EP_001.do.html"
+                                                        >Paperless 플랫폼</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_BM_001.do.html"
+                                                ><span>비즈메카EZ</span></a
+                                                >
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_ES_SM.do.html"
+                                                ><span>에너지</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_ES_001.do.html"
+                                                        >GiGA energy manager</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_ES_002.do.html"
+                                                        >GiGA energy DR</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_ES_006.do.html"
+                                                        >GiGA energy trade</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_SF_SM.do.html"
+                                                ><span>스마트공간</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_SF_001.do.html"
+                                                        >공간컨텐츠관리솔루션(CMS)</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_VS_001.do.html"
+                                                ><span>가상공간</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_VS_001.do.html"
+                                                        >Real Cube</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_TS_SM.do.html"
+                                                ><span>모빌리티</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_001.do.html">정밀측위</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_003.do.html"
+                                                        >자율주행 셔틀</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_004.do.html">GIS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_004.do.html"
+                                                        >AI교통영상분석솔루션</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_005.do.html"
+                                                        >DTG/법인차량 관제</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_006.do.html"
+                                                        >EV 차량관제</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_TS_007.do.html"
+                                                        >EV 바이크 관제</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_EN_001.do.html"
+                                                ><span>환경</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_EN_001.do.html">Air Map</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_BS_LE_001.do.html"
+                                                ><span>랜선에듀</span></a
+                                                >
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_BS_CP_001.do.html"
+                                                ><span>결합/제휴</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_CP_001.do.html"
+                                                        ><span>비즈성공팩</span></a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_BS_CP_002.do.html"
+                                                        ><span>주소변경 사업 제휴</span></a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <!-- <li><a href="/pd/P_PD_BS_ML_001.do"><span>메타라운지</span></a></li> -->
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">미디어/광고</a>
+                                        <ul class="gnb_dth_3">
+                                            <li>
+                                                <a href="pd/P_PD_MD_AD_001.do.html"
+                                                ><span>olleh tv LiveAD+</span></a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="pd/P_PD_MD_UB_001.do.html"
+                                                ><span>olleh tv UHD Biz</span></a
+                                                >
+                                            </li>
+                                            <li class="more">
+                                                <a href="pd/P_PD_MD_WT_SM.do.html"
+                                                ><span>우리TV시리즈</span></a
+                                                >
+                                                <a class="more_plusbtn" href="#"
+                                                ><span title="하위메뉴더보기"></span
+                                                ></a>
+                                                <ul class="gnb_dth_4">
+                                                    <li>
+                                                        <a href="pd/P_PD_MD_WT_001.do.html"
+                                                        >우리지자체 tv</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MD_WT_002.do.html"
+                                                        >우리소방/경찰서 tv</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MD_WT_003.do.html"
+                                                        >우리병원 tv</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="pd/P_PD_MD_WT_004.do.html"
+                                                        >우리조합 tv</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb_dth_1 bt">
+                            <strong><a href="#">산업</a></strong>
+                            <div class="gnb_dth_2_scroll">
+                                <ul class="gnb_dth_2">
+                                    <li class="mb20">
+                                        <a href="sl/P_SL_FN_001.do.html">금융</a>
+                                    </li>
+                                    <li class="mb20">
+                                        <a href="sl/P_SL_MF_001.do.html">제조</a>
+                                    </li>
+                                    <li class="mb20">
+                                        <a href="sl/P_SL_RT_001.do.html">물류</a>
+                                    </li>
+                                    <li><a href="sl/P_SL_MD_001.do.html">의료</a></li>
+                                    <li class="mb20">
+                                        <a href="sl/P_SL_PB_001.do.html">공공/국방</a>
+                                    </li>
+                                    <li><a href="sl/P_SL_FC_001.do.html">프랜차이즈</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb_dth_1 bt">
+                            <strong><a href="#">DX Insight</a></strong>
+                            <div class="gnb_dth_2_scroll">
+                                <ul class="gnb_dth_2">
+                                    <li class="mb20">
+                                        <a href="bt/P_BT_SM.do.html">전체</a>
+                                    </li>
+                                    <li class="mb20">
+                                        <a href="bt/P_BT_TI_LT_001.do.html">DX Story</a>
+                                    </li>
+                                    <li class="mb20">
+                                        <a href="bt/P_BT_VG_LT_001.do.html">영상 갤러리</a>
+                                    </li>
+                                    <li class="mb20">
+                                        <a href="bt/P_BT_MR_LT_001.do.html">언론보도</a>
+                                    </li>
+                                    <li><a href="bt/P_BT_CR_LT.do.html">컨퍼런스</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb_dth_1 cs">
+                            <strong><a href="#">고객지원</a></strong>
+                            <div class="gnb_dth_2_scroll">
+                                <ul class="gnb_dth_2">
+                                    <li>
+                                        <a href="cs/P_CS_SI_RE_001.do.html">브로슈어/신청서</a>
+                                    </li>
+                                    <li>
+                                        <a href="cs/P_CS_FQ_SC_001.do.html"
+                                        ><span>자주하는 질문(FAQ)</span></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="cs/P_CS_CQ_001.do.html"
+                                        ><span>1:1 온라인 문의</span></a
+                                        >
+                                    </li>
+                                    <li><a href="cs/P_CS_NT_LT_001.do.html">공지사항</a></li>
+                                    <li class="my-biz-li">
+                                        <a
+                                                href="https://mkt.enterprise.kt.com/l/900091/2021-07-02/35j75"
+                                                target="_blank"
+                                                class="my-biz"
+                                        >마이비즈</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!--  header  -->
     </div>
-  </body>
-</html>
+    <!--  header  -->
+

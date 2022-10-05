@@ -1069,7 +1069,7 @@ function Tabs(obj){
 			return false;
 		});
 	}
-	for(; i < element.size(); i++){
+	for(; i < element.length; i++){
 		instance = new Tab();
 		instance.init(element[i]);
 	}
@@ -1419,7 +1419,7 @@ function isFromChatbot(){
 	}
 }
 
-$(window).load(function(){
+$(window).on('load',function(){
 	isOnConsulting();//2021-07-19 : AI 서빙로봇 컨설팅 팝업을 띄울것인지 여부 - 이영주
 	changeFootSearchTel();//비즈메카이지 하단 문의 번호 변경
 	isFromChatbot();//2022-05-19 : 챗봇을 통해 들어온 경우 컨설팅 신청 오픈
