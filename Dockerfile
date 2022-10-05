@@ -14,7 +14,7 @@ ARG port
 EXPOSE ${port}
 
 FROM eclipse-temurin:17.0.2_8-jre-alpine
-COPY --from=MAVEN_BUILD  /build/target/*.war app.war
+COPY --from=MAVEN_BUILD  /build/target/*.jar app.jar
 
 
 ENV TZ Asia/Seoul
@@ -27,6 +27,6 @@ ENV JAVA_OPTS="${JAVA_OPTS} -XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1S
 
 #ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar  app.jar "]
 
-#ENTRYPOINT ["sh", "-c", "java -jar  app.jar "]
+ENTRYPOINT ["sh", "-c", "java -jar  app.jar "]
 
-ENTRYPOINT ["java", "-jar","app.war"]
+# ENTRYPOINT ["java", "-jar","app.war"]
