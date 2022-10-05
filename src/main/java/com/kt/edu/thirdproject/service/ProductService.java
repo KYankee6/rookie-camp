@@ -53,7 +53,6 @@ public class ProductService {
         //product별 taglist를 list화
         for (Product product : products) {
             String str=product.getTaglist();
-            System.out.println("taglist"+str);
             String[] res = str.split("[,]", 0);
 
             Map<String,Object> info=new HashMap();
@@ -62,17 +61,13 @@ public class ProductService {
             List<Integer> serv_type=new ArrayList<Integer>();
             for(String myStr: res) {
                 int tagnum=Integer.parseInt(myStr);
-//                System.out.println(tagnum);
                 if(tagnum>=1 && tagnum<=3){
-//                    System.out.println("규모"+tagnum);
                     entsize.add(tagnum);
                 }
                 else if(tagnum>=4 && tagnum<=18){
-//                    System.out.println("업종"+tagnum);
                     category.add(tagnum);
                 }
                 else{
-//                    System.out.println("서비스"+tagnum);
                     serv_type.add(tagnum);
                 }
 
@@ -80,7 +75,6 @@ public class ProductService {
             info.put("규모",entsize);
             info.put("업종",category);
             info.put("서비스",serv_type);
-//            System.out.println("최종---------------------------"+info);
             ProductDto productDto = ProductDto.builder()
                     .id(product.getId())
                     .name(product.getName())

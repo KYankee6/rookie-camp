@@ -25,7 +25,6 @@ public class HashtagService {
 
         for (Hashtag hashtag : hashtags) {
             String str=hashtag.getName();
-            System.out.println("hashtag"+str);
             HashtagDto hashtagDto = HashtagDto.builder()
                     .id(hashtag.getId())
                     .name(hashtag.getName())

@@ -16557,6 +16557,14 @@ span.label-blue {
   border-radius: 15px;
 }
 
+span.label-blue:hover{
+  background-color: #34558b;
+  color:white;
+  cursor:pointer;
+  border-color: #34558b;
+
+}
+
 span.label-blue-on {
   color: white;
   display: inline-block;
