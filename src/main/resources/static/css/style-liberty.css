@@ -16557,12 +16557,11 @@ span.label-blue {
   border-radius: 15px;
 }
 
-span.label-blue:hover{
+span.label-blue:hover {
   background-color: #34558b;
-  color:white;
-  cursor:pointer;
+  color: white;
+  cursor: pointer;
   border-color: #34558b;
-
 }
 
 span.label-blue-on {
@@ -19980,7 +19979,7 @@ li {
 .slick-loading .slick-slide2 {
   visibility: hidden;
 }
-.slick-vertical .slick-slide2{
+.slick-vertical .slick-slide2 {
   display: block;
 
   height: auto;
@@ -19991,31 +19990,32 @@ li {
   display: none;
 }
 #load-more {
-    color: #34558b;
-    background-color: #fff;
-    border-radius: 15px;
-    border-style: solid;
-    border-block-color: #34558b;
-    font-size: 23px;
-    color:#34558b ;
-    padding: 20px;
-    width: 80%;
-    text-align: center;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    display:block;
-    margin: 0 auto;
+  color: #34558b;
+  background-color: #fff;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #34558b;
+  height: 35px;
+  font-size: 23px;
+  color: #34558b;
+
+  width: 10%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
 #load-more:hover {
-    background-color: #34558b;
-    color:#fff;
-    border-radius: 15px;
-    border-style: solid;
-    border-block-color: #34558b;
+  background-color: #34558b;
+  color: #fff;
+  border-radius: 15px;
+  border-style: solid;
+  border-block-color: #34558b;
 }
 #load-more:after {
   content: "";
@@ -20027,16 +20027,15 @@ li {
   margin-left: -20px !important;
   margin-top: -120%;
   opacity: 0;
-  transition: all 0.8s
+  transition: all 0.8s;
 }
 
 #load-more:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
-  transition: 0s
+  transition: 0s;
 }
-
 
 /*slider*/
 

@@ -17107,6 +17107,8 @@ a.blog-desc {
   display: inline-block;
   color: var(--heading-color);
   margin: 1rem 0;
+  display: table;
+  margin: 0 auto;
 }
 
 .card-body.blog-details {

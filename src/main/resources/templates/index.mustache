@@ -205,23 +205,14 @@
 <div class="blog-section py-5">
     <div class="container py-md-5 py-4">
         <div class="waviy text-center mb-md-5 mb-4">
-            <span style="--i:1">O</span>
-            <span style="--i:2">u</span>
-            <span style="--i:3">r</span>
-            <span style="--i:4"></span>
-            <span style="--i:5">N</span>
-            <span style="--i:6">e</span>
-            <span style="--i:7">w</span>
+            <span style="--i:1">P</span>
+            <span style="--i:2">r</span>
+            <span style="--i:3">o</span>
+            <span style="--i:4">d</span>
+            <span style="--i:5">u</span>
+            <span style="--i:6">c</span>
+            <span style="--i:7">t</span>
             <span style="--i:8">s</span>
-            <span style="--i:1"></span>
-            <span style="--i:2">&</span>
-            <span style="--i:3"></span>
-            <span style="--i:4">E</span>
-            <span style="--i:5">v</span>
-            <span style="--i:6">e</span>
-            <span style="--i:7">n</span>
-            <span style="--i:8">t</span>
-            <span style="--i:9">s</span>
         </div>
 
         <div class="anchor_tab_wrap mb-md-5">
@@ -241,7 +232,7 @@
 
             </div>
         </div>
-        <div class="row" id="crow">
+        <div class="row" id="crow" style="margin-bottom: 50px;">
             <div style="margin: 0 auto 30px;">
                         <span class="label-blue-on label-blue category-tabs" style="margin: 3px" id="category-all-tab"
 
@@ -274,7 +265,51 @@
     </div>
 </section>
 <!-- //bg with text section -->
-
+<!-- 플로팅버튼 -->
+<div class="floating_btn">
+  <!-- 2020-12-29 s 수정 title제거 -->
+  <ul>
+    <li>
+      <a
+        href="javascript:void(0)"
+        onclick="floating_pop_open('product')"
+        tabindex=""
+        ><span>상품 전체보기</span></a
+      >
+    </li>
+    <!-- <li><a href="javascript:window.open('https://ibot.kt.com/client/pc-web/chat.html', 'windowPop', 'width=420, height=600, left=200, top=200, resizable = yes')" title="새창열림" tabindex="0"><span>챗봇</span></a></li> -->
+    <li>
+      <a
+        href="javascript:fn_newsLetterPopup()"
+        title="새창열림"
+        id="btnFloatinbNewsLetter"
+        tabindex="0"
+        ><span>뉴스레터 신청</span></a
+      >
+    </li>
+    <li class="consulting">
+      <a
+        href="javascript:void(0)"
+        onclick="floating_pop_open('consulting')"
+        tabindex="0"
+        ><span>컨설팅 신청</span></a
+      >
+    </li>
+    <li>
+      <a
+        href="cs/P_CS_SI_RE_001.do.html"
+        target=""
+        title="페이지이동"
+        id=""
+        tabindex="0"
+        ><span>브로슈어/신청서 다운로드</span></a
+      >
+    </li>
+  </ul>
+  <!-- 2020-12-29 e 수정 -->
+  <button type="button" class="btn_float_more">닫힘</button>
+  <button type="button" class="top">최상단으로</button>
+</div>
 {{> footer}}
 
 
@@ -311,9 +346,17 @@
 
 <!-- Js scripts -->
 <!-- move top -->
-<button onclick="topFunction()" id="movetop" title="Go to top">
+<!--
+<button onclick="topFunction()" id="movetop" title="Go to top" style="position: fixed;
+bottom: 85px !important;
+right: 50px !important;
+z-index: 93 !important;
+display: block;
+border-radius: 50px !important;
+width: 50px;
+height: 50px;">
     <span class="fa fa-level-up" aria-hidden="true"></span>
-</button>
+</button>-->
 </div>
 </body>
 
