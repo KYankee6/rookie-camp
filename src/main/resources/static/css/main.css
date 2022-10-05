@@ -126,7 +126,7 @@
   color: transparent;
   position: absolute;
   left: 0;
-  top: 48px;
+  top: 18px;
   z-index: 11; /*transition:all .4s ease-in-out*/
 }
 .kt-head.fixed.on .in-sec {

@@ -1,5 +1,6 @@
 {{> header }}
 
+
     <!-- banner section -->
     <section class="w3l-main-slider" id="home">
         <div class="banner-content">
@@ -32,7 +33,7 @@
     <div class="blog-section py-5">
         <div class="container py-md-5 py-4">
             <div class="waviy text-center mb-md-5 mb-4">
-                <h3 style="font-weight: bold; margin-top: 50px;">
+                <h3 style="font-weight: bold; margin-top: 50px; line-height: 1.5em;">
                     내 가게 상권의 유동인구, 매출 데이터, 경쟁현황, 배달분석, 트렌드/이슈 등<br>
                     유용한 데이터를 주 1회 이상 문자 알림 서비스로 제공합니다.</h3>
             </div>
@@ -68,7 +69,7 @@
                 <div class="mid">
                     <div class="cont">
                         <div class="diagram">
-                            <h2 style="margin-top:100px;"><strong class="tit_left">기대효과</strong></h2>
+                            <h2 style="margin-top:100px; padding-top: 108px;"><strong class="tit_left">기대효과</strong></h2>
                             <ul class="list_dot_big mt20">
                                 <li>내 가게 주변에 대한 정보를 습득하고, 가게 운영에 참고할 수 있습니다.</li>
                             </ul>
@@ -135,7 +136,7 @@
                 <div class="mid">
                     <div class="cont">
                         <div class="diagram">
-                            <h2><strong class="tit_left">요금안내</strong></h2>
+                            <h2 style="padding-top: 108px;"><strong class="tit_left">요금안내</strong></h2>
                             <table class="table table-striped" style="margin-top:30px; text-align:center">
                                 <thead>
                                     <tr>
@@ -162,7 +163,7 @@
                 <div class="mid">
                     <div class="cont">
                         <div class="diagram">
-                            <h2><strong class="tit_left">사용자 가이드</strong></h2>
+                            <h2 style="padding-top: 108px;"><strong class="tit_left">사용자 가이드</strong></h2>
                             <div class="card-body">
                                 <div class="mt-4">
                                     <div class="accordion" id="accordion" role="tablist">
@@ -290,7 +291,82 @@
 
     <!-- Js scripts -->
     <!-- move top -->
-    <a href="https://jalnagage.kt.co.kr/home/" id="signup" title="Sign up">가입<br>하기</a>
+    <style>
+        .wrapper{
+          position: fixed;
+          top: 75%;
+          left: 93%;
+          transform: translate(-50%, -50%);
+        }
+        
+        .link_wrapper{
+          position: relative;
+        }
+        
+        .a_id{
+          display: block;
+          border-radius: 4px;
+          font-size: 15px;
+          width: 100px;
+          height: 50px;
+          line-height: 50px;
+          font-weight: bold;
+          text-decoration: none;
+          background: #bd2130;
+          text-align: center;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border: 3px solid #bd2130;
+          transition: all .35s;
+        }
+        
+        .icon{
+          width: 50px;
+          height: 50px;
+          border: 3px solid transparent;
+          position: absolute;
+          transform: rotate(45deg);
+          right: 0;
+          top: 0;
+          z-index: -1;
+          transition: all .35s;
+        }
+        
+        .icon svg{
+          width: 30px;
+          position: absolute;
+          top: calc(50% - 15px);
+          left: calc(50% - 15px);
+          transform: rotate(-45deg);
+          fill: #bd2130;
+          transition: all .35s;
+        }
+        
+        .a_id:hover{
+          width: 100px;
+          border: 3px solid #bd2130;
+          background: transparent;
+          color: #bd2130;
+          font-size: 15px;
+        }
+        
+        .a_id:hover + .icon{
+          border: 3px solid #bd2130;
+          right: -25%;
+        }
+        </style>
+     <div class="wrapper">
+        <div class="link_wrapper">
+          <a class="a_id" href="https://jalnagage.kt.co.kr/home/">가입</a>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+              <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+            </svg>
+          </div>
+        </div>
+        
+      </div>
     <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fa fa-level-up" aria-hidden="true"></span>
     </button>

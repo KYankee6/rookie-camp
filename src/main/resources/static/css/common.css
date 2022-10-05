@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Josefin Sans';
 }
 /* :focus {outline:0;}
 22-01-26 : 웹접근성 포커스 관련 */
@@ -615,7 +616,7 @@ a:hover.nodeco {
   color: transparent;
   position: absolute;
   left: 0;
-  top: 48px;
+  top: 18px;
   z-index: 2;
   z-index: 11; /*transition:all .4s ease-in-out*/
 }
