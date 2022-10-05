@@ -504,9 +504,9 @@
         const newArray = array.slice(0, period+6);
         let html = '';
         newArray.forEach((item)=>{
-            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat1]').attr("href", "/detail");
             $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat3]').attr("href", "/detail");
             $(template).find('[data-role=cat3]').text(item.name);
             $(template).find('[data-role=cat4]').text(item.description);
             let hashTagList = item.hashTagList.slice(0, 6);
@@ -552,9 +552,9 @@
             const newArray = array.slice(0, period+6);
             let html = '';
             newArray.forEach((item)=>{
-                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat1]').attr("href", "/detail");
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').attr("href", "/detail");
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
                 let hashTagList = item.hashTagList.slice(0, 6);
@@ -592,9 +592,9 @@
                 if(i==6)break;
                 let item = res[i];
                 console.log("this is item!!!"+JSON.stringify(item));
-                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat1]').attr("href", "/detail");
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').attr("href", "/detail");
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
                 let hashTagList = item.hashTagList.slice(0, 6);

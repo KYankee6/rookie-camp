@@ -375,9 +375,9 @@
         const newArray = array.slice(0, period + 6);
         let html = '';
         newArray.forEach((item) => {
-            $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat1]').attr("href", "/detail");
             $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-            $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+            $(template).find('[data-role=cat3]').attr("href", "/detail");
             $(template).find('[data-role=cat3]').text(item.name);
             $(template).find('[data-role=cat4]').text(item.description);
             $(template).find('[data-role=cat5]').text(item.taglist);
@@ -404,9 +404,9 @@
                 for (let i = 0; i < 6; i++) {
 
                     let item = res[i];
-                    $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                    $(template).find('[data-role=cat1]').attr("href", "/detail");
                     $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                    $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                    $(template).find('[data-role=cat3]').attr("href", "/detail");
                     $(template).find('[data-role=cat3]').text(item.name);
                     $(template).find('[data-role=cat4]').text(item.description);
                     html += $(template).html();
@@ -430,9 +430,9 @@
             const newArray = array.slice(0, period + 6);
             let html = '';
             newArray.forEach((item) => {
-                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat1]').attr("href", "/detail");
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').attr("href", "/detail");
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
                 html += $(template).html();
@@ -459,9 +459,9 @@
             for (let i = 0; i < 6; i++) {
                 let item = res[i];
                 console.log(item);
-                $(template).find('[data-role=cat1]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat1]').attr("href", "/detail");
                 $(template).find('[data-role=cat2]').attr("src", "/images/pd/" + item.img + '.png');
-                $(template).find('[data-role=cat3]').attr("href", "/product/" + item.id);
+                $(template).find('[data-role=cat3]').attr("href", "/detail");
                 $(template).find('[data-role=cat3]').text(item.name);
                 $(template).find('[data-role=cat4]').text(item.description);
 
