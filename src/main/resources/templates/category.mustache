@@ -31,7 +31,7 @@
 
         <div class="row" id="crow">
             <div style="margin: 0 auto 30px;">
-                <span class="label-blue category-tabs" style="margin: 3px" id="tabs"
+                <span class="label-blue" style="margin: 3px" id="tabs"
                 >전체</span>
                 {{#serviceTypeList}}
                     <span class="label-blue category-tabs" style="margin: 3px;" data-category-id="{{id}}"
@@ -315,9 +315,13 @@
             tab.classList.remove('label-blue-on')
         }
         this.classList.add('label-blue-on');
+        let url_case = '/api/v1/category';
+        if(this.dataset!=null){
+            url_case += '/'+this.dataset.categoryId;
+        }
         $.ajax({
             type: 'GET',
-            url: '/api/v1/category/' + this.dataset.categoryId,
+            url: url_case,
             dataType: 'json',
             // contentType: 'application/json; charset=utf-8',
         }).done(function (res) {
